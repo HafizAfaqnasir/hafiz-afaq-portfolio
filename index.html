@@ -57,6 +57,28 @@ p{margin:0}
 .tabs a{flex:none;text-decoration:none;font:500 .74rem var(--f-slate);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--line);padding:9px 12px;color:var(--mute)}
 .tabs a:hover{color:var(--paper);border-color:var(--paper)}.tabs a[aria-current]{background:var(--red);border-color:var(--red);color:var(--paper)}
 @media (max-width:900px){.nav ul{display:none}}
+/* mobile menu */
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;color:var(--paper);cursor:pointer;place-items:center;padding:0;flex:none}
+.burger i{display:block;width:18px;height:2px;background:currentColor;position:relative;transition:background .2s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor;transition:transform .3s var(--ease)}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+.burger[aria-expanded="true"] i{background:transparent}.burger[aria-expanded="true"] i::before{transform:translateY(6px) rotate(45deg)}.burger[aria-expanded="true"] i::after{transform:translateY(-6px) rotate(-45deg)}
+.nav-end{display:flex;align-items:center;gap:10px}
+.mnav{position:fixed;inset:0;z-index:39;background:var(--stage);padding:calc(78px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow-y:auto;overscroll-behavior:contain;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .3s var(--ease),visibility 0s .3s}
+.mnav.open{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .3s var(--ease)}
+.mnav .slate{display:block;margin:4px 0 10px}
+.mnav-proj{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
+.mnav-proj a{display:grid;gap:4px;padding:12px;border:1px solid var(--line);text-decoration:none;color:var(--paper);min-height:64px;font-weight:600;font-size:.95rem}
+.mnav-proj a span{font:500 .68rem var(--f-slate);color:var(--red)}.mnav-proj a small{color:var(--mute);font-weight:400;font-size:.74rem}
+.mnav-links{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--line)}
+.mnav-links a{display:flex;justify-content:space-between;align-items:center;padding:16px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--paper);font:600 1.35rem/1.1 var(--f-display);letter-spacing:-.02em}
+.mnav-links a::after{content:"→";color:var(--red);font-size:1.1rem}
+.mnav .btn{width:100%;justify-content:center}
+body.menu-open{overflow:hidden}
+@media (max-width:900px){.burger{display:grid}}
+@media (max-width:520px){.nav-end>.btn{display:none}.me .nm{font-size:.98rem}}
+/* touch comfort */
+@media (hover:none){.btn{min-height:48px}.tabs a{padding:12px 14px}}
 
 /* page wipe */
 #wipe{position:fixed;inset:0;z-index:80;background:var(--red);transform:scaleX(0);transform-origin:left;pointer-events:none;display:grid;place-items:center}
@@ -362,6 +384,8 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
 .reveal{animation:up .7s var(--ease) both}
 @keyframes up{from{opacity:.001;translate:0 24px}to{opacity:1;translate:0 0}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* mobile overrides (last so they win) */
+@media (max-width:520px){.sec{padding-block:clamp(56px,14vw,80px)}.hero h1{font-size:clamp(2.4rem,11.5vw,3.2rem)}}
 </style>
 
 <nav class="nav" aria-label="Main">
@@ -376,9 +400,24 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
       <li><a href="#ip">IP &amp; Regulatory</a></li>
       <li><a href="#about" data-home>About</a></li>
     </ul>
-    <a class="btn btn-red btn-sm" href="#contact" data-home>Start a project</a>
+    <div class="nav-end"><a class="btn btn-red btn-sm" href="#contact" data-home>Start a project</a>
+    <button class="burger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><i></i></button></div>
   </div>
 </nav>
+<div class="mnav" id="mnav" aria-label="Menu">
+  <span class="slate"><b>Projects</b></span>
+  <div class="mnav-proj" id="mProj"></div>
+  <span class="slate"><b>Explore</b></span>
+  <ul class="mnav-links">
+    <li><a href="#problems" data-home>Problems I solve</a></li>
+    <li><a href="#toolkit" data-home>Toolkit</a></li>
+    <li><a href="#lab" data-home>Character lab</a></li>
+    <li><a href="#workflow" data-home>Workflow</a></li>
+    <li><a href="#ip">IP &amp; Regulatory</a></li>
+    <li><a href="#about" data-home>About</a></li>
+  </ul>
+  <a class="btn btn-red" href="#contact" data-home>Start a project →</a>
+</div>
 
 <div id="wipe" aria-hidden="true"><span id="wipeTxt"></span></div>
 <main id="app"></main>
@@ -1009,6 +1048,14 @@ function go(hash){
   setTimeout(()=>{render(isCase?id:null,isCase?null:id);wipe.className="out";setTimeout(()=>wipe.className="",520)},430);
 }
 addEventListener("hashchange",()=>{document.getElementById("projMenu").open=false;go(location.hash)});
+(()=>{const b=document.getElementById("menuBtn"),m=document.getElementById("mnav");
+  const set=o=>{m.classList.toggle("open",o);b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Close menu":"Open menu");document.body.classList.toggle("menu-open",o)};
+  b.addEventListener("click",()=>set(!m.classList.contains("open")));
+  m.addEventListener("click",e=>{if(e.target.closest("a"))set(false)});
+  addEventListener("keydown",e=>{if(e.key==="Escape")set(false)});
+  matchMedia("(min-width:901px)").addEventListener("change",e=>{if(e.matches)set(false)});
+  document.getElementById("mProj").innerHTML=CASES.map(c=>`<a href="#${c.id}"><span>${c.num}</span>${esc(c.client.split(" · ")[0])}<small>${esc(c.kind)}</small></a>`).join("");
+})();
 document.getElementById("projList").innerHTML=CASES.map(c=>`<a href="#${c.id}"><span>${c.num}</span>${esc(c.client.split(" · ")[0])}<small>${esc(c.kind)}</small></a>`).join("");
 let pxBound=false;
 function parallax(){if(pxBound)return;pxBound=true;let t=0;addEventListener("scroll",()=>{if(t||current!=="home")return;t=requestAnimationFrame(()=>{t=0;const y=scrollY;if(y>900)return;document.querySelectorAll(".phone").forEach((p,i)=>p.style.translate=`0 ${-y*(i===1?.12:.06)}px`)})},{passive:true})}
