@@ -341,6 +341,7 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
 #lbClose{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));width:44px;height:44px;border:1px solid var(--paper);background:var(--stage);color:var(--paper);font-size:1.15rem;cursor:pointer}
 
 /* studio */
+[hidden]{display:none!important}
 #studioBtn{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 #studio{position:fixed;inset:0 0 0 auto;width:min(440px,100vw);z-index:70;background:var(--stage-2);border-left:1px solid var(--line);transform:translateX(102%);transition:transform .4s var(--ease);overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px}
 #studio.open{transform:none}
