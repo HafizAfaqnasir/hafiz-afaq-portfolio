@@ -3,7 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Hafiz Afaq (AI Guy). I make tailored AI content for brands.">
+<meta name="description" content="Hafiz Afaq (AI Guy), AI filmmaker and creative director in Karachi. Story ads, UGC, founder films and lesson series that look filmed.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://hafiz-afaq-portfolio.vercel.app/">
+<link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png">
+<link rel="apple-touch-icon" href="media/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hafiz Afaq (AI Guy)">
+<meta property="og:title" content="Hafiz Afaq (AI Guy) · I make tailored AI content for brands">
+<meta property="og:description" content="Story ads, UGC, founder films and lessons that look filmed. Full case studies: casting sheets, sets, workflow and the final films.">
+<meta property="og:url" content="https://hafiz-afaq-portfolio.vercel.app/">
+<meta property="og:image" content="https://hafiz-afaq-portfolio.vercel.app/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hafiz-afaq-portfolio.vercel.app/media/og.jpg">
 <title>Hafiz Afaq · AI Guy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,7 +217,7 @@ section{scroll-margin-top:72px}
 .about h2{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
 .about .copy{display:grid;gap:16px;font-size:1.04rem;color:var(--soft);max-width:62ch}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
-.more{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .more>a{text-decoration:none;color:inherit}.more>*{background:var(--stage);padding:24px 20px;display:grid;gap:10px;align-content:start}
 .more>.dark{background:var(--red)}.more>.dark .slate,.more>.dark .slate b,.more>.dark p{color:var(--paper)}.go-ip{font-weight:600;font-size:.88rem;margin-top:4px}.more>.dark:hover{background:#c40f08}
 .more h3{font-size:1.12rem;font-weight:600}.more p{color:var(--mute);font-size:.9rem}
@@ -384,7 +398,44 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
 .reveal{animation:up .7s var(--ease) both}
 @keyframes up{from{opacity:.001;translate:0 24px}to{opacity:1;translate:0 0}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* proof band */
+.stats{border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);padding:0}
+.stats .wrap>div{background:var(--stage);padding:22px clamp(16px,2vw,24px);display:grid;gap:6px;align-content:start}
+.stats b{font:800 clamp(2rem,4vw,3rem)/1 var(--f-display);letter-spacing:-.03em;color:var(--paper)}
+.stats b::after{content:"";display:block;width:28px;height:4px;background:var(--red);margin-top:10px}
+.stats span{color:var(--mute);font-size:.88rem;max-width:26ch}
+@media (max-width:860px){.stats .wrap{grid-template-columns:1fr 1fr}}
+/* brief builder */
+.brief{display:grid;gap:14px;margin-top:12px}
+.brief fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
+.brief legend{font:500 .7rem var(--f-slate);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:8px;padding:0}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{cursor:pointer}.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-flex;align-items:center;min-height:38px;padding:8px 12px;border:1px solid var(--line);font-size:.86rem;color:var(--soft);transition:background .15s,border-color .15s,color .15s}
+.opts label:hover span{border-color:var(--paper);color:var(--paper)}
+.opts input:checked+span{background:var(--red);border-color:var(--red);color:var(--paper)}
+.opts input:focus-visible+span{outline:2px solid var(--paper);outline-offset:2px}
+.brief .fld{display:grid;gap:6px;font:500 .7rem var(--f-slate);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.brief .fld input{font:400 1rem var(--f-body);letter-spacing:0;text-transform:none;color:var(--paper);background:var(--stage-2);border:1px solid var(--line);padding:12px;border-radius:0;width:100%}
+.brief .fld input:focus{outline:2px solid var(--red);outline-offset:0}
+.bout{display:block;white-space:pre-wrap;font:400 .82rem/1.55 var(--f-slate);color:var(--paper);background:var(--stage-2);border-left:3px solid var(--red);padding:12px 14px}
+.bbtns{display:flex;flex-wrap:wrap;gap:8px}
+/* sticky mobile CTA */
+.mcta{display:none}
+@media (max-width:760px){
+  .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:38;justify-content:center;transform:translateY(140%);transition:transform .35s var(--ease);box-shadow:0 12px 30px rgba(0,0,0,.55)}
+  .mcta.show{transform:none}
+  #studioBtn{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  .kit .tool small{display:none}.kit .tools{grid-template-columns:1fr 1fr}.kit>div{padding:18px 16px}
+}
 /* mobile overrides (last so they win) */
+@media (max-width:900px){
+  .hero-grid>div:first-child{display:contents}
+  .hero .idc{order:1}.hero h1{order:2}.hero .reel{order:3;height:min(118vw,440px);margin-block:8px 4px}.hero .lede{order:4}.hero .ctas{order:5}
+}
+
 @media (max-width:520px){.sec{padding-block:clamp(56px,14vw,80px)}.hero h1{font-size:clamp(2.4rem,11.5vw,3.2rem)}}
 </style>
 
@@ -430,12 +481,21 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
       <a class="btn btn-light" href="https://www.linkedin.com/in/hafizafaqnasir/" target="_blank" rel="noopener">Message me on LinkedIn <span aria-hidden="true">→</span></a>
     </div>
     <div class="send">
-      <span class="slate"><b>What to send</b></span>
-      <ol><li>A reference video you like</li><li>Your script, or the one message the video must land</li><li>Brand assets: logo, colours, product photos, website</li><li>Format, length and deadline</li></ol>
+      <span class="slate"><b>Brief builder</b> · 30 seconds</span>
+      <form class="brief" id="brief" onsubmit="return false">
+        <fieldset><legend>What do you need?</legend><div class="opts" data-name="need"></div></fieldset>
+        <fieldset><legend>Format</legend><div class="opts" data-name="fmt"></div></fieldset>
+        <fieldset><legend>When</legend><div class="opts" data-name="when"></div></fieldset>
+        <label class="fld">Brand<input name="brand" maxlength="60" placeholder="Your brand or product" autocomplete="organization"></label>
+        <label class="fld">Reference video (optional)<input name="ref" type="url" maxlength="300" placeholder="https://…"></label>
+        <output class="bout" id="bOut" aria-live="polite"></output>
+        <div class="bbtns"><a class="btn btn-red btn-sm" id="bMail" href="#">Email this brief →</a><button class="btn btn-sm" type="button" id="bCopy">Copy for LinkedIn</button></div>
+      </form>
       <div class="reach" id="reach"></div>
     </div>
   </div>
 </section>
+<a class="btn btn-red mcta" id="mcta" href="#contact">Start a project · brief in 30s <span aria-hidden="true">→</span></a>
 <footer><div class="wrap"><span class="slate"><b>Hafiz Afaq</b> · The AI Guy</span><span class="slate">Client films are AI-generated and disclosed as such.</span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer"><button type="button" id="lbClose" aria-label="Close">✕</button><img id="lbImg" alt=""><div class="cap" id="lbCap"></div></dialog>
@@ -766,14 +826,19 @@ function home(){
     <h1>I make tailored <span class="hl">AI content</span> for brands.</h1>
     <p class="lede">Story ads, UGC and lessons that look filmed. I cast every face on a sheet, build every set before a frame moves, and finish the edit and sound myself.</p>
     <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#work">Watch the work</a></div>
-    <div class="proof"><span class="slate"><b>6</b> brands</span><span class="slate"><b>9:16</b> · <b>16:9</b> · <b>3D</b> · <b>Photoreal</b></span><span class="slate"><b>−14</b> LUFS masters</span><span class="slate"><b>Brief → file</b> in a day</span></div>
   </div>
   <div class="reel" aria-label="Clips from recent work">
     <a class="phone p1" href="#sans"><video data-auto muted loop playsinline preload="metadata" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
-    <a class="phone p2" href="#ultra"><video data-auto muted loop playsinline preload="metadata" poster="${M("ultra-dad-poster.jpg")}" src="${M("ultra-dad.mp4")}"></video><span class="rec">REC</span><span class="cap">ULTRA · story ad</span></a>
+    <a class="phone p2" href="#work" aria-label="Showreel, 24 seconds. See all work"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
     <a class="phone p3" href="#ggpod"><video data-auto muted loop playsinline preload="metadata" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
   </div>
 </div></header>
+<section class="stats" aria-label="Proof in numbers"><div class="wrap">
+  <div><b>6</b><span>brands, one person from brief to final file</span></div>
+  <div><b>18</b><span>start frames locked before a single ULTRA clip moved</span></div>
+  <div><b>3:13</b><span>story film with the same faces from first shot to last</span></div>
+  <div><b>189</b><span>page DRAP dossier. I know what a brand is allowed to claim</span></div>
+</div></section>
 <div class="wall" aria-label="Character and product sheets"><div class="wall-track">${[...WALL,...WALL].map(([f,cp],i)=>`<figure${i>=WALL.length?' aria-hidden="true"':""}><img src="${M(f+".webp")}" alt="${i<WALL.length?esc(cp):""}" loading="lazy" height="118"><figcaption>${esc(cp)}</figcaption></figure>`).join("")}</div></div>
 
 <section class="sec" id="work"><div class="wrap">
@@ -781,7 +846,7 @@ function home(){
   <div class="films">${c.map((k,i)=>`
     <a class="film${i===0||i===3?" wide":""}" href="#${k.id}">
       <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="" loading="lazy">`}</div>
-      <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':""}
+      <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':'<span class="badge chip">Board + clips</span>'}
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>${esc(k.client)}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div>
     </a>`).join("")}</div>
@@ -847,7 +912,6 @@ function home(){
     <div><span class="slate"><b>02</b></span><h3>Static creatives &amp; social</h3><p>Ad creatives, key visuals and social posts for D2C brands, in the same look as the video.</p></div>
     <div><span class="slate"><b>03</b></span><h3>Performance marketing</h3><p>Meta Ads, Google Ads and SEO. Creative made to be tested and scaled, not just admired.</p></div>
     <a class="dark" href="#ip"><span class="slate"><b>04</b></span><h3>Business &amp; legal intelligence</h3><p>IP research, regulatory compliance and trade documentation. I know the claims a brand can make before the script is written.</p><span class="go-ip">See the IP &amp; regulatory work →</span></a>
-    <div><span class="slate"><b>05</b></span><h3>Web &amp; photography</h3><p>Web development for landing pages, and photography that stops the scroll.</p></div>
   </div>
 </div></section>
 
@@ -877,7 +941,7 @@ function player(src,poster,orient,label){
 function casePage(k){
   const i=CASES.indexOf(k),nx=CASES[(i+1)%CASES.length];
   const hero=k.final?player(k.final,k.poster,k.orient,"Final film"):
-    `<div class="player v empty"><img src="${M(k.poster)}" alt=""><p>The final ad is with the client. Scroll down for the full production board and clips.</p></div>`;
+    (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="metadata" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v empty"><img src="${M(k.poster)}" alt=""><p>The final ad is with the client. Scroll down for the full production board and clips.</p></div>`);
   return `
 <div class="wrap cp-top"><a class="back" href="#work">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="#${c.id}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
 <header class="wrap cp-hero${k.orient==="h"?" land":""}">
@@ -1053,7 +1117,7 @@ addEventListener("hashchange",()=>{document.getElementById("projMenu").open=fals
   b.addEventListener("click",()=>set(!m.classList.contains("open")));
   m.addEventListener("click",e=>{if(e.target.closest("a"))set(false)});
   addEventListener("keydown",e=>{if(e.key==="Escape")set(false)});
-  matchMedia("(min-width:901px)").addEventListener("change",e=>{if(e.matches)set(false)});
+  {const mq=matchMedia("(min-width:901px)"),h=e=>{if(e.matches)set(false)};mq.addEventListener?mq.addEventListener("change",h):mq.addListener&&mq.addListener(h)}
   document.getElementById("mProj").innerHTML=CASES.map(c=>`<a href="#${c.id}"><span>${c.num}</span>${esc(c.client.split(" · ")[0])}<small>${esc(c.kind)}</small></a>`).join("");
 })();
 document.getElementById("projList").innerHTML=CASES.map(c=>`<a href="#${c.id}"><span>${c.num}</span>${esc(c.client.split(" · ")[0])}<small>${esc(c.kind)}</small></a>`).join("");
@@ -1061,6 +1125,33 @@ let pxBound=false;
 function parallax(){if(pxBound)return;pxBound=true;let t=0;addEventListener("scroll",()=>{if(t||current!=="home")return;t=requestAnimationFrame(()=>{t=0;const y=scrollY;if(y>900)return;document.querySelectorAll(".phone").forEach((p,i)=>p.style.translate=`0 ${-y*(i===1?.12:.06)}px`)})},{passive:true})}
 {const h=location.hash.replace(/^#/,"");const isCase=CASES.some(c=>c.id===h)||h==="ip";render(isCase?h:null,isCase?null:h||null)}
 
+
+/* brief builder */
+(()=>{const f=document.getElementById("brief");if(!f)return;
+  const O={need:["Story ad","UGC / TikTok ad","Founder interview","Product film","Lesson series","Brand protection"],fmt:["9:16","16:9","1:1","Not sure"],when:["This week","Within 2 weeks","Flexible"]};
+  const D={need:0,fmt:0,when:1};
+  f.querySelectorAll(".opts").forEach(box=>{const n=box.dataset.name;O[n].forEach((o,i)=>{const l=document.createElement("label");l.innerHTML=`<input type="radio" name="${n}"${i===D[n]?" checked":""}><span></span>`;l.querySelector("input").value=o;l.querySelector("span").textContent=o;box.appendChild(l)})});
+  const out=document.getElementById("bOut"),mail=document.getElementById("bMail"),cp=document.getElementById("bCopy");
+  const text=()=>{const v=n=>(f.elements[n].value||"").trim();const brand=v("brand")||"[your brand]",ref=v("ref");
+    const need=v("need"),fmt=v("fmt"),when=v("when");
+    const lines=[`Hi Hafiz, I'd like a ${need.toLowerCase()} for ${brand}.`,`Format: ${fmt}. Timing: ${when.toLowerCase()}.`];
+    if(ref)lines.push(`Reference: ${ref}`);lines.push("Can you send a shot plan and the characters you'd lock first?");
+    return {subject:`${need} for ${brand}`,body:lines.join("\n")}};
+  const upd=()=>{const t=text();out.textContent=t.body;mail.href=`mailto:afaqn4286@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(t.body)}`};
+  f.addEventListener("input",upd);f.addEventListener("change",upd);upd();
+  mail.target="_blank";mail.rel="noopener";
+  cp.addEventListener("click",()=>{const t=text().body;const done=m=>{cp.textContent=m;setTimeout(()=>cp.textContent="Copy for LinkedIn",1800)};
+    const open=()=>window.open("https://www.linkedin.com/in/hafizafaqnasir/","_blank","noopener");
+    if(navigator.clipboard?.writeText)navigator.clipboard.writeText(t).then(()=>{done("Copied. Opening LinkedIn…");open()}).catch(()=>{const r=document.createRange();r.selectNodeContents(out);const g=getSelection();g.removeAllRanges();g.addRange(r);done("Selected. Copy it")});
+    else{const r=document.createRange();r.selectNodeContents(out);const g=getSelection();g.removeAllRanges();g.addRange(r);done("Selected. Copy it")}});
+})();
+
+/* sticky mobile CTA */
+(()=>{const b=document.getElementById("mcta"),c=document.getElementById("contact");let inC=false;
+  new IntersectionObserver(e=>{inC=e[0].isIntersecting;tick()},{threshold:.05}).observe(c);
+  const tick=()=>b.classList.toggle("show",scrollY>560&&!inC);
+  addEventListener("scroll",tick,{passive:true});tick();
+})();
 /* contact */
 const reach=document.getElementById("reach");
 [["LinkedIn","linkedin.com/in/hafizafaqnasir","https://www.linkedin.com/in/hafizafaqnasir/"],["Email","afaqn4286@gmail.com","afaqn4286@gmail.com"]].forEach(([k,v,cp],i)=>{const r=document.createElement("div");r.className="row";r.innerHTML=`<span class="slate">${k}</span><span class="val" id="rv${i}"></span>`;r.querySelector(".val").textContent=v;const b=document.createElement("button");b.className="copy-btn";b.type="button";b.id="rc"+i;b.textContent="Copy";b.addEventListener("click",()=>{const ok=()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1500)};const sel=()=>{const s=getSelection(),g=document.createRange();g.selectNodeContents(document.getElementById("rv"+i));s.removeAllRanges();s.addRange(g);b.textContent="Selected"};navigator.clipboard?.writeText?navigator.clipboard.writeText(cp).then(ok).catch(sel):sel()});r.appendChild(b);reach.appendChild(r)});
