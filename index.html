@@ -430,6 +430,27 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
   #studioBtn{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   .kit .tool small{display:none}.kit .tools{grid-template-columns:1fr 1fr}.kit>div{padding:18px 16px}
 }
+
+/* hero theater */
+.phone{cursor:zoom-in;transition:filter .35s var(--ease),scale .35s var(--ease)}
+.phone::after{content:"▶";position:absolute;left:50%;top:50%;translate:-50% -50%;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(227,20,12,.92);color:#fff;font-size:1rem;opacity:0;scale:.8;transition:opacity .25s,scale .3s var(--ease);pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+@media (hover:hover){
+  .reel:hover .phone{filter:blur(2.5px) brightness(.6)}
+  .reel:hover .phone:hover{filter:none;scale:1.035;z-index:4}
+  .phone:hover::after{opacity:1;scale:1}
+}
+@media (hover:none){.phone::after{opacity:.9;scale:.85;width:44px;height:44px}}
+.theater{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px));background:rgba(8,8,8,.42);-webkit-backdrop-filter:blur(14px) saturate(.85);backdrop-filter:blur(14px) saturate(.85);opacity:0;transition:opacity .35s var(--ease)}
+.theater.on{opacity:1}
+.theater[hidden]{display:none}
+.th-box{display:grid;gap:12px;justify-items:center;width:min(92vw,calc((100dvh - 150px) * 9 / 16));max-width:520px}
+.th-frame{width:100%;aspect-ratio:9/16;border-radius:26px;overflow:hidden;border:6px solid var(--red);background:#000;box-shadow:0 40px 120px rgba(0,0,0,.75);transform-origin:center}
+.th-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.th-bar{width:100%;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.th-bar .slate{color:var(--paper)}
+.th-x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:14px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(10,10,10,.6);color:var(--paper);font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+.th-x:hover{background:var(--red);border-color:var(--red)}
+body.th-open{overflow:hidden}
 /* mobile overrides (last so they win) */
 @media (max-width:900px){
   .hero-grid>div:first-child{display:contents}
@@ -496,6 +517,11 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
   </div>
 </section>
 <a class="btn btn-red mcta" id="mcta" href="#contact">Start a project · brief in 30s <span aria-hidden="true">→</span></a>
+<div class="theater" id="theater" role="dialog" aria-modal="true" aria-label="Video" hidden>
+  <button type="button" class="th-x" id="thX" aria-label="Close video">✕</button>
+  <div class="th-box"><div class="th-frame" id="thFrame"><video id="thVid" controls playsinline preload="auto"></video></div>
+  <div class="th-bar"><span class="slate" id="thT"></span><a class="btn btn-red btn-sm" id="thGo" href="#work">Open →</a></div></div>
+</div>
 <footer><div class="wrap"><span class="slate"><b>Hafiz Afaq</b> · The AI Guy</span><span class="slate">Client films are AI-generated and disclosed as such.</span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer"><button type="button" id="lbClose" aria-label="Close">✕</button><img id="lbImg" alt=""><div class="cap" id="lbCap"></div></dialog>
@@ -956,9 +982,9 @@ function home(){
     <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#work">Watch the work</a></div>
   </div>
   <div class="reel" aria-label="Clips from recent work">
-    <a class="phone p1" href="#sans"><video data-auto muted loop playsinline preload="metadata" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
-    <a class="phone p2" href="#work" aria-label="Showreel, 24 seconds. See all work"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
-    <a class="phone p3" href="#ggpod"><video data-auto muted loop playsinline preload="metadata" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
+    <a class="phone p1" href="#sans" data-play="sans-reaction.mp4" data-pp="sans-reaction-poster.jpg" data-t="Sans Air Purifier Mini · TikTok Shop UGC ad" data-go="#sans" data-gol="Open the case study"><video data-auto muted loop playsinline preload="metadata" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
+    <a class="phone p2" href="#work" aria-label="Play the showreel" data-play="showreel.mp4" data-pp="showreel-poster.jpg" data-t="Showreel · 6 brands · 0:24 · silent cut" data-go="#work" data-gol="See all nine projects"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
+    <a class="phone p3" href="#ggpod" data-play="f/ggpod.mp4" data-pp="gg-talk-poster.jpg" data-t="Glint & Gleam · GG Pod · founder interview, with sound" data-go="#ggpod" data-gol="Open the case study" data-sound><video data-auto muted loop playsinline preload="metadata" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
   </div>
 </div></header>
 <section class="stats" aria-label="Proof in numbers"><div class="wrap">
@@ -1274,6 +1300,26 @@ function parallax(){if(pxBound)return;pxBound=true;let t=0;addEventListener("scr
     else{const r=document.createRange();r.selectNodeContents(out);const g=getSelection();g.removeAllRanges();g.addRange(r);done("Selected. Copy it")}});
 })();
 
+/* hero theater: click a phone, it grows to centre, the page blurs */
+(()=>{const th=document.getElementById("theater"),fr=document.getElementById("thFrame"),v=document.getElementById("thVid"),
+  tt=document.getElementById("thT"),go=document.getElementById("thGo"),x=document.getElementById("thX");let from=null,paused=[];
+  const fromT=()=>{const a=from.getBoundingClientRect(),b=fr.getBoundingClientRect();return `translate(${a.left+a.width/2-(b.left+b.width/2)}px,${a.top+a.height/2-(b.top+b.height/2)}px) scale(${a.width/b.width})`};
+  function open(ph){from=ph;const d=ph.dataset;
+    paused=[...document.querySelectorAll("video")].filter(e=>e!==v&&!e.paused);paused.forEach(e=>e.pause());
+    v.poster=M(d.pp);v.src=M(d.play);v.muted=!("sound" in d);v.loop=!("sound" in d);tt.textContent=d.t;go.textContent=d.gol+" →";go.href=d.go;
+    th.hidden=false;document.body.classList.add("th-open");requestAnimationFrame(()=>th.classList.add("on"));
+    if(!reduce&&fr.getBoundingClientRect().width)fr.animate([{transform:fromT()},{transform:"none"}],{duration:520,easing:"cubic-bezier(.2,.8,.2,1)"});
+    v.play().catch(()=>{});x.focus({preventScroll:true})}
+  function close(){if(th.hidden)return;v.pause();th.classList.remove("on");document.body.classList.remove("th-open");
+    const done=()=>{th.hidden=true;v.removeAttribute("src");v.load();paused.forEach(e=>e.play().catch(()=>{}));from&&from.focus({preventScroll:true})};
+    if(reduce||!from||!from.isConnected){done();return}
+    fr.animate([{transform:"none"},{transform:fromT()}],{duration:380,easing:"cubic-bezier(.4,0,.2,1)"}).onfinish=done}
+  document.addEventListener("click",e=>{const ph=e.target.closest(".phone[data-play]");if(ph){e.preventDefault();open(ph)}});
+  th.addEventListener("click",e=>{if(!e.target.closest(".th-box")&&e.target!==x)close()});
+  x.addEventListener("click",close);go.addEventListener("click",close);
+  addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+  addEventListener("hashchange",close);
+})();
 /* sticky mobile CTA */
 (()=>{const b=document.getElementById("mcta"),c=document.getElementById("contact");let inC=false;
   new IntersectionObserver(e=>{inC=e[0].isIntersecting;tick()},{threshold:.05}).observe(c);
