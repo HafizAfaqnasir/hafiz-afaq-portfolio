@@ -152,7 +152,7 @@ section{scroll-margin-top:72px}
 .film{grid-column:span 4;position:relative;display:block;text-decoration:none;border:1px solid var(--line);background:var(--stage-2);overflow:hidden;isolation:isolate}
 .film.wide{grid-column:span 8}
 .film .media{aspect-ratio:4/5;position:relative;overflow:hidden}
-.film.wide .media{aspect-ratio:auto;height:100%;min-height:100%}
+.film.wide .media{position:absolute;inset:0;aspect-ratio:auto}
 .film video,.film img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
 .film:hover video,.film:hover img{transform:scale(1.04)}
 .film .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.05) 30%,rgba(10,10,10,.92));z-index:1}
@@ -162,8 +162,8 @@ section{scroll-margin-top:72px}
 .film .go i{font-style:normal;transition:transform .3s var(--ease)}
 .film:hover .go i{transform:translateX(5px)}
 .film .n{position:absolute;top:14px;left:14px;z-index:2;font:500 .7rem var(--f-slate);background:var(--red);padding:4px 7px}
-.film .badge{position:absolute;top:14px;right:14px;z-index:2}
-@media (max-width:980px){.film,.film.wide{grid-column:span 6}.film.wide .media{aspect-ratio:4/5;height:auto}}
+.film .badge{position:absolute;top:14px;right:14px;left:auto;z-index:2}
+@media (max-width:980px){.film,.film.wide{grid-column:span 6}.film.wide .media{position:relative;inset:auto;aspect-ratio:4/5;height:auto}}
 @media (max-width:620px){.film,.film.wide{grid-column:span 12}}
 
 /* pains */
@@ -596,7 +596,27 @@ const CASES=[
   board:[["From the film",[["stately-s1.webp","After","The creator in the study set, warm lamps behind."],["stately-s2.webp","After, later in the take","Same light wrap as he moves."]]]],
   finish:[["Light wrap","Background light bleeds onto hair and shoulder edges."],["Contact shadow","A soft shadow ties him to the set."],["Living set","Candle and lamps flicker gently."],["Delivery","Full 4:20 at 1080×1920 with the original audio in sync."]]},
 
- {id:"dlh",num:"04",client:"Dynamic Learning Hub · US",kind:"Educational series",title:"A learning brand’s YouTube series, in two visual worlds.",
+ {id:"walkin",num:"04",client:"Stately · statelymen.com",kind:"Brand B-roll ad",title:"Walk in like you own the room.",
+  logline:"A 10-second suit ad built around one real product from Stately’s store, worn by an AI model who walks a busy office like he belongs there.",
+  orient:"v",final:"f/walkin.mp4",poster:"walkin-poster.jpg",preview:"walkin-clean.mp4",previewPoster:"walkin-clean-poster.jpg",
+  specs:["9:16","0:10 ad + 0:08 B-roll","1080×1920","−14 LUFS"],tools:["claude","nano","flow","code"],
+  pain:"Stately needed suit B-roll that looks like their customer’s real morning, wearing a suit they actually sell, with no shoot, no model booking and no location.",
+  quote:"Make it corporate, make it walk, and don’t give me another airport.",
+  brief:["Stately sent a handheld 9:16 walking shot as the reference and asked for something in that spirit, but not in an airport.","I chose one concept, The Walk-In, matched it to a real suit from their store, and built the face, the suit and the office as locked references before a single frame moved."],
+  steps:[
+   ["Pick one idea","From a shortlist of corporate concepts the client chose The Walk-In: a man crossing a busy open-plan office, camera tracking beside him like the reference."],
+   ["Pick a real product","The Paisley & Gray Ashton Peak jacket and Downing trousers in Dark Blue Shark from statelymen.com. Product photos front, back, side and fabric close-up became the wardrobe reference."],
+   ["Cast Daniel","A base portrait first. Once approved, the identity anchor was rewritten to match what was actually rendered: the mole beside the nose on his left cheek, hair parted on his right."],
+   ["Lock the suit","A six-angle turnaround of Daniel in the Stately suit, with the wardrobe lock updated to the exact blue and weave on the sheet."],
+   ["Build the office","An empty-aisle plate from a white loft reference: windows on the left, sun patches on the floor, no text, and nobody else in blue."],
+   ["Animate","Google Flow, Veo 3.1 Ingredients to Video, 9:16, three references: sheet, face and plate, with a second-by-second timeline prompt."],
+   ["Finish two cuts","Upscale to 1080×1920, grade, grain, one line of copy, a charcoal end card and a sound bed matched to his walk. Delivered as a branded ad and a clean B-roll."]],
+  board:[
+   ["Casting & wardrobe",[["walkin-portrait.webp","Daniel · face lock","Approved first, then the anchor was rewritten to match it.","lock"],["walkin-sheet.webp","Daniel · suit turnaround","Six angles in the Dark Blue Shark suit.","lock"]]],
+   ["Set & motion",[["walkin-plate.webp","Office plate","Empty aisle, window light from the left.","lock"],["v:walkin-raw.mp4","Raw Veo 3.1 output","720p, 8 seconds, straight from Flow."],["v:walkin-clean.mp4","Clean B-roll","Graded, upscaled, no text or music."]]]],
+  finish:[["Grade","Suit blue made richer, office kept bright, skin natural, light grain to hide AI smoothness."],["Copy","“Walk in like / you own the room.” placed above the Reels and TikTok caption zone."],["End card","STATELY in their charcoal and off-white, with their own line: Find Your New Confidence."],["Sound","His real footsteps and office room tone, minimal music at 108 BPM to match the walk, a whoosh into the end card."],["Delivery","Branded 0:10 ad and clean 0:08 B-roll, 1080×1920, −14 LUFS."]]},
+
+ {id:"dlh",num:"05",client:"Dynamic Learning Hub · US",kind:"Educational series",title:"A learning brand’s YouTube series, in two visual worlds.",
   logline:"A 3D counting rhyme for toddlers and a realistic fractions lesson for Grade 3, both ending on the school’s enrollment call.",
   orient:"h",final:"f/dlh1.mp4",final2:"f/dlh2.mp4",poster:"dlh1-s1.webp",poster2:"dlh2-s1.webp",preview:null,previewImg:"dlh1-s1.webp",
   specs:["16:9","1:52 + 1:31","3D + photoreal","Enrollment end card"],tools:["flow","nano","eleven","suno","canva","capcut","claude"],
@@ -617,7 +637,26 @@ const CASES=[
    ["Video 2 · In the lesson",[["dlh-frame.webp","Start frame","Teacher, pupils and a blank board."],["dlh2-s1.webp","Graphics on the board","“What is a fraction?” designed in the edit."],["dlh2-s2.webp","The payoff","Two-sixths, great job."]]]],
   finish:[["Numbers","Every numeral and diagram designed in Canva and placed in CapCut."],["Voices","Character lines kept consistent with fixed ElevenLabs voices."],["Music","The client’s Afrobeat track and original Suno music."],["CTA","Logo, website and phone on the end card."]]},
 
- {id:"sans",num:"05",client:"Sans Air Purifier Mini",kind:"TikTok Shop UGC ad",title:"“My family didn’t believe me.”",
+ {id:"sansdirty",num:"06",client:"Sans Air Purifier Mini",kind:"VFX revision on real footage",title:"The filter had to look used.",
+  logline:"A client note on a filmed UGC clip: make the filter look dirty. Fixed in post, in 4K at 60 frames, with the creator’s hands moving over it.",
+  orient:"v",final:"f/sansdirty.mp4",poster:"sansdirty-poster.jpg",preview:"sansdirty-after.mp4",previewPoster:"sansdirty-after-poster.jpg",
+  specs:["9:16","0:07","4K · 60 fps","Original audio"],tools:["code","claude"],
+  pain:"The whole ad sells a dirty filter, but the filmed one came out clean white. A reshoot meant a new creator day, and the approved edit could not change.",
+  quote:"The filter looks brand new. Make it look dirty.",
+  brief:["Sans sent the creator’s clip and one photo of a used filter next to a new one. That photo set the colour and the amount of dust.","I left the client’s edit, sound and timing alone and changed one thing: the filter, in both reveals, on every frame."],
+  steps:[
+   ["Read the note","One clip, two reveals, a reference photo of a month-old filter. Target: warm grey-beige, not black."],
+   ["Map the filter","Locate the filter area in each reveal and keep a clean reference of it, so every frame has the same footprint."],
+   ["Build dust that behaves like dust","Layered noise for uneven loading, streaks that run along the pleats, fine specks. Heavier through the middle where the air flows, lighter at the end caps, packed deeper in the pleat valleys."],
+   ["Light it with the shot","Dust darkens and desaturates the filter’s own pixels, so the shot’s light, shadow and grain stay. Nothing is pasted on top, and the dust never moves on the filter."],
+   ["Protect the cover and hands","An automatic matte came first, but it left grey smudges on the cover’s shaded side. I switched to tracing the cover edge by hand on every frame pair and tightened the safety margin from 25 to 12 pixels."],
+   ["Check and deliver","Every frame reviewed. Cover, hands and the closed purifier untouched. Delivered at the original 4K, 60 fps and length, with a before-and-after still for the client."]],
+  board:[
+   ["The brief",[["sansdirty-ref.webp","Client reference","New filter next to a used one. This set the target.","lock"],["v:sansdirty-src.mp4","Before","The creator’s clip as filmed: clean white filter."]]],
+   ["The fix",[["v:sansdirty-after.mp4","After","Same clip, used filter, same light and grain."],["sansdirty-ba.webp","Before / after","The still sent to the client with the video."]]]],
+  finish:[["Light","Dust follows the shot’s own light and shadow direction."],["Behaviour","Dust sits deeper in the pleats and heavier where air passes, and it stays fixed to the filter."],["Roto","Cover edge traced by hand so no grey reaches the cover or hands."],["Untouched","Client’s cuts, timing, colour and sound left exactly as approved."],["Delivery","4K, 60 fps, original audio, plus a before-and-after still."]]},
+
+ {id:"sans",num:"07",client:"Sans Air Purifier Mini",kind:"TikTok Shop UGC ad",title:"“My family didn’t believe me.”",
   logline:"A 44-second family-reaction ad where the proof, a filter full of dust, lands in the very first frame.",
   orient:"v",final:null,poster:"sans-kf-cta.webp",preview:"sans-reaction.mp4",previewPoster:"sans-reaction-poster.jpg",
   specs:["9:16","0:44","1080×1920","TikTok Shop"],tools:["flow","nano","capcut","claude"],
@@ -638,7 +677,7 @@ const CASES=[
    ["Keyframes & motion",[["sans-kf-reaction.webp","Open unit","Same table, same lamp."],["v:sans-reaction.mp4","Reaction","Every face matches its sheet."],["sans-kf-cta.webp","CTA keyframe","The whole family around the product."],["v:sans-cta.mp4","CTA","Maya to camera."]]]],
   finish:[["Hook","The dirt is on screen before a word is said."],["Sticker fix","Veo misspelled the product name; the sticker was replaced in the edit."],["Proof","Rating pulled from the brand’s own site on delivery day."],["Look","One grain layer so every clip looks like one phone."]]},
 
- {id:"bunn",num:"06",client:"BUNN Speed Brew Elite",kind:"Product use-case film",title:"Minutes, not mornings lost.",
+ {id:"bunn",num:"08",client:"BUNN Speed Brew Elite",kind:"Product use-case film",title:"Minutes, not mornings lost.",
   logline:"A 30-second breakfast story built from a coffee-maker review: rush, brew, one calm sip.",
   orient:"v",final:null,poster:"bunn-hero.webp",preview:"bunn-pour.mp4",previewPoster:"bunn-pour-poster.jpg",
   specs:["9:16","~0:30","9 shots","1080p"],tools:["flow","nano","capcut","claude"],
@@ -659,8 +698,8 @@ const CASES=[
    ["Motion",[["v:bunn-pour.mp4","Brew","Logo intact through the pour."],["v:bunn-mug.mp4","Pour","Steam and breakfast on the table."]]]],
   finish:[["Product truth","No shot shows a button the real machine doesn’t have."],["Continuity","Same three mugs, same plates, same seats in every shot."],["Light","One morning sun direction across all three locations."],["Process","Turned into a LinkedIn case-study carousel."]]}
 ];
-const LAB=[["w6","sans-maya-sheet","Maya","Sans · lead","Sage sweater, light-wash jeans. Twelve angles."],["w6","gg-ryan-sheet","Ryan","Glint & Gleam · founder","Glasses, curly hair, mole on the left cheek, hands for demos."],["w4","dlh-ada","Ms. Ada","Dynamic Learning Hub","Navy, lavender and a lime pin: the school’s colours."],["w4","bunn-sarah","Sarah","BUNN","Camel blazer, burgundy bag, low ponytail."],["w4","sans-family-sheet","The family","Sans","Four faces, three angles each."],["w3","dlh-kid1","Pupil","DLH","Lime bobbles, lavender polo."],["w3","dlh-kid2","Pupil","DLH","Navy uniform polo."],["w3","bunn-ryan","Ryan","BUNN","Navy hoodie, olive backpack."],["w3","gg-product","Product lock","GG Pod","Display, lid and cable from four sides."]];
-const WALL=[["sans-maya-sheet","Maya · Sans"],["gg-ryan-sheet","Ryan · GG Pod"],["ultra-s2","Friend · ULTRA"],["dlh-ada","Ms. Ada · DLH"],["bunn-product","BUNN product lock"],["ultra-s1","Dad · ULTRA"],["sans-family-sheet","Family · Sans"],["dlh1-s1","Kofi, Leo, Amara"],["bunn-sarah","Sarah · BUNN"],["gg-product","GG Pod lock"],["dlh-plate","Classroom plate"],["bunn-kitchen","Kitchen plate"]];
+const LAB=[["w6","walkin-sheet","Daniel","Stately · The Walk-In","Dark Blue Shark suit, pocket square, tan shoes. Six angles."],["w6","walkin-portrait","Daniel · face","Stately","Mole beside the nose, hair parted on his right."],["w6","sans-maya-sheet","Maya","Sans · lead","Sage sweater, light-wash jeans. Twelve angles."],["w6","gg-ryan-sheet","Ryan","Glint & Gleam · founder","Glasses, curly hair, mole on the left cheek, hands for demos."],["w4","dlh-ada","Ms. Ada","Dynamic Learning Hub","Navy, lavender and a lime pin: the school’s colours."],["w4","bunn-sarah","Sarah","BUNN","Camel blazer, burgundy bag, low ponytail."],["w4","sans-family-sheet","The family","Sans","Four faces, three angles each."],["w3","dlh-kid1","Pupil","DLH","Lime bobbles, lavender polo."],["w3","dlh-kid2","Pupil","DLH","Navy uniform polo."],["w3","bunn-ryan","Ryan","BUNN","Navy hoodie, olive backpack."],["w3","gg-product","Product lock","GG Pod","Display, lid and cable from four sides."]];
+const WALL=[["walkin-sheet","Daniel · Stately"],["walkin-plate","Office plate"],["sans-maya-sheet","Maya · Sans"],["gg-ryan-sheet","Ryan · GG Pod"],["ultra-s2","Friend · ULTRA"],["dlh-ada","Ms. Ada · DLH"],["bunn-product","BUNN product lock"],["ultra-s1","Dad · ULTRA"],["sans-family-sheet","Family · Sans"],["dlh1-s1","Kofi, Leo, Amara"],["bunn-sarah","Sarah · BUNN"],["gg-product","GG Pod lock"],["dlh-plate","Classroom plate"],["bunn-kitchen","Kitchen plate"]];
 
 /* ================= STORY LAYER (per case) ================= */
 const STORY={
@@ -728,6 +767,50 @@ No beauty filter, no plastic skin, no text.`}},
 7  shadow     soft contact shadow behind him on the set
 8  unify      one vignette and one grain over both layers
 9  check      frames at every join and at random points`}},
+ walkin:{
+  story:[["The ask","Stately sent a handheld walking shot as a reference and wanted suit B-roll in that style, set somewhere corporate, not an airport."],
+   ["The catch","A suit ad only works if the suit is real and the man is the same in every frame. In AI video, the blue drifts, the pocket square disappears and the face changes when the camera turns."],
+   ["The idea","Make the office do the selling. A bright white loft full of people in everyday clothes, and one man in a dark blue Stately suit walking through it. He’s the only sharp thing in the room."],
+   ["The result","A 10-second branded ad and an 8-second clean B-roll. Same face, same suit, same light from the first frame to the end card."]],
+  core:"The viewer should picture themselves walking into work in that suit.",
+  cliche:"Another man in a suit striding through an airport.",
+  signature:"He crosses a stripe of morning sun and the sharkskin weave catches it for a moment.",
+  beatsNote:"Branded cut · 0:10",beats:[["0:00 Hook","Daniel walks in. No text, the shot does the work.",1.4],["0:01 Line","“Walk in like / you own the room.”",3.3],["0:05 The sun","He crosses the light and the suit shines.",2.7],["0:07 Turn","Dissolve to charcoal, a soft whoosh.",0.6],["0:08 End card","STATELY · Find Your New Confidence · statelymen.com",2]],
+  prompt:{t:"The three locks · repeated in every prompt",tags:["Identity anchor","Wardrobe lock","Lighting bible","Veo 3.1","9:16"],
+   text:`IDENTITY ANCHOR, Daniel: 38-year-old man, light olive skin,
+oval face, warm dark-brown almond eyes, short salt-and-pepper
+stubble, a small mole on his left cheek beside the nose, dark-brown
+hair parted on his right side, athletic build, broad shoulders.
+
+WARDROBE LOCK, Stately Dark Blue Shark: medium-dark blue two-button
+modern-fit jacket in a fine sharkskin weave, notch lapels, flap
+pockets, patterned silk pocket square; matching trousers; crisp
+white shirt, top button open, no tie; tan-brown leather shoes.
+
+LIGHTING BIBLE, The Walk-In: bright loft office in the morning.
+Soft daylight from a long wall of windows, overhead LED fill and
+bounce off white brick, contrast low to medium, sun patches on
+the wooden floor.`}},
+ sansdirty:{
+  story:[["The ask","Sans’s note on a filmed UGC clip was one line: the filter looks brand new, make it look dirty."],
+   ["The catch","It is real footage in 4K at 60 frames. The creator’s hands and a white cover move over a white filter, and anything pasted on will slide, glow or stain the cover."],
+   ["The idea","Don’t add a texture. Age the filter itself: darken and warm its own pixels the way dust would, so the light, the grain and the pleats stay real."],
+   ["The result","Both reveals now show a month-old filter, the cover and hands are clean on every frame, and the client’s edit and sound are untouched."]],
+  core:"The viewer should wince at what the filter caught, and never question the shot.",
+  cliche:"A flat grey overlay that slides when the cover moves.",
+  signature:"The dust sits deeper in the pleat valleys and heavier through the middle, where the air actually passes.",
+  beatsNote:"Clip · 0:07, two reveals",beats:[["0:00 Set-up","Creator with the purifier, cover on.",0.5],["0:00 Reveal 1","Cover off: the used filter.",1.7],["0:02 Cover","Back on. Frames untouched.",0.3],["0:02 Reveal 2","Opened again, same dust in the same place.",2.9],["0:05 End","Closed purifier, untouched.",1.2]],
+  prompt:{t:"The dust recipe · run on every frame",tags:["No overlay","Pleat-aware","Airflow","Hand roto","4K · 60 fps"],
+   text:`1  footprint  filter area and a clean reference per reveal
+2  loading    layered noise for uneven dust, streaks along pleats
+3  airflow    heavier through the middle, lighter at the end caps
+4  cavity     pleat valleys trap more dust than the ridges
+5  age        darken and desaturate toward warm grey-beige,
+              keeping the shot's own light, shadow and grain
+6  hold       dust is fixed to the filter, it never drifts
+7  roto       cover edge traced by hand on every frame pair,
+              12 px safety above the motion-blurred edge
+8  check      every frame: cover, hands and end shot untouched`}},
  dlh:{
   story:[["The ask","Dynamic Learning Hub runs live online classes for US families and wanted a YouTube channel that earns parents’ trust years before their child can enroll."],
    ["The catch","Two audiences and two styles: 3D cartoons for toddlers, a realistic classroom for Grade 3. Both need the same faces across dozens of clips, and a maths lesson can’t afford one wrong number."],
@@ -793,6 +876,8 @@ const STEP_TOOLS={
  ultra:[["claude"],["nano"],["nano"],["nano"],["nano","claude"],["flow"],["capcut"]],
  ggpod:[["claude"],["nano"],["nano"],["nano"],["nano"],["flow"],["capcut","code"]],
  stately:[["claude"],[],["code"],["code"],["code"],["code"]],
+ walkin:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["code"]],
+ sansdirty:[["claude"],["code"],["code"],["code"],["code"],["code"]],
  dlh:[["claude"],["nano"],["nano"],["nano"],["flow"],["canva","capcut"],["eleven","suno"]],
  sans:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]],
  bunn:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]]};
@@ -842,9 +927,9 @@ function home(){
 <div class="wall" aria-label="Character and product sheets"><div class="wall-track">${[...WALL,...WALL].map(([f,cp],i)=>`<figure${i>=WALL.length?' aria-hidden="true"':""}><img src="${M(f+".webp")}" alt="${i<WALL.length?esc(cp):""}" loading="lazy" height="118"><figcaption>${esc(cp)}</figcaption></figure>`).join("")}</div></div>
 
 <section class="sec" id="work"><div class="wrap">
-  <div class="sec-head"><h2>Selected work</h2><p>Six brands, six problems. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
+  <div class="sec-head"><h2>Selected work</h2><p>Six brands, eight projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
   <div class="films">${c.map((k,i)=>`
-    <a class="film${i===0||i===3?" wide":""}" href="#${k.id}">
+    <a class="film${[0,3,4,7].includes(i)?" wide":""}" href="#${k.id}">
       <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="" loading="lazy">`}</div>
       <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':'<span class="badge chip">Board + clips</span>'}
       <div class="shade"></div>
