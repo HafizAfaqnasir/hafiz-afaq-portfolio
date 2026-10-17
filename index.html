@@ -533,6 +533,7 @@ const TOOLS={
   suno:["Suno","Original music","suno"],
   capcut:["CapCut","Edit, captions, stickers","capcut"],
   canva:["Canva","On-screen graphics","canva"],
+  gpt:["ChatGPT","Concept and first prompts"],
   claude:["Claude","Direction system: scripts, prompts, QC","claude"],
   code:["Python · OpenCV","Custom compositing and finishing","opencv"],
   manus:["Manus","Agent for research and briefs","manus"],
@@ -697,9 +698,29 @@ const CASES=[
    ["Set & frames",[["bunn-kitchen.webp","Kitchen master","Window light from the left.","lock"],["bunn-hero.webp","Hero frame","The BUNN on the counter."]]],
    ["Motion",[["v:bunn-pour.mp4","Brew","Logo intact through the pour."],["v:bunn-mug.mp4","Pour","Steam and breakfast on the table."]]]],
   finish:[["Product truth","No shot shows a button the real machine doesn’t have."],["Continuity","Same three mugs, same plates, same seats in every shot."],["Light","One morning sun direction across all three locations."],["Process","Turned into a LinkedIn case-study carousel."]]}
+,
+ {id:"swifter",num:"09",client:"SWIFTER · concept brand",kind:"Spec ad · streetwear",title:"Ten seconds to say Move Different.",
+  logline:"A self-initiated streetwear spot: one shirt, one model, eight shots and a logo that stays readable from the first frame to the last.",
+  orient:"v",final:"f/swifter.mp4",poster:"swifter-poster.jpg",label1:"Final · Direction B",final2:"f/swifter-a.mp4",poster2:"swifter-a-poster.jpg",orient2:"v",label2:"First cut · Direction A",
+  preview:"swifter-clip.mp4",previewPoster:"swifter-clip-poster.jpg",
+  specs:["9:16","2 × 0:10","Spec work","Music-led"],tools:["gpt","flow"],
+  pain:"A new streetwear label has ten seconds to say who it is, and AI video tends to melt the one thing that matters most: the logo on the shirt.",
+  quote:"",
+  brief:["SWIFTER is a concept brand I created to test a complete streetwear ad pipeline, from a one-line idea to a finished ten-second film.","It is spec work, not a client job. I show it because it answers a question brands ask me: can AI hold a logo and a look through fast cuts?"],
+  steps:[
+   ["Set the brand","Name, brushed-type logo, a compass-star mark and the line MOVE DIFFERENT. Supporting line: YOUR STYLE. YOUR MOVE."],
+   ["Design the look","Oversized black tee with the logo on the chest and a small mark at the back neck, loose blue baggy jeans, chunky white sneakers."],
+   ["Storyboard Direction A","Eight shots in ten seconds with a male model: fabric macro, face, full look, back-neck logo, jeans tag and sneakers, the walk, the look, the reveal."],
+   ["Change direction","Rebuilt around a female model in a black cap, with a red slash under the logo and six tighter beats."],
+   ["Write the shot prompt","Same model, face, hair and outfit in every shot; logo placement named; LED-strip studio; camera moves, transitions, typography and a 100–110 BPM instrumental beat."],
+   ["Generate and check","Google Flow. QC against one list: same model, garment accuracy, logo legibility, natural movement, cuts on the beat, 9:16 framing."]],
+  board:[
+   ["Storyboards",[["swifter-sb-a.webp","Direction A · male model","Eight shots, script and prompt on one page."],["swifter-sb-b.webp","Direction B · female model","Six beats, music and specs."]]],
+   ["From the final film",[["swifter-logo.webp","0:00 · Product hook","Light sweep across the chest print."],["swifter-face.webp","0:01 · The model","Black cap, logo on the brim."],["swifter-chain.webp","0:04 · Details","Wallet chain and denim."],["swifter-sleeve.webp","0:05 · Sleeve","Small woven tag on the cuff."],["swifter-look.webp","0:08 · The look","Into camera, logo still sharp."],["swifter-end.webp","0:09 · Reveal","SWIFTER — Move Different."]]]],
+  finish:[["Hook","The shirt comes first. The face arrives one second later."],["Typography","Brand name, line and supporting line timed to the cuts, kept inside the 9:16 safe zone."],["Logo","Legible on chest, back neck and brim across every shot."],["Sound","Instrumental hip-hop and trap at 100–110 BPM, cuts on the beat."],["Delivery","Two 10-second 9:16 versions: Direction A and the final Direction B."]]}
 ];
 const LAB=[["w6","walkin-sheet","Daniel","Stately · The Walk-In","Dark Blue Shark suit, pocket square, tan shoes. Six angles."],["w6","walkin-portrait","Daniel · face","Stately","Mole beside the nose, hair parted on his right."],["w6","sans-maya-sheet","Maya","Sans · lead","Sage sweater, light-wash jeans. Twelve angles."],["w6","gg-ryan-sheet","Ryan","Glint & Gleam · founder","Glasses, curly hair, mole on the left cheek, hands for demos."],["w4","dlh-ada","Ms. Ada","Dynamic Learning Hub","Navy, lavender and a lime pin: the school’s colours."],["w4","bunn-sarah","Sarah","BUNN","Camel blazer, burgundy bag, low ponytail."],["w4","sans-family-sheet","The family","Sans","Four faces, three angles each."],["w3","dlh-kid1","Pupil","DLH","Lime bobbles, lavender polo."],["w3","dlh-kid2","Pupil","DLH","Navy uniform polo."],["w3","bunn-ryan","Ryan","BUNN","Navy hoodie, olive backpack."],["w3","gg-product","Product lock","GG Pod","Display, lid and cable from four sides."]];
-const WALL=[["walkin-sheet","Daniel · Stately"],["walkin-plate","Office plate"],["sans-maya-sheet","Maya · Sans"],["gg-ryan-sheet","Ryan · GG Pod"],["ultra-s2","Friend · ULTRA"],["dlh-ada","Ms. Ada · DLH"],["bunn-product","BUNN product lock"],["ultra-s1","Dad · ULTRA"],["sans-family-sheet","Family · Sans"],["dlh1-s1","Kofi, Leo, Amara"],["bunn-sarah","Sarah · BUNN"],["gg-product","GG Pod lock"],["dlh-plate","Classroom plate"],["bunn-kitchen","Kitchen plate"]];
+const WALL=[["swifter-look","SWIFTER · spec"],["walkin-sheet","Daniel · Stately"],["walkin-plate","Office plate"],["sans-maya-sheet","Maya · Sans"],["gg-ryan-sheet","Ryan · GG Pod"],["ultra-s2","Friend · ULTRA"],["dlh-ada","Ms. Ada · DLH"],["bunn-product","BUNN product lock"],["ultra-s1","Dad · ULTRA"],["sans-family-sheet","Family · Sans"],["dlh1-s1","Kofi, Leo, Amara"],["bunn-sarah","Sarah · BUNN"],["gg-product","GG Pod lock"],["dlh-plate","Classroom plate"],["bunn-kitchen","Kitchen plate"]];
 
 /* ================= STORY LAYER (per case) ================= */
 const STORY={
@@ -811,6 +832,27 @@ the wooden floor.`}},
 7  roto       cover edge traced by hand on every frame pair,
               12 px safety above the motion-blurred edge
 8  check      every frame: cover, hands and end shot untouched`}},
+ swifter:{
+  story:[["The ask","My own brief: a streetwear label that doesn’t exist yet, and ten seconds on a phone screen to make someone remember its name."],
+   ["The catch","Eight shots in ten seconds means a new angle every second. In AI video, every new angle is a new chance for the face to change and the logo to turn into scribbles."],
+   ["The idea","Product first, person second, brand last. Open on the print itself under a light sweep, then the model, then the details, then the walk, then the name."],
+   ["The result","Two finished 10-second versions. Direction A with a male model, and the final Direction B with a female model, cap and red slash, the logo readable in every beat."]],
+  core:"The viewer should want the shirt before they know the brand.",
+  cliche:"A model posing against a graffiti wall in the street.",
+  signature:"A light sweep across the brushed SWIFTER print in the first second, before any face appears.",
+  beatsNote:"Final cut · Direction B · 0:10",beats:[["0:00 Hook","Chest logo, light sweep.",2],["0:02 Full look","Push in. SWIFTER · MOVE DIFFERENT.",2],["0:04 Details","Logo, jeans, sneakers, attitude.",2],["0:06 The walk","Toward camera. YOUR STYLE. YOUR MOVE.",2],["0:08 The look","Into camera.",1],["0:09 Reveal","SWIFTER — Move Different.",1]],
+  prompt:{t:"Direction B · Google Flow prompt",tags:["Same model","Wardrobe","Studio","Transitions","Typography","Music"],
+   text:`Create a 10-second vertical 9:16 premium streetwear
+advertisement for "SWIFTER". Use the same female model
+throughout the video.
+Oversized black T-shirt with "SWIFTER" logo, baggy jeans,
+sneakers, indoor studio setup, cinematic lighting, modern
+transitions, beat-synced cuts, animated text and effects.
+Stylish, confident, urban vibe.
+Audio: modern hip-hop/trap beat with strong bass.
+
+Music: dark modern hip-hop / trap, 100–110 BPM,
+no vocals, high energy.`}},
  dlh:{
   story:[["The ask","Dynamic Learning Hub runs live online classes for US families and wanted a YouTube channel that earns parents’ trust years before their child can enroll."],
    ["The catch","Two audiences and two styles: 3D cartoons for toddlers, a realistic classroom for Grade 3. Both need the same faces across dozens of clips, and a maths lesson can’t afford one wrong number."],
@@ -878,6 +920,7 @@ const STEP_TOOLS={
  stately:[["claude"],[],["code"],["code"],["code"],["code"]],
  walkin:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["code"]],
  sansdirty:[["claude"],["code"],["code"],["code"],["code"],["code"]],
+ swifter:[["gpt"],["gpt"],["gpt"],["gpt"],["gpt"],["flow"]],
  dlh:[["claude"],["nano"],["nano"],["nano"],["flow"],["canva","capcut"],["eleven","suno"]],
  sans:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]],
  bunn:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]]};
@@ -927,9 +970,9 @@ function home(){
 <div class="wall" aria-label="Character and product sheets"><div class="wall-track">${[...WALL,...WALL].map(([f,cp],i)=>`<figure${i>=WALL.length?' aria-hidden="true"':""}><img src="${M(f+".webp")}" alt="${i<WALL.length?esc(cp):""}" loading="lazy" height="118"><figcaption>${esc(cp)}</figcaption></figure>`).join("")}</div></div>
 
 <section class="sec" id="work"><div class="wrap">
-  <div class="sec-head"><h2>Selected work</h2><p>Six brands, eight projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
+  <div class="sec-head"><h2>Selected work</h2><p>Six client brands and one spec ad, nine projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
   <div class="films">${c.map((k,i)=>`
-    <a class="film${[0,3,4,7].includes(i)?" wide":""}" href="#${k.id}">
+    <a class="film${[0,3,4].includes(i)?" wide":""}" href="#${k.id}">
       <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="" loading="lazy">`}</div>
       <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':'<span class="badge chip">Board + clips</span>'}
       <div class="shade"></div>
@@ -1025,12 +1068,12 @@ function player(src,poster,orient,label){
 }
 function casePage(k){
   const i=CASES.indexOf(k),nx=CASES[(i+1)%CASES.length];
-  const hero=k.final?player(k.final,k.poster,k.orient,"Final film"):
+  const hero=k.final?player(k.final,k.poster,k.orient,k.label1||"Final film"):
     (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="metadata" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v empty"><img src="${M(k.poster)}" alt=""><p>The final ad is with the client. Scroll down for the full production board and clips.</p></div>`);
   return `
 <div class="wrap cp-top"><a class="back" href="#work">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="#${c.id}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
 <header class="wrap cp-hero${k.orient==="h"?" land":""}">
-  <div class="reveal">${k.orient==="h"?hero:`<div>${hero}</div>`}${k.final2?`<div style="margin-top:14px">${player(k.final2,k.poster2,"h","Video 2")}</div>`:""}</div>
+  <div class="reveal">${k.orient==="h"?hero:`<div>${hero}</div>`}${k.final2?`<div style="margin-top:14px">${player(k.final2,k.poster2,k.orient2||"h",k.label2||"Video 2")}</div>`:""}</div>
   <div class="reveal" style="animation-delay:.12s">
     <span class="cp-num">Case ${k.num}</span>
     <div class="chips"><span class="chip red">${esc(k.kind)}</span><span class="chip">${esc(k.client)}</span></div>
