@@ -451,6 +451,31 @@ dialog#lb .cap{font:400 .74rem var(--f-slate);color:var(--soft);padding:10px 0;t
 .th-x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:14px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(10,10,10,.6);color:var(--paper);font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
 .th-x:hover{background:var(--red);border-color:var(--red)}
 body.th-open{overflow:hidden}
+
+/* cover hero + ledger + builds */
+.player.cover{background:#000}.player.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.ledger{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.ledger li{background:var(--stage);padding:20px 20px 22px;display:grid;gap:6px;position:relative}
+.ledger h3{font-size:1.08rem;font-weight:600}.ledger p{color:var(--mute);font-size:.9rem}
+.ledger .tick{position:absolute;top:16px;right:16px;width:24px;height:24px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:.72rem;font-weight:700}
+@media (max-width:860px){.ledger{grid-template-columns:1fr 1fr}}@media (max-width:520px){.ledger{grid-template-columns:1fr}}
+.builds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.build{border:1px solid var(--line);background:var(--stage-2);padding:26px;display:grid;gap:14px;align-content:start;position:relative;overflow:hidden}
+.build .bvis{height:150px;border-radius:12px;overflow:hidden;position:relative;background:#111;border:1px solid var(--line)}
+.build h3{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:700;letter-spacing:-.02em}
+.build p{color:var(--soft);font-size:.95rem}
+.build .bstats{display:flex;flex-wrap:wrap;gap:8px 18px}.build .bstats span{font:500 .72rem var(--f-slate);letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}.build .bstats b{color:var(--paper);font-size:.9rem;margin-right:4px}
+.bv-up{display:grid;grid-template-columns:1fr 1fr;height:100%}.bv-up div{display:grid;place-items:center;font:700 1.4rem var(--f-slate)}
+.bv-up div:first-child{background:repeating-linear-gradient(45deg,#2a2a2a 0 8px,#222 8px 16px);color:#888;filter:blur(1px)}
+.bv-up div:last-child{background:linear-gradient(135deg,#1b1b1b,#2b0907);color:var(--paper)}
+.bv-code{padding:16px;font:400 .76rem/1.6 var(--f-slate);color:#9ad;white-space:pre;overflow:hidden}
+.bv-code b{color:var(--red);font-weight:500}
+.bv-pan{display:flex;align-items:center;gap:16px;padding:0 22px;height:100%;background:#121212}
+.bv-pan i{width:84px;height:84px;border-radius:50%;flex:none;background:radial-gradient(circle at 40% 35%,#d6ff9e,#39FF14 40%,#0a5a00 75%);box-shadow:0 0 0 7px #3c4148,0 0 30px #39FF14aa}
+.bv-pan span{display:block;font:800 1.7rem var(--f-body);letter-spacing:-.02em;color:#fff}.bv-pan small{font:500 .72rem var(--f-slate);color:#FFD60A;letter-spacing:.08em;text-transform:uppercase}
+.bv-sw{display:flex;height:100%}.bv-sw i{flex:1}
+@media (max-width:760px){.builds{grid-template-columns:1fr}}
+.files>*{min-width:0}.file .two>*{min-width:0}.fstats>*{min-width:0}.did li{overflow-wrap:anywhere}
 /* mobile overrides (last so they win) */
 @media (max-width:900px){
   .hero-grid>div:first-child{display:contents}
@@ -485,6 +510,7 @@ body.th-open{overflow:hidden}
     <li><a href="#toolkit" data-home>Toolkit</a></li>
     <li><a href="#lab" data-home>Character lab</a></li>
     <li><a href="#workflow" data-home>Workflow</a></li>
+    <li><a href="#builds" data-home>Builds</a></li>
     <li><a href="#ip">IP &amp; Regulatory</a></li>
     <li><a href="#about" data-home>About</a></li>
   </ul>
@@ -586,6 +612,25 @@ const CASES=[
    ["Motion",[["v:ultra-dad.mp4","Sidewalk shot","Dad holds the tin to camera; label readable."]]]],
   finish:[["Label composite","The tin label tracked from the real packshot in the hero shots."],["Caption line","“Same ritual. Zero nicotine. No crash.” lands on the product shot."],["Sound","A room tone for each location and a swell into the reveal."],["Master","−14 LUFS for TikTok, Reels and Shorts."]]},
 
+ {id:"erased",num:"",client:"Optimum Vision · optimum.com.pk",kind:"B2B brand film",title:"Every other room gets erased.",
+  logline:"A 56-second film for a Karachi digital-signage company: the places a visitor forgets turn into pencil and rub away. The room with the Optimum wall stays.",
+  orient:"v",final:null,poster:"cover-erased.webp",preview:null,previewImg:"tile-erased.webp",
+  emptyNote:"First cut is with the client for approval. The full workflow is below.",
+  specs:["9:16","0:56","Social cut","−14.9 LUFS"],tools:["claude","nano","flow","code"],
+  pain:"Optimum sells video walls and LED screens to banks, telecoms and retail. Their real product is a feeling, a space people remember, and a spec sheet can’t show that.",
+  brief:["Optimum Vision installs video walls and digital signage for brands like Khaadi, Telenor and Samaa TV.","They needed a campaign film that sells the result, not the hardware: a lobby people remember."],
+  steps:[
+   ["Read the business","Their own site: B2B reseller and integrator, quote-led sales, real installs. The angle: a screen without good content is wasted, and a lobby without a screen is forgotten."],
+   ["Write ERASED","A man walks out of a bank, a hotel and a university. Each room turns into a pencil sketch and erases behind him. At Optimum, everything erases except the LED wall."],
+   ["Cast the people","Hamza, the visitor, in a day outfit and a night outfit. Bilal, his friend at the dhaba. Zara, the Optimum host, the only character who smiles."],
+   ["Build every room three times","Bank, hotel, university and the Optimum lobby, each as real, pencil sketch and blank paper, plus the dhaba and an end-card paper."],
+   ["Beat the three-reference limit","Flow takes three references. Each room’s real → sketch → erased states were stacked into one strip image, so face, outfit and room still fit."],
+   ["Shoot the shot list","Reverse-tracking erase shots, the push-in at Optimum, the payoff where only the wall survives, and the dhaba line at night."],
+   ["Revise and finish","v02 put the Optimum logo on the wall and gave Hamza his own line. v03 removed a jump cut, softened the close-up light and held the hook longer."]],
+  ledger:[["Hamza","Headshot · day body · night body"],["Bilal","Headshot · body, outfit locked"],["Zara","Headshot"],["Bank","Real · sketch · erased"],["Hotel","Real · sketch · erased"],["University","Real · sketch · erased"],["Optimum lobby","Real · sketch with live wall · wall only"],["Dhaba","Night, real"],["End card","Paper, logo wall glowing"]],
+  board:[],
+  finish:[["Sound","No music in the forgotten places, only pencil scratch and eraser. Warm music starts the moment he enters Optimum."],["Brand","The Optimum wall is the logo: entering, during the erase, the look back, the end card."],["Line","“Be the room they remember.”"],["QC","Checked at one frame per second: no face changes, no room coming back, no jump cuts."],["Delivery","9:16 social cut, 56 seconds, −14.9 LUFS."]]},
+
  {id:"ggpod",num:"02",client:"Glint & Gleam · GG Pod",kind:"Founder interview ad",title:"A founder interview that feels recorded, not rendered.",
   logline:"A 1:47 interview with an AI founder in his workshop, cut like the founder ads that sell.",
   orient:"v",final:"f/ggpod.mp4",poster:"gg-s2.webp",preview:"gg-talk.mp4",previewPoster:"gg-talk-poster.jpg",
@@ -605,6 +650,25 @@ const CASES=[
    ["Casting & set",[["gg-ryan-sheet.webp","Founder sheet","Eight panels, including seated pose and hands.","lock"],["gg-set.webp","Workshop plate","Empty set, one pendant, window light from the left.","lock"],["gg-product.webp","Product lock","Display, lid and cable side fixed from four angles.","lock"]]],
    ["Frames & motion",[["gg-frame.webp","Master frame","Ryan in the set, documentary framing."],["gg-s1.webp","Demo from the final","The device in use, matching the product sheet."],["v:gg-talk.mp4","Interview clip","Hands, glasses and eye-line hold."],["v:gg-demo.mp4","Demo clip","Retainer goes into the tank."]]]],
   finish:[["Captions","Transcribed from the audio and timed word by word in the brand’s style."],["Look","Colour matched across clips, grain and vignette, upscaled to 1080p."],["Sound","One room tone under every cut; −14 LUFS, −1.4 dB peak."],["Endings","Version A ends on a quote over black like the reference; version B on Ryan’s face."]]},
+
+ {id:"orakser",num:"",client:"ORAKSER · orakser.com",kind:"AI UGC testimonial ad",title:"One ® on a signboard.",
+  logline:"A 37-second selfie-style ad for a Karachi trademark firm. A restaurant owner explains why he registered his name before anything else.",
+  orient:"v",final:null,poster:"cover-orakser.webp",preview:null,previewImg:"tile-orakser.webp",
+  emptyNote:"Characters and restaurant are fictional. The full build is below.",
+  specs:["9:16","0:37","4 clips","−14 LUFS"],tools:["claude","nano","flow","code"],
+  pain:"Restaurant owners spend on food, fit-out and marketing, then lose the name to someone else because it was never registered. A brochure doesn’t make them feel that.",
+  brief:["ORAKSER handles trademark registration in Karachi and wanted Reels that speak to restaurant owners in their own words.","The script was theirs. I turned it into four UGC shots with one AI actor who never changes."],
+  steps:[
+   ["Route the project","AI UGC testimonial: talking head, selfie feel, raw phone look, 9:16, about 30 seconds in four clips."],
+   ["Cast Faraz","35, owns a garden restaurant, navy shalwar kameez, thick beard, brown leather watch. Every version that looked like a model was thrown out."],
+   ["Lock him","A character sheet so he’s the same man in every frame, and the evening light locked across all four shots."],
+   ["Four shots","A selfie to hook, sitting at his table to tell the story, standing under his sign for the payoff, a selfie again to ask."],
+   ["Fix what AI invents","A second phone in his free hand, a watch that jumped wrists, a folder that kept opening, a lapel mic that popped in. Each fix: give every hand a job."],
+   ["Paint the sign in the edit","AI can’t spell, so the board was generated blank. The name was painted on and tracked. On “register kar diya”, a small ® appears."],
+   ["Finish","Captions in ORAKSER’s logo colours, four clips levelled, three sound effects, a clean end card with real contact details."]],
+  board:[],
+  ledger:[["Faraz","Actor base · character sheet"],["Restaurant","Garden setting at dusk, blank signboard"],["Clip 1","Hook selfie"],["Clip 2","Story at his table"],["Clip 3","Payoff under the sign"],["Clip 4","CTA selfie, mic-free retake"],["Graphics","Tracked sign name, ®, captions, end card"]],
+  finish:[["Captions","Red for the problem words, blue for the brand words, from ORAKSER’s own logo."],["Payoff","The ® lands with a small flash and tick on the exact word."],["Sound","Four clips within 1.5 LU of each other, soft fades, three effects only."],["Speed","Prompt to final export in about two hours."],["Delivery","9:16, 37 seconds, −14 LUFS, SEO file name and title metadata."]]},
 
  {id:"stately",num:"03",client:"Stately · statelymen.com",kind:"Background replacement",title:"A luxury study set, without a reshoot.",
   logline:"Four minutes of creator footage moved from a plain wall into a lamp-lit walnut study.",
@@ -663,6 +727,25 @@ const CASES=[
    ["Video 2 · Casting & set",[["dlh-ada.webp","Ms. Ada","Navy blazer, lavender blouse, lime pin.","lock"],["dlh-kid1.webp","Pupil sheet","Lime bobbles, lavender polo.","lock"],["dlh-kid2.webp","Pupil sheet","Navy uniform polo.","lock"],["dlh-kid3.webp","Pupil sheet","The third face that never swaps.","lock"],["dlh-plate.webp","Classroom plate","Blank board, window light from the left.","lock"]]],
    ["Video 2 · In the lesson",[["dlh-frame.webp","Start frame","Teacher, pupils and a blank board."],["dlh2-s1.webp","Graphics on the board","“What is a fraction?” designed in the edit."],["dlh2-s2.webp","The payoff","Two-sixths, great job."]]]],
   finish:[["Numbers","Every numeral and diagram designed in Canva and placed in CapCut."],["Voices","Character lines kept consistent with fixed ElevenLabs voices."],["Music","The client’s Afrobeat track and original Suno music."],["CTA","Logo, website and phone on the end card."]]},
+
+ {id:"nhis",num:"",client:"New Horizon Integration Systems",kind:"Pitch · brand film + logo sting",title:"Everyone’s asleep. Not me.",
+  logline:"A 45-second film where a smart building narrates its own night, plus a 6.5-second logo sting where the lights go out and the building wakes up.",
+  orient:"v",final:null,poster:"cover-nhis.webp",preview:null,previewImg:"tile-nhis.webp",
+  emptyNote:"Made for a pitch meeting. The full plan and assets are below.",
+  specs:["16:9 + 9:16","0:45 film","0:06.5 sting","30s and 15s cutdowns"],tools:["claude","nano","flow","eleven","suno","code"],
+  pain:"Building management systems are invisible when they work. Nobody buys BMS, ELV and fire-and-life-safety integration from a list of acronyms.",
+  brief:["NHIS integrates building management, security, fire safety and energy systems for towers, hospitals and plants in Karachi.","I pitched AI video and design. The idea: let the building tell you what it handled while everyone slept."],
+  steps:[
+   ["Read the company","Integrated BMS, ELV, OT security, energy, 27 years. What the client sells is calm: things go wrong at night and nobody ever knows."],
+   ["Write the night","The building speaks: a forgotten light on floor seven, an unknown car in parking, a warm server room, smoke from a pantry. Each handled quietly."],
+   ["Anchor the tower","One hero tower reference, a night-light anchor, and five consistency blocks pasted word for word into every shot."],
+   ["Eight shots","Establishing push-in, the lamp switching off, the CCTV dome tracking a car, cold mist in the server room, smoke cleared, the network glowing, sunrise."],
+   ["Sound as the brand","A calm 60 BPM score that never turns dramatic, and a two-note “pulse” every time the building acts. The pulse becomes the audio logo."],
+   ["Lights Out. Building On.","The sting: windows switch off one by one, a few turn cyan and connect, the points fly together into the real NHIS mark."],
+   ["Cutdowns","30 seconds without the server room, 15 seconds as a Reels hook: 3 AM, the smoke, the end line."]],
+  board:[],
+  ledger:[["Tower","Hero reference, no signage"],["Shots S01–S07","Start frames, 16:9 and 9:16"],["Video","Image-to-video, three takes each"],["Voice","Calm, close-mic, 0.9× speed"],["Music","45s ambient score, 60 BPM"],["Pulse","Two-note chime, the audio logo"],["Logo sting","6.5s, 16:9 and 9:16, built from the real logo file"]],
+  finish:[["Voice","Calm and dry, never dramatic. The building is in control."],["Pulse","The same chime on every action and on the logo."],["Claims check","The smoke line flagged for the client to confirm their system really does it."],["Logo","Animated from the original file so the letters stay exact."],["Delivery","Film plan, sting in 16:9 and 9:16, 30s and 15s cutdowns."]]},
 
  {id:"sansdirty",num:"06",client:"Sans Air Purifier Mini",kind:"VFX revision on real footage",title:"The filter had to look used.",
   logline:"A client note on a filmed UGC clip: make the filter look dirty. Fixed in post, in 4K at 60 frames, with the creator’s hands moving over it.",
@@ -879,6 +962,76 @@ Audio: modern hip-hop/trap beat with strong bass.
 
 Music: dark modern hip-hop / trap, 100–110 BPM,
 no vocals, high energy.`}},
+ erased:{
+  story:[["The ask","Optimum Vision installs video walls and LED screens. They wanted a campaign that sells what a screen does to a room, not the screen."],
+   ["The catch","Nobody remembers a lobby. And showing a screen on a screen is the most boring ad in the category."],
+   ["The idea","Forgetting, made visible. Every ordinary room turns to pencil and rubs away behind the visitor. The Optimum room is the only one that stays."],
+   ["The result","A 56-second film, revised twice with the team: the Optimum logo lives on the wall, and that night at a dhaba Hamza still can’t stop talking about an office."]],
+  core:"The viewer should realise they’ve already forgotten most of the lobbies they’ve walked through.",
+  cliche:"A slow pan across a video wall with a voiceover listing pixel pitch.",
+  signature:"The look back: everything is blank paper except one glowing wall.",
+  beatsNote:"Shot list · ~0:56",beats:[["Bank","Erased behind him. He never looks back.",5],["Hotel","Same erase, faster.",4],["University","Fastest. Rule of three.",3],["Optimum","He slows down. Light from the wall on his face.",6],["The smile","The wall in his eyes.",3],["Payoff","Everything erases except the wall.",8],["Dhaba","“Yaar, I saw an office today…”",9],["End card","Be the room they remember.",7]],
+  prompt:{t:"Shot 1A · the bank erase, the hook",tags:["Reverse tracking","35mm","Stacked state strip","Erase rules","Sound plan"],
+   text:`The first three seconds decide everything.
+
+A man walks out of a bank toward a camera that
+glides backward ahead of him, 35mm, chest height.
+Behind him the room starts turning into a pencil
+drawing, beginning at the back wall and spreading
+toward camera. Then invisible eraser strokes rub
+the sketch away into blank paper.
+
+Rules: Hamza never changes. He stays real and in
+colour, same pace, and never looks back.
+The forgetting happens to the room, not to him.
+
+References: Hamza headshot, day outfit,
+ERS_SEQ01_BANK_ERASE strip (real → sketch → erased)`}},
+ orakser:{
+  story:[["The ask","ORAKSER wanted restaurant owners to see trademark registration as protection for the name they’ve worked for."],
+   ["The catch","No actor, no restaurant, no shoot. And AI video invents things nobody asked for: extra phones, moving watches, certificates that don’t exist."],
+   ["The idea","One owner, four camera set-ups in the same evening light, and one second of payoff: the ® arriving on his own sign."],
+   ["The result","A 37-second Reel that sounds like a restaurant owner, not an ad, because the script comes from years of trademark work."]],
+  core:"A restaurant owner should feel the fear of losing his name, then the relief of owning it.",
+  cliche:"A lawyer behind a desk explaining the Trade Marks Ordinance.",
+  signature:"A blank board on purpose, so the name and the ® could be painted on in the edit.",
+  beatsNote:"Final cut · 0:37",beats:[["Hook","“Restaurant owners, yeh ghalti mat karna.”",5],["Story","Why the name had to be his.",10],["Payoff","“Trademark register kar diya.” The ® lands.",8],["CTA","“Aap bhi Orakser se contact karein.”",9],["End card","Logo, WhatsApp, website.",5]],
+  prompt:{t:"Clip 4 · the CTA, after the mic fix",tags:["ID card","Selfie","Hands","Avoid list","Timestamped"],
+   text:`FORMAT: vertical 9:16 phone selfie at arm's length,
+natural micro-shake, raw and unedited.
+CHARACTER: Faraz, 35, navy shalwar kameez, thick
+beard, brown leather watch on the left wrist.
+SETTING: his garden restaurant at dusk, warm bulbs,
+blank wooden signboard behind him.
+HANDS: right hand holds the phone. Left hand moves
+from his chest ("main") to open toward the lens
+("aap bhi"). There is no microphone on him: no
+lavalier mic, nothing attached to his kameez.
+AVOID: lavalier microphone, any object appearing on
+his clothes, second phone, folder, text on the sign.`}},
+ nhis:{
+  story:[["The ask","Pitch NHIS on AI video and design: something that makes building integration feel like the reason a tower runs well."],
+   ["The catch","The best work of a building system is the thing that never happens. There is nothing to film."],
+   ["The idea","Give the building a voice. At 3 AM it quietly handles four small crises, and by morning nobody knows anything happened."],
+   ["The result","A 45-second film plan with every asset and prompt, cutdowns for social, and a logo sting that tells the same story in six seconds."]],
+  core:"The viewer should feel safe because someone, or something, is awake when they aren’t.",
+  cliche:"Drone shots of a tower with a dashboard of glowing icons.",
+  signature:"A two-note pulse each time the building acts, which becomes the brand’s sound.",
+  beatsNote:"Film · 0:45",beats:[["03:00 AM","“Everyone’s asleep.”",5],["Floor seven","A forgotten light goes out.",5],["Parking","An unknown car, tracked.",5],["Server room","Running warm. Cooling it now.",5],["Floor twelve","Smoke, fans, zone sealed.",8],["The brain","Every system thinks together.",6],["Sunrise","Nobody will know.",6],["End card","Buildings that think.",5]],
+  prompt:{t:"The night voice · full script",tags:["Voiceover","On-screen HUD","60 BPM score","Pulse sound","Claims check"],
+   text:`It's three in the morning. Everyone's asleep.
+Not me. Floor seven forgot a light. I didn't.
+A car I don't recognise just came into parking.
+I'm watching.
+The server room is running warm. Cooling it now.
+Floor twelve. A little smoke from the pantry.
+Fans on. Zone sealed. Security's on the way.
+I don't sleep. I don't forget.
+Every system I have thinks together.
+By morning, nobody will know what happened
+last night. That's the point.
+New Horizon Integration Systems.
+Buildings that think.`}},
  dlh:{
   story:[["The ask","Dynamic Learning Hub runs live online classes for US families and wanted a YouTube channel that earns parents’ trust years before their child can enroll."],
    ["The catch","Two audiences and two styles: 3D cartoons for toddlers, a realistic classroom for Grade 3. Both need the same faces across dozens of clips, and a maths lesson can’t afford one wrong number."],
@@ -946,11 +1099,14 @@ const STEP_TOOLS={
  stately:[["claude"],[],["code"],["code"],["code"],["code"]],
  walkin:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["code"]],
  sansdirty:[["claude"],["code"],["code"],["code"],["code"],["code"]],
+ erased:[["claude"],["claude"],["nano"],["nano"],["code"],["flow"],["code"]],
+ orakser:[["claude"],["nano"],["nano"],["flow"],["flow"],["code"],["code"]],
+ nhis:[["claude"],["claude"],["nano"],["nano","flow"],["suno","eleven"],["code"],["code"]],
  swifter:[["gpt"],["gpt"],["gpt"],["gpt"],["gpt"],["flow"]],
  dlh:[["claude"],["nano"],["nano"],["nano"],["flow"],["canva","capcut"],["eleven","suno"]],
  sans:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]],
  bunn:[["claude"],["claude"],["nano"],["nano"],["nano"],["flow"],["capcut"]]};
-CASES.forEach(c=>{Object.assign(c,STORY[c.id]);c.stepTools=STEP_TOOLS[c.id]||[]});
+CASES.forEach((c,i)=>{Object.assign(c,STORY[c.id]);c.stepTools=STEP_TOOLS[c.id]||[];c.num=String(i+1).padStart(2,"0")});
 
 /* ================= HELPERS ================= */
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -983,12 +1139,12 @@ function home(){
   </div>
   <div class="reel" aria-label="Clips from recent work">
     <a class="phone p1" href="#sans" data-play="sans-reaction.mp4" data-pp="sans-reaction-poster.jpg" data-t="Sans Air Purifier Mini · TikTok Shop UGC ad" data-go="#sans" data-gol="Open the case study"><video data-auto muted loop playsinline preload="metadata" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
-    <a class="phone p2" href="#work" aria-label="Play the showreel" data-play="showreel.mp4" data-pp="showreel-poster.jpg" data-t="Showreel · 6 brands · 0:24 · silent cut" data-go="#work" data-gol="See all nine projects"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
+    <a class="phone p2" href="#work" aria-label="Play the showreel" data-play="showreel.mp4" data-pp="showreel-poster.jpg" data-t="Showreel · 6 brands · 0:24 · silent cut" data-go="#work" data-gol="See all twelve projects"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
     <a class="phone p3" href="#ggpod" data-play="f/ggpod.mp4" data-pp="gg-talk-poster.jpg" data-t="Glint & Gleam · GG Pod · founder interview, with sound" data-go="#ggpod" data-gol="Open the case study" data-sound><video data-auto muted loop playsinline preload="metadata" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
   </div>
 </div></header>
 <section class="stats" aria-label="Proof in numbers"><div class="wrap">
-  <div><b>6</b><span>brands, one person from brief to final file</span></div>
+  <div><b>8</b><span>client brands, one person from brief to final file</span></div>
   <div><b>18</b><span>start frames locked before a single ULTRA clip moved</span></div>
   <div><b>3:13</b><span>story film with the same faces from first shot to last</span></div>
   <div><b>189</b><span>page DRAP dossier. I know what a brand is allowed to claim</span></div>
@@ -996,11 +1152,11 @@ function home(){
 <div class="wall" aria-label="Character and product sheets"><div class="wall-track">${[...WALL,...WALL].map(([f,cp],i)=>`<figure${i>=WALL.length?' aria-hidden="true"':""}><img src="${M(f+".webp")}" alt="${i<WALL.length?esc(cp):""}" loading="lazy" height="118"><figcaption>${esc(cp)}</figcaption></figure>`).join("")}</div></div>
 
 <section class="sec" id="work"><div class="wrap">
-  <div class="sec-head"><h2>Selected work</h2><p>Six client brands and one spec ad, nine projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
+  <div class="sec-head"><h2>Selected work</h2><p>Eight client brands, a pitch and a spec ad: twelve projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
   <div class="films">${c.map((k,i)=>`
-    <a class="film${[0,3,4].includes(i)?" wide":""}" href="#${k.id}">
+    <a class="film${[0,3,4,7,8,11].includes(i)?" wide":""}" href="#${k.id}">
       <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="" loading="lazy">`}</div>
-      <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':'<span class="badge chip">Board + clips</span>'}
+      <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':k.preview?'<span class="badge chip">Board + clips</span>':'<span class="badge chip">Case study</span>'}
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>${esc(k.client)}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div>
     </a>`).join("")}</div>
@@ -1024,6 +1180,32 @@ function home(){
 <section class="sec" id="lab"><div class="wrap">
   <div class="sec-head"><h2>Character lab</h2><p>Real casting sheets from client work. Consistency is decided here, before the first clip. Hover to see what is locked.</p></div>
   <div class="lab">${LAB.map(([w,f,n,s,l])=>`<figure class="${w}" data-full="${M(f+".webp")}" data-cap="${esc(n+" · "+s)}"><img src="${M(f+".webp")}" alt="${esc(n)} sheet" loading="lazy"><figcaption><strong>${esc(n)}</strong><span class="slate">${esc(s)}</span><span class="locks">${esc(l)}</span></figcaption></figure>`).join("")}</div>
+</div></section>
+
+<section class="sec" id="builds" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>Beyond <span class="hl" style="font-size:.88em">video</span></h2><p>Tools and systems I built along the way, mostly by talking to Claude. Each one solved a real problem on a real job.</p></div>
+  <div class="builds">
+    <article class="build"><div class="bvis"><div class="bv-up"><div>1080p</div><div>4K</div></div></div>
+      <span class="slate"><b>SJG Group</b> · Website hero</span><h3>A homepage video, rebuilt in 4K.</h3>
+      <p>The source was 1080p, labelled 60fps but only 283 unique frames, so it juddered. I removed the duplicate frames, upscaled every frame with Real-ESRGAN on CPU, blended back a little of the original texture so it didn’t look synthetic, and checked that no text warped.</p>
+      <div class="bstats"><span><b>3840×2160</b>master</span><span><b>5</b>web versions</span><span><b>1</b>HTML embed snippet</span></div></article>
+    <article class="build"><div class="bvis"><div class="bv-code"><b>server</b>.tool("muse_chat")
+<b>server</b>.tool("muse_generate_image")
+<b>server</b>.tool("muse_list_models")
+auth: Gateway Key · cron: daily health
+deploy: vercel · tests: 10 passing</div></div>
+      <span class="slate"><b>My own connector</b> · MCP</span><h3>A Claude connector for Meta’s Muse models.</h3>
+      <p>A TypeScript MCP server with three tools, key-based access and a daily health check, pushed to a private GitHub repo and deployed on Vercel. It’s connected in Claude and waiting on Meta API access to go live.</p>
+      <div class="bstats"><span><b>3</b>tools</span><span><b>10</b>tests</span><span><b>Vercel</b>deploy</span></div></article>
+    <article class="build"><div class="bvis"><div class="bv-pan"><i></i><div><span>PANICORE</span><small>Friends. Monsters. Bad decisions.</small></div></div></div>
+      <span class="slate"><b>Panicore</b> · YouTube brand</span><h3>A gaming clip channel, branded from zero.</h3>
+      <p>Name, a mascot called Corey (a glowing toxic-green core, designed so it resembles no game character), colours, logo, banner and watermark, plus a permission-first clipping workflow so the channel can actually be monetised.</p>
+      <div class="bstats"><span><b>#39FF14</b>signal green</span><span><b>4</b>content series</span><span><b>1</b>rights log</span></div></article>
+    <article class="build"><div class="bvis"><div class="bv-sw"><i style="background:#0A0A0A"></i><i style="background:#E3140C"></i><i style="background:#F7F5F2"></i><i style="background:#1d1c1b"></i></div></div>
+      <span class="slate"><b>This site</b> · Vibe coded</span><h3>The portfolio you’re on.</h3>
+      <p>Designed and built in conversation with Claude: twelve case pages, a showreel that opens big, a brief builder, a mobile menu and an owner-only studio, deployed from GitHub to Vercel.</p>
+      <div class="bstats"><span><b>12</b>case pages</span><span><b>1</b>HTML file</span><span><b>GitHub</b>→ Vercel</span></div></article>
+  </div>
 </div></section>
 
 <section class="sec" id="workflow" style="border-top:1px solid var(--line)"><div class="wrap">
@@ -1095,7 +1277,7 @@ function player(src,poster,orient,label){
 function casePage(k){
   const i=CASES.indexOf(k),nx=CASES[(i+1)%CASES.length];
   const hero=k.final?player(k.final,k.poster,k.orient,k.label1||"Final film"):
-    (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="metadata" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v empty"><img src="${M(k.poster)}" alt=""><p>The final ad is with the client. Scroll down for the full production board and clips.</p></div>`);
+    (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="metadata" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v cover"><img src="${M(k.poster)}" alt="${esc(k.title)}"></div>${k.emptyNote?`<p class="slate" style="margin-top:10px">${esc(k.emptyNote)}</p>`:""}`);
   return `
 <div class="wrap cp-top"><a class="back" href="#work">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="#${c.id}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
 <header class="wrap cp-hero${k.orient==="h"?" land":""}">
@@ -1138,10 +1320,14 @@ ${k.beats?`<section class="sec" style="padding-top:0"><div class="wrap">
   <ol class="steps">${k.steps.map(([h,p],i)=>`<li><div><h3>${esc(h)}</h3>${(k.stepTools[i]||[]).length?`<div class="chips st-tools">${toolList(k.stepTools[i])}</div>`:""}</div><p>${esc(p)}</p></li>`).join("")}</ol>
 </div></section>
 
-<section class="sec" style="background:var(--stage-2);border-block:1px solid var(--line)"><div class="wrap">
+${k.ledger?`<section class="sec" style="background:var(--stage-2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>The asset ledger</h2><p>Everything that was built and locked before a single clip was generated.</p></div>
+  <ol class="ledger">${k.ledger.map(([a,b],i)=>`<li><span class="slate"><b>${String(i+1).padStart(2,"0")}</b></span><h3>${esc(a)}</h3><p>${esc(b)}</p><span class="tick" aria-label="done">✓</span></li>`).join("")}</ol>
+</div></section>`:""}
+${k.board&&k.board.length?`<section class="sec" style="background:var(--stage-2);border-block:1px solid var(--line)"><div class="wrap">
   <div class="sec-head"><h2>The production board</h2><p>The actual assets from this job. Tap a still to see it full size.</p></div>
   ${k.board.map(([h,items])=>`<div class="board-group"><div class="bg-head"><h3>${esc(h)}</h3>${items.length>2?'<div class="ctl"><button type="button" data-s="-1" aria-label="Previous">←</button><button type="button" data-s="1" aria-label="Next">→</button></div>':""}</div><div class="strip">${items.map(figure).join("")}</div></div>`).join("")}
-</div></section>
+</div></section>`:""}
 
 <section class="sec"><div class="wrap two">
   <div><span class="slate"><b>Behind the shot</b></span><h2 style="font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.025em;margin:12px 0 16px">${esc(k.prompt.t)}</h2>
@@ -1179,7 +1365,11 @@ function ipPage(){
    {tag:"Trademark · Enforcement",title:"Stopping a copied brand name in seven days.",client:"Food brand · names withheld",
     problem:"Another trader was selling the same kind of product under the client’s brand name, confusing customers and borrowing the client’s goodwill.",
     did:["Set out the client’s rights and the well-known-mark protection available","Listed each infringing act against the relevant sections of the Trade Marks Ordinance 2001","Made seven specific demands with a seven-day compliance deadline","Spelled out the civil and criminal consequences of ignoring it","Marked it without prejudice and formatted it for courier, email or WhatsApp service"],
-    stats:[["7","demands"],["7","day deadline"],["2001","Trade Marks Ordinance"],["1","notice, court-ready"]]}];
+    stats:[["7","demands"],["7","day deadline"],["2001","Trade Marks Ordinance"],["1","notice, court-ready"]]},
+   {tag:"Trademark · Cross-border partnership",title:"A partner pack for a foreign IP agency.",client:"Trademark agency in China · name withheld",
+    problem:"A new overseas partner wanted to send Pakistan filings, but first asked detailed questions on cost to certificate, documents, notarisation and timeline.",
+    did:["Answered every question in one package: power of attorney template, application instruction form and a draft cooperation agreement","Set the full cost through to the certificate, paid in two stages tied to the official fees","Explained what notarisation the Registry accepts and what it doesn’t need","Rebuilt the final offer as a 9-page proposal in a law-firm layout with a 12–15 month timeline","Held company documents back until terms are agreed"],
+    stats:[["9","page proposal"],["12–15","months to certificate"],["3","documents in the partner pack"],["1","all-in quote"]]}];
   const services=["Trademark registration","Copyright","Patent","Design registration","Company & NTN registration","Domain registration","DRAP registration","FDA registration","Pakistan Single Window","Halal certification","ISO certification","PCSIR"];
   return `
 <div class="wrap cp-top"><a class="back" href="#about">← About</a></div>
