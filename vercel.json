@@ -4,22 +4,22 @@
     {
       "source": "/index.html",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/work/:slug/index.html",
       "destination": "/work/:slug/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/services/:slug/index.html",
       "destination": "/services/:slug/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/ip-trademark-regulatory/index.html",
       "destination": "/ip-trademark-regulatory/",
-      "permanent": true
+      "statusCode": 301
     }
   ],
   "headers": [
