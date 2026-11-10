@@ -1814,7 +1814,7 @@ function seoMeta(key){
   const k=CASES.find(c=>c.id===key);
   if(k)return{t:SEO_T[k.id]||`${k.client.split(" · ")[0]} – Case Study | Hafiz Afaq`,d:SEO_D[k.id]||k.logline};
   {const sv=SERVICES.find(x=>x.id===key);if(sv)return{t:sv.t,d:sv.d}}
-  if(key==="ip")return{t:"Trademark, DRAP & IP Research Services in Pakistan | Hafiz Afaq",d:"Trademark registration and brand protection, DRAP dossiers, establishment licences, import/export research and OSINT, through ORAKSER in Karachi."};
+  if(key==="ip")return{t:"Trademark, DRAP & IP Research Services | Hafiz Afaq",d:"Trademark registration and brand protection, DRAP dossiers, establishment licences, import/export research and OSINT, through ORAKSER in Karachi."};
   return SEO_HOME;
 }
 function linkify(scope){
