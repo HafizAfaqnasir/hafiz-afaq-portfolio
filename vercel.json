@@ -1,5 +1,27 @@
 {
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/work/:slug/index.html",
+      "destination": "/work/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/services/:slug/index.html",
+      "destination": "/services/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/ip-trademark-regulatory/index.html",
+      "destination": "/ip-trademark-regulatory/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/media/(.*)",
