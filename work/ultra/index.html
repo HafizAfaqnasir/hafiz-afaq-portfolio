@@ -548,7 +548,7 @@ body.th-open{overflow:hidden}
 <main id="app">
 <div class="wrap cp-top"><a class="back" href="/work/">← All work</a><nav class="tabs" aria-label="Projects"><a href="work/ultra/" aria-current="page">01 · ULTRA</a><a href="work/erased/">02 · Optimum Vision</a><a href="work/ggpod/">03 · Glint &amp; Gleam</a><a href="work/orakser/">04 · ORAKSER</a><a href="work/stately/">05 · Stately</a><a href="work/walkin/">06 · Stately</a><a href="work/cherat/">07 · Cherat Packaging</a><a href="work/dlh/">08 · Dynamic Learning Hub</a><a href="work/dlhabc/">09 · Dynamic Learning Hub</a><a href="work/nhis/">10 · New Horizon Integration Systems</a><a href="work/swapp/">11 · Swapp</a><a href="work/sansdirty/">12 · Sans Air Purifier Mini</a><a href="work/sans/">13 · Sans Air Purifier Mini</a><a href="work/bunn/">14 · BUNN Speed Brew Elite</a><a href="work/swifter/">15 · SWIFTER</a><a href="work/ehsaan/">16 · My own channel</a><a href="work/dental/">17 · The Dental Clinic</a></nav></div>
 <header class="wrap cp-hero">
-  <div class="reveal"><div><div class="player v"><video controls="" playsinline="" preload="metadata" poster="media/ultra-s1.webp" src="media/f/ultra.mp4"></video><span class="lbl chip red">Final film</span></div></div></div>
+  <div class="reveal"><div><div class="player v"><video controls="" playsinline="" preload="none" poster="media/ultra-s1.webp" src="media/f/ultra.mp4"></video><span class="lbl chip red">Final film</span></div></div></div>
   <div class="reveal" style="animation-delay:.12s">
     <span class="cp-num">Case 01</span>
     <div class="chips"><span class="chip red">Character story ad</span><span class="chip">ULTRA</span></div>
@@ -1416,9 +1416,9 @@ function home(){
     <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#work">Watch the work</a></div>
   </div>
   <div class="reel" aria-label="Clips from recent work">
-    <a class="phone p1" href="#sans" data-play="sans-reaction.mp4" data-pp="sans-reaction-poster.jpg" data-t="Sans Air Purifier Mini · TikTok Shop UGC ad" data-go="#sans" data-gol="Open the case study"><video data-auto muted loop playsinline preload="metadata" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
-    <a class="phone p2" href="#work" aria-label="Play the showreel" data-play="showreel.mp4" data-pp="showreel-poster.jpg" data-t="Showreel · 6 brands · 0:24 · silent cut" data-go="#work" data-gol="See all seventeen projects"><video data-auto muted loop playsinline preload="auto" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
-    <a class="phone p3" href="#ggpod" data-play="f/ggpod.mp4" data-pp="gg-talk-poster.jpg" data-t="Glint & Gleam · GG Pod · founder interview, with sound" data-go="#ggpod" data-gol="Open the case study" data-sound><video data-auto muted loop playsinline preload="metadata" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
+    <a class="phone p1" href="#sans" data-play="sans-reaction.mp4" data-pp="sans-reaction-poster.jpg" data-t="Sans Air Purifier Mini · TikTok Shop UGC ad" data-go="#sans" data-gol="Open the case study"><video data-auto muted loop playsinline preload="none" poster="${M("sans-reaction-poster.jpg")}" src="${M("sans-reaction.mp4")}"></video><span class="cap">Sans · UGC ad</span></a>
+    <a class="phone p2" href="#work" aria-label="Play the showreel" data-play="showreel.mp4" data-pp="showreel-poster.jpg" data-t="Showreel · 6 brands · 0:24 · silent cut" data-go="#work" data-gol="See all seventeen projects"><video data-auto muted loop playsinline preload="none" poster="${M("showreel-poster.jpg")}" src="${M("showreel.mp4")}"></video><span class="rec">REEL</span><span class="cap">Showreel · 6 brands · 0:24</span></a>
+    <a class="phone p3" href="#ggpod" data-play="f/ggpod.mp4" data-pp="gg-talk-poster.jpg" data-t="Glint & Gleam · GG Pod · founder interview, with sound" data-go="#ggpod" data-gol="Open the case study" data-sound><video data-auto muted loop playsinline preload="none" poster="${M("gg-talk-poster.jpg")}" src="${M("gg-talk.mp4")}"></video><span class="cap">GG Pod · founder ad</span></a>
   </div>
 </div></header>
 <section class="stats" aria-label="Proof in numbers"><div class="wrap">
@@ -1567,12 +1567,12 @@ function figure(item){
   return `<figure class="frame"><div class="pic" data-full="${M(src)}" data-cap="${esc(t)}"><img src="${M(src)}" alt="${esc(t)}" loading="lazy">${tag?`<span class="badge lock">${tag==="lock"?"Locked":esc(tag)}</span>`:""}</div><figcaption><span class="slate"><b>${esc(t)}</b></span><span>${esc(d)}</span></figcaption></figure>`;
 }
 function player(src,poster,orient,label){
-  return `<div class="player ${orient}"><video controls playsinline preload="metadata" poster="${M(poster)}" src="${M(src)}"></video>${label?`<span class="lbl chip red">${esc(label)}</span>`:""}</div>`;
+  return `<div class="player ${orient}"><video controls playsinline preload="none" poster="${M(poster)}" src="${M(src)}"></video>${label?`<span class="lbl chip red">${esc(label)}</span>`:""}</div>`;
 }
 function casePage(k){
   const i=CASES.indexOf(k),nx=CASES[(i+1)%CASES.length];
   const hero=k.final?player(k.final,k.poster,k.orient,k.label1||"Final film"):
-    (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="metadata" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v cover"><img src="${M(k.poster)}" alt="${esc(k.title)}"></div>${k.emptyNote?`<p class="slate" style="margin-top:10px">${esc(k.emptyNote)}</p>`:""}`);
+    (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v cover"><img src="${M(k.poster)}" alt="${esc(k.title)}"></div>${k.emptyNote?`<p class="slate" style="margin-top:10px">${esc(k.emptyNote)}</p>`:""}`);
   return `
 <div class="wrap cp-top"><a class="back" href="/work/">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="#${c.id}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
 <header class="wrap cp-hero${k.orient==="h"?" land":""}">
@@ -1766,8 +1766,8 @@ function ipPage(){
   <div><span class="slate"><b>Brand videos for ORAKSER</b></span><h2 style="font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.025em;margin:12px 0 16px">Where the two worlds meet.</h2>
     <p style="color:var(--soft);max-width:44ch">I made these AI-assisted Urdu reels for ORAKSER’s social channels. Each one tells a business owner, in under twenty seconds, why a brand with no registered trademark can be lost to someone else.</p>
     <p style="color:var(--soft);max-width:44ch;margin-top:12px">Same method as my client films: a story first, a clear hook, bold captions, and one action at the end: protect your brand.</p></div>
-  <figure class="ipv"><div class="player sq"><video controls playsinline preload="metadata" poster="${M("ip/orakser-reel-1.jpg")}" src="${M("ip/orakser-reel-1.mp4")}"></video></div><figcaption class="slate"><b>Reel 01</b> · “Apna brand” · 0:18 · Urdu</figcaption></figure>
-  <figure class="ipv"><div class="player v"><video controls playsinline preload="metadata" poster="${M("ip/orakser-reel-2.jpg")}" src="${M("ip/orakser-reel-2.mp4")}"></video></div><figcaption class="slate"><b>Reel 02</b> · “Apna brand bachao” · 0:18 · Urdu</figcaption></figure>
+  <figure class="ipv"><div class="player sq"><video controls playsinline preload="none" poster="${M("ip/orakser-reel-1.jpg")}" src="${M("ip/orakser-reel-1.mp4")}"></video></div><figcaption class="slate"><b>Reel 01</b> · “Apna brand” · 0:18 · Urdu</figcaption></figure>
+  <figure class="ipv"><div class="player v"><video controls playsinline preload="none" poster="${M("ip/orakser-reel-2.jpg")}" src="${M("ip/orakser-reel-2.mp4")}"></video></div><figcaption class="slate"><b>Reel 02</b> · “Apna brand bachao” · 0:18 · Urdu</figcaption></figure>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
@@ -1934,7 +1934,7 @@ function renderFinals(){
     const mine=items.filter(it=>it.project===box.dataset.project);box.innerHTML="";
     if(mine.length)box.insertAdjacentHTML("beforebegin","");
     mine.forEach(it=>{const src=safeUrl(it.url||"");if(!src)return;const el=document.createElement("div");el.className="final";
-      el.innerHTML=it.kind==="video"?`<video controls playsinline preload="metadata" src="${esc(src)}"></video>`:it.kind==="image"?`<img src="${esc(src)}" alt="${esc(it.title)}" loading="lazy">`:`<a class="watch" href="${esc(src)}" target="_blank" rel="noopener">▶ Watch: ${esc(it.title)}</a>`;
+      el.innerHTML=it.kind==="video"?`<video controls playsinline preload="none" src="${esc(src)}"></video>`:it.kind==="image"?`<img src="${esc(src)}" alt="${esc(it.title)}" loading="lazy">`:`<a class="watch" href="${esc(src)}" target="_blank" rel="noopener">▶ Watch: ${esc(it.title)}</a>`;
       el.insertAdjacentHTML("beforeend",`<div class="meta"><span class="slate"><b>More from this project</b> · ${esc(it.title)}</span></div>`);box.appendChild(el)})});
   renderStudioList();
 }
