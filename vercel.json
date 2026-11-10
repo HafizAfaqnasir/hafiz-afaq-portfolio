@@ -20,6 +20,11 @@
       "source": "/ip-trademark-regulatory/index.html",
       "destination": "/ip-trademark-regulatory/",
       "statusCode": 301
+    },
+    {
+      "source": "/work/index.html",
+      "destination": "/work/",
+      "statusCode": 301
     }
   ],
   "headers": [
