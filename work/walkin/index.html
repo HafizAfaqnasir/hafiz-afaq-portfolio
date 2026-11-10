@@ -1003,23 +1003,24 @@ const CASES=[
    ["From the final film",[["swifter-logo.webp","0:00 · Product hook","Light sweep across the chest print."],["swifter-face.webp","0:01 · The model","Black cap, logo on the brim."],["swifter-chain.webp","0:04 · Details","Wallet chain and denim."],["swifter-sleeve.webp","0:05 · Sleeve","Small woven tag on the cuff."],["swifter-look.webp","0:08 · The look","Into camera, logo still sharp."],["swifter-end.webp","0:09 · Reveal","SWIFTER — Move Different."]]]],
   finish:[["Hook","The shirt comes first. The face arrives one second later."],["Typography","Brand name, line and supporting line timed to the cuts, kept inside the 9:16 safe zone."],["Logo","Legible on chest, back neck and brim across every shot."],["Sound","Instrumental hip-hop and trap at 100–110 BPM, cuts on the beat."],["Delivery","Two 10-second 9:16 versions: Direction A and the final Direction B."]]},
 
- {id:"ehsaan",num:"",client:"My own channel · OneFace",kind:"Short film · one actor, nine roles",title:"Every role is me.",
-  logline:"A 2:40 Urdu short in four acts. One real face, mine, plays all nine characters, from the boss to the grandfather.",
+ {id:"ehsaan",num:"",client:"My own channel · OneFace",kind:"Short film · one actor, six roles",title:"Every role is me.",
+  logline:"A 2:40 AI short film where one real face, mine, plays all six characters: a factory worker, an old guard, a mechanic, a biker, a rich businessman and his sister.",
   orient:"h",final:null,poster:"cover-ehsaan.webp",preview:null,previewImg:"tile-ehsaan.webp",badge:"Own channel",
-  emptyNote:"Made for my own channel. It goes up here when the channel launches. The full workflow is below.",
-  specs:["16:9","2:40","18 shots · 4 acts","Roman Urdu captions"],tools:["claude","nano","flow","code"],
-  pain:"In a one-actor channel, every role has to read as a different person and still be recognisably the same face. Too close and the audience gets confused. Too far and the joke is lost.",
-  brief:["My own channel, in the one-actor parable format: I play every character and each story carries a moral.","The pilot, Ehsaan Ki Zanjeer (the chain of kindness), is a parable told with my own cast, in my own words."],
+  emptyNote:"Made for my own channel. The film goes up here when the channel launches. The full workflow is below.",
+  specs:["16:9","2:40","21 shots","Original score"],tools:["claude","nano","flow","code"],
+  pain:"Getting AI to make a video is easy. Getting it to keep the same face in every shot is the hard part, and here six different people had to share one face without looking like clones.",
+  brief:["My own channel, in the one-actor parable format: I play every character and each story carries a moral.","Ehsaan Ki Zanjeer (Chain of Kindness): a worker gets locked in a freezer, a guard saves him and asks for one thing in return, “help the next person in trouble”, and that favour travels down a highway, into a dhaba and back to the worker’s own home."],
   steps:[
-   ["Build the character bank","Nine roles from one face, each with an ID card: the boss, Behen, Abba Ji, Ammi Jaan, Dada Ji, Chhota Bhai, Chotu, Seth Sahab and Jaggu."],
-   ["Blend, don’t swap","Face fusion at set strengths. The lead is 100% me, the other roles roughly 35–55%, so the family resemblance looks real instead of cloned."],
-   ["Write four acts","Eighteen shots in four acts: a kindness given, passed on, passed on again at a cost, and returned."],
-   ["Make it portable","A reusable character file, so the same cast walks into every future episode unchanged."],
-   ["Shoot the shots","Start frames from the bank, animated in Google Flow."],
-   ["Score and caption","An original score, Roman Urdu captions and a 1080p master."]],
-  ledger:[["The boss","Lead · 100% my face"],["Behen","Blended"],["Abba Ji","Blended, aged"],["Ammi Jaan","Blended"],["Dada Ji","Blended, aged"],["Chhota Bhai","Blended, younger"],["Chotu","Blended, youngest"],["Seth Sahab","Blended"],["Jaggu","Blended"]],
+   ["Lock one face","One headshot of my real face first. Every character starts from it: older, younger, rougher, and a woman in a hijab."],
+   ["Headless body sheets","Outfits were made with no heads, so the AI only ever sees one face and can’t mix two."],
+   ["Locations first","Freezer, factory gate, highway, car interior, dhaba and home, all designed at a 3/4 angle so the camera has room to move."],
+   ["One shot, one prompt","21 shots in Google Flow, each generated on its own from a detailed prompt."],
+   ["Beat the refusal","The video model refused my real face for the businessman, so he was generated with a stand-in face and I put mine back with my own face-fusion pipeline."],
+   ["Blend each role","Businessman 100% me, swapped twice. The sister about 40%, so she reads as family. The old guard about 35%: he keeps his white beard, only the bone structure is mine. The original mouth stays untouched so lip-sync never breaks."],
+   ["Edit and mix","A colour grade per act, an original score with no stock music, room tone, sound design, captions, mixed to YouTube loudness."]],
+  ledger:[["Factory worker","Lead"],["Old guard","~35% my face, white beard kept"],["Mechanic","Roadside"],["Biker","Highway"],["Businessman","100% my face"],["His sister","~40% my face"],["Locations","Freezer · gate · highway · car · dhaba · home"]],
   board:[],
-  finish:[["Captions","Roman Urdu, readable on a phone."],["Score","Original music, no library tracks."],["Master","1080p, 2:40."],["Next","The character bank carries into every episode after this one."]]},
+  finish:[["Grade","A separate colour grade for each act."],["Score","Original music, no stock tracks."],["Sound","Room tone, sound design and captions, mixed to YouTube loudness."],["Disclosure","My own face, with consent, and labelled as AI-generated."]]},
 
  {id:"dental",num:"",client:"The Dental Clinic · Karachi",kind:"Concept · online consultation film",title:"The world’s waiting room.",
   logline:"A film concept for a Karachi dental clinic’s online consultations, written for Pakistanis abroad who keep putting off the dentist until the next trip home.",
@@ -1094,21 +1095,21 @@ Light: sun caustics rippling across the reef from
 above, clear blue water, fine floating particles.
 Style: high-end nature documentary. No text.`}},
  ehsaan:{
-  story:[["The ask","My own brief: launch a one-actor channel where every role is me."],["The catch","Nine people from one face. Face swaps make clones, and prompts alone lose the face."],["The idea","Blend my face into each role at a fixed strength, so they look related the way a real family does."],["The result","A 2:40 pilot in 18 shots, and a character bank built to last the whole channel."]],
-  core:"The audience should laugh at spotting me in every role, then feel the moral anyway.",
-  cliche:"The same face pasted onto nine bodies.",
-  signature:"Abba Ji and Dada Ji share my eyes at two different ages.",
-  beatsNote:"Pilot · 2:40",beats:[["Act 1","A small kindness.",4],["Act 2","It is passed on.",4],["Act 3","Passed on again, at a cost.",4],["Act 4","It comes back.",4]],
-  prompt:{t:"Character ID · Dada Ji",tags:["Blend ~40%","Age 75","Locked wardrobe","Same eyes"],
-   text:`Role: Dada Ji, 75, the grandfather.
-Base face: my reference photo, blended at about
-40%, so the resemblance shows in the eyes and
-brow rather than as a copy.
-Short white beard, thick-rimmed glasses, cream
-kurta, brown waistcoat, wooden walking stick.
-Warm courtyard light, late afternoon.
-Lock: same beard length, glasses and waistcoat
-in every shot.`}},
+  story:[["The ask","My own brief: a one-actor channel where every role is me, without ever standing in front of a camera."],["The catch","AI happily gives you a new face in every shot. Six people from one face means engineering consistency, not hoping for it."],["The idea","Lock one face, show the AI only that face, and blend it into each role at a set strength so they read as family, not clones."],["The result","A 2:40 short in 21 shots. The lesson: AI doesn’t make the film, decisions do."]],
+  core:"The audience should spot me in every role, then feel the moral anyway.",
+  cliche:"The same face pasted onto six bodies.",
+  signature:"The sister and the old guard carry my bone structure, not my face.",
+  beatsNote:"Film · 2:40",beats:[["Freezer","A worker is locked in.",4],["The guard","Saved, with one condition.",4],["Highway","The favour travels on.",4],["Dhaba","Passed on again.",4],["Home","It comes back.",4]],
+  prompt:{t:"Role ID · the old guard",tags:["Blend ~35%","White beard kept","Headless outfit sheet","Same bones"],
+   text:`Role: the old guard at the factory gate, 70s.
+Base face: my reference headshot, blended at
+about 35%, so only the bone structure is mine.
+Keep his own white beard and deep wrinkles.
+Outfit from the headless sheet: faded khaki
+uniform, wool cap, torch on the belt.
+Night, sodium light from the gate, cold haze.
+Lock: beard, cap and uniform in every shot.
+Mouth untouched in face fusion for lip-sync.`}},
  dental:{
   story:[["The ask","Promote a Karachi clinic’s online dental consultations."],["The catch","Medical ads can’t promise outcomes, and the doctor must never be faked."],["The idea","The real enemy is waiting. Make the whole world a waiting room, and the video call the way out."],["The result","A concept and a back-up, with rules that keep the clinic safe. In development."]],
   core:"An overseas viewer should realise they’ve been postponing their teeth for years.",
@@ -1387,7 +1388,7 @@ const STEP_TOOLS={
  dlhabc:[["claude"],["nano"],["nano"],["suno"],["flow"],["flow","nano"],["code"]],
  cherat:[["claude"],["claude"],["code"],["code"],["claude"],["code"]],
  swapp:[["claude"],["claude"],["nano"],["flow"],["eleven"],[]],
- ehsaan:[["nano","claude"],["code"],["claude"],["code"],["flow"],["code"]],
+ ehsaan:[["nano"],["nano"],["nano"],["flow"],["code"],["code"],["code"]],
  dental:[["claude"],["claude"],["claude"],["claude"],["nano"],["nano","flow"]],
  ultra:[["claude"],["nano"],["nano"],["nano"],["nano","claude"],["flow"],["capcut"]],
  ggpod:[["claude"],["nano"],["nano"],["nano"],["nano"],["flow"],["capcut","code"]],
@@ -1830,7 +1831,7 @@ const isSvc=id=>SERVICES.some(s=>s.id===id);
 const isRoute=id=>id==="ip"||isSvc(id)||CASES.some(c=>c.id===id);
 const pathFor=id=>id==="ip"?"ip-trademark-regulatory/":isSvc(id)?`services/${id}/`:CASES.some(c=>c.id===id)?`work/${id}/`:"";
 function routeFromPath(){const rel=location.pathname.slice(ROOT.length);const m=rel.match(/^work\/([\w-]+)\/?$/);if(m&&CASES.some(c=>c.id===m[1]))return m[1];if(/^ip-trademark-regulatory\/?$/.test(rel))return"ip";const sm=rel.match(/^services\/([\w-]+)\/?$/);if(sm&&isSvc(sm[1]))return sm[1];return null}
-const SEO_T={ultra:"AI Character Story Ad for ULTRA – Case Study | Hafiz Afaq",erased:"AI Brand Film for Optimum Vision – Case Study | Hafiz Afaq",ggpod:"AI Founder Interview Video – Case Study | Hafiz Afaq",orakser:"AI UGC Testimonial Ad for ORAKSER | Hafiz Afaq",stately:"AI Set Replacement Video for Stately | Hafiz Afaq",walkin:"AI Fashion B-Roll Ad for Stately – Case Study | Hafiz Afaq",dlh:"AI Kids Educational Video Series – Case Study | Hafiz Afaq",nhis:"AI Brand Film & Logo Animation Pitch | Hafiz Afaq",sansdirty:"AI VFX Fix on Real UGC Footage – Case Study | Hafiz Afaq",sans:"AI UGC TikTok Shop Ad – Case Study | Hafiz Afaq",bunn:"AI Coffee Product Film for BUNN – Case Study | Hafiz Afaq",swifter:"AI Streetwear Spec Ad (SWIFTER) | Hafiz Afaq",dlhabc:"AI Kids Alphabet Song Video (3D) – Case Study | Hafiz Afaq",cherat:"AI Website Hero Video Loop – Case Study | Hafiz Afaq",swapp:"AI Car Rental Reel for Swapp UAE | Hafiz Afaq",ehsaan:"One Actor, Nine AI Roles – Short Film | Hafiz Afaq",dental:"AI Dental Clinic Video Concept | Hafiz Afaq"};
+const SEO_T={ultra:"AI Character Story Ad for ULTRA – Case Study | Hafiz Afaq",erased:"AI Brand Film for Optimum Vision – Case Study | Hafiz Afaq",ggpod:"AI Founder Interview Video – Case Study | Hafiz Afaq",orakser:"AI UGC Testimonial Ad for ORAKSER | Hafiz Afaq",stately:"AI Set Replacement Video for Stately | Hafiz Afaq",walkin:"AI Fashion B-Roll Ad for Stately – Case Study | Hafiz Afaq",dlh:"AI Kids Educational Video Series – Case Study | Hafiz Afaq",nhis:"AI Brand Film & Logo Animation Pitch | Hafiz Afaq",sansdirty:"AI VFX Fix on Real UGC Footage – Case Study | Hafiz Afaq",sans:"AI UGC TikTok Shop Ad – Case Study | Hafiz Afaq",bunn:"AI Coffee Product Film for BUNN – Case Study | Hafiz Afaq",swifter:"AI Streetwear Spec Ad (SWIFTER) | Hafiz Afaq",dlhabc:"AI Kids Alphabet Song Video (3D) – Case Study | Hafiz Afaq",cherat:"AI Website Hero Video Loop – Case Study | Hafiz Afaq",swapp:"AI Car Rental Reel for Swapp UAE | Hafiz Afaq",ehsaan:"AI Short Film: One Actor, Six Roles | Hafiz Afaq",dental:"AI Dental Clinic Video Concept | Hafiz Afaq"};
 const SEO_D={ultra:"A 3-minute AI character story ad for ULTRA where every lead is an animal that stays identical in every scene, and the product label is always readable.",ggpod:"A 1:47 AI founder interview ad for an ultrasonic retainer cleaner: one face held in close-up for two minutes, the product locked, cut like real founder ads.",stately:"Four minutes of creator footage moved from a plain wall into a lamp-lit walnut study with AI and Python compositing, without a reshoot. Full VFX workflow.",bunn:"A 30-second AI product film for the BUNN Speed Brew Elite coffee maker, built from a real review: rush, brew, one calm sip. Cast, sets and edit inside.",sans:"A 44-second AI UGC TikTok Shop ad for the Sans Air Purifier Mini: a family-reaction story with the proof, a dusty filter, in the very first frame."};
 const SEO_HOME={t:"AI Video Production & AI Filmmaker for Brands | Hafiz Afaq",d:"AI filmmaker making AI video ads, UGC ads, brand films and lesson series for brands in the US, UK and worldwide. 17 case studies, full workflow."};
 function seoMeta(key){
