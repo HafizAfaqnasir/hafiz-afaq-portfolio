@@ -364,6 +364,13 @@ footer .wrap{padding-block:26px;display:flex;justify-content:space-between;flex-
 .badge{position:absolute;top:10px;left:10px;font:500 .62rem var(--f-slate);letter-spacing:.06em;background:var(--red);padding:4px 7px;text-transform:uppercase;z-index:1}
 .badge.lock{background:var(--paper);color:var(--stage)}
 
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svcs a{background:var(--stage);padding:24px;display:grid;gap:10px;align-content:start;text-decoration:none;position:relative;transition:background .3s}
+.svcs a:hover{background:var(--stage-2)}.svcs b{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;padding-right:28px}.svcs small{color:var(--mute);font-size:.88rem;line-height:1.5}
+.svcs i{position:absolute;top:22px;right:22px;font-style:normal;color:var(--red)}
+.svc-for{border:1px solid var(--line);padding:24px;align-self:start}.svc-for ul{margin:12px 0 0;padding-left:18px;display:grid;gap:10px;color:var(--soft)}
+.svc-films .film{grid-column:span 4}@media(max-width:900px){.svc-films .film{grid-column:span 6}}@media(max-width:560px){.svc-films .film{grid-column:1/-1}}
+.svc-rel{margin-top:22px}.svc-rel a{color:var(--paper);font-weight:600;margin-left:8px}
 .finish{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .finish div{background:var(--stage);padding:22px;display:grid;gap:8px;align-content:start}
 .finish b{font-weight:600}.finish p{color:var(--mute);font-size:.9rem}
@@ -509,6 +516,7 @@ body.th-open{overflow:hidden}
     <a class="me" href="#top" data-home><img src="media/me.jpg" alt="" width="40" height="40"><span class="nm">Hafiz Afaq<span class="tag">AI GUY</span></span></a>
     <ul>
       <li class="dd"><details id="projMenu"><summary>Projects ▾</summary><div class="dd-menu" id="projList"></div></details></li>
+      <li><a href="#services" data-home>Services</a></li>
       <li><a href="#problems" data-home>Problems I solve</a></li>
       <li><a href="#toolkit" data-home>Toolkit</a></li>
       <li><a href="#lab" data-home>Character lab</a></li>
@@ -525,6 +533,7 @@ body.th-open{overflow:hidden}
   <div class="mnav-proj" id="mProj"></div>
   <span class="slate"><b>Explore</b></span>
   <ul class="mnav-links">
+    <li><a href="#services" data-home>Services</a></li>
     <li><a href="#problems" data-home>Problems I solve</a></li>
     <li><a href="#toolkit" data-home>Toolkit</a></li>
     <li><a href="#lab" data-home>Character lab</a></li>
@@ -569,7 +578,7 @@ body.th-open{overflow:hidden}
       <div class="info"><span class="slate"><b>ULTRA</b> · Character story ad</span><h3>A bear dad, a dog best friend, and one tin.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/erased/">
-      <div class="media"><img src="media/tile-erased.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-erased.webp" alt="Optimum Vision: Every other room gets erased." loading="lazy"></div>
       <span class="n">02</span><span class="badge chip">Case study</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Optimum Vision · optimum.com.pk</b> · B2B brand film</span><h3>Every other room gets erased.</h3><span class="go">View case study <i>→</i></span></div>
@@ -581,13 +590,13 @@ body.th-open{overflow:hidden}
       <div class="info"><span class="slate"><b>Glint &amp; Gleam · GG Pod</b> · Founder interview ad</span><h3>A founder interview that feels recorded, not rendered.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film wide" href="work/orakser/">
-      <div class="media"><img src="media/tile-orakser.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-orakser.webp" alt="ORAKSER: One ® on a signboard." loading="lazy"></div>
       <span class="n">04</span><span class="badge chip">Case study</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>ORAKSER · orakser.com</b> · AI UGC testimonial ad</span><h3>One ® on a signboard.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film wide" href="work/stately/">
-      <div class="media"><img src="media/stately-s1.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/stately-s1.webp" alt="Stately: A luxury study set, without a reshoot." loading="lazy"></div>
       <span class="n">05</span><span class="badge chip red">Full film</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Stately · statelymen.com</b> · Background replacement</span><h3>A luxury study set, without a reshoot.</h3><span class="go">View case study <i>→</i></span></div>
@@ -599,31 +608,31 @@ body.th-open{overflow:hidden}
       <div class="info"><span class="slate"><b>Stately · statelymen.com</b> · Brand B-roll ad</span><h3>Walk in like you own the room.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/cherat/">
-      <div class="media"><img src="media/tile-cherat.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-cherat.webp" alt="Cherat Packaging: From cylinder to country." loading="lazy"></div>
       <span class="n">07</span><span class="badge chip">With client</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Cherat Packaging</b> · Website hero film</span><h3>From cylinder to country.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/dlh/">
-      <div class="media"><img src="media/dlh1-s1.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/dlh1-s1.webp" alt="Dynamic Learning Hub: A learning brand’s YouTube series, in two visual worlds." loading="lazy"></div>
       <span class="n">08</span><span class="badge chip red">Full film</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Dynamic Learning Hub · US</b> · Educational series</span><h3>A learning brand’s YouTube series, in two visual worlds.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/dlhabc/">
-      <div class="media"><img src="media/tile-dlhabc.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-dlhabc.webp" alt="Dynamic Learning Hub: Thirteen letters, three kids, one song." loading="lazy"></div>
       <span class="n">09</span><span class="badge chip">With client</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Dynamic Learning Hub · US</b> · Kids rhyme · Episode 1, A to M</span><h3>Thirteen letters, three kids, one song.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/nhis/">
-      <div class="media"><img src="media/tile-nhis.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-nhis.webp" alt="New Horizon Integration Systems: Everyone’s asleep. Not me." loading="lazy"></div>
       <span class="n">10</span><span class="badge chip">Case study</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>New Horizon Integration Systems</b> · Pitch · brand film + logo sting</span><h3>Everyone’s asleep. Not me.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film wide" href="work/swapp/">
-      <div class="media"><img src="media/tile-swapp.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-swapp.webp" alt="Swapp: The fastest punch on Earth." loading="lazy"></div>
       <span class="n">11</span><span class="badge chip">In production</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>Swapp · swappcars.com, UAE</b> · Test reel · car rental</span><h3>The fastest punch on Earth.</h3><span class="go">View case study <i>→</i></span></div>
@@ -653,17 +662,22 @@ body.th-open{overflow:hidden}
       <div class="info"><span class="slate"><b>SWIFTER · concept brand</b> · Spec ad · streetwear</span><h3>Ten seconds to say Move Different.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film wide" href="work/ehsaan/">
-      <div class="media"><img src="media/tile-ehsaan.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-ehsaan.webp" alt="My own channel: Every role is me." loading="lazy"></div>
       <span class="n">16</span><span class="badge chip">Own channel</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>My own channel · OneFace</b> · Short film · one actor, nine roles</span><h3>Every role is me.</h3><span class="go">View case study <i>→</i></span></div>
     </a>
     <a class="film" href="work/dental/">
-      <div class="media"><img src="media/tile-dental.webp" alt="" loading="lazy"></div>
+      <div class="media"><img src="media/tile-dental.webp" alt="The Dental Clinic: The world’s waiting room." loading="lazy"></div>
       <span class="n">17</span><span class="badge chip">Concept</span>
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>The Dental Clinic · Karachi</b> · Concept · online consultation film</span><h3>The world’s waiting room.</h3><span class="go">View case study <i>→</i></span></div>
     </a></div>
+</div></section>
+
+<section class="sec" id="services" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Services</h2><p>Four ways brands work with me. Each page shows the deliverables, the process and the case studies behind it.</p></div>
+  <div class="svcs"><a href="services/ai-ugc-ads/"><span class="slate">AI UGC video ads</span><b>AI UGC ads</b><small>AI UGC ads for TikTok, Reels and Meta: selfie testimonials, founder interviews and family-reaction ads with one consistent face and your real product.</small><i aria-hidden="true">→</i></a><a href="services/ai-video-ads/"><span class="slate">AI video ad production</span><b>AI video ads &amp; brand films</b><small>AI video ad production for brands in the US, UK and worldwide: character story ads, product films, B2B brand films and spec spots, cast, lit and edited like a real shoot.</small><i aria-hidden="true">→</i></a><a href="services/ai-educational-videos/"><span class="slate">AI educational videos</span><b>AI kids &amp; educational videos</b><small>AI kids rhymes and educational lesson videos for learning brands: locked characters, correct letters and numbers, original songs and an enrollment call at the end.</small><i aria-hidden="true">→</i></a><a href="services/ai-vfx-post-production/"><span class="slate">AI VFX and finishing</span><b>AI VFX &amp; post-production</b><small>AI and Python VFX for brand footage: background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.</small><i aria-hidden="true">→</i></a></div>
 </div></section>
 
 <section class="sec" id="problems" style="padding-top:0"><div class="wrap">
@@ -1584,11 +1598,16 @@ function home(){
   <div class="sec-head"><h2>Selected work</h2><p>Eleven client brands, a pitch, a spec ad and my own channel: seventeen projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
   <div class="films">${c.map((k,i)=>`
     <a class="film${[0,3,4,10,11,14,15].includes(i)?" wide":""}" href="#${k.id}">
-      <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="" loading="lazy">`}</div>
+      <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="${esc(k.client.split(" · ")[0]+": "+k.title)}" loading="lazy">`}</div>
       <span class="n">${k.num}</span>${k.final?'<span class="badge chip red">Full film</span>':k.badge?`<span class="badge chip">${esc(k.badge)}</span>`:k.preview?'<span class="badge chip">Board + clips</span>':'<span class="badge chip">Case study</span>'}
       <div class="shade"></div>
       <div class="info"><span class="slate"><b>${esc(k.client)}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div>
     </a>`).join("")}</div>
+</div></section>
+
+<section class="sec" id="services" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Services</h2><p>Four ways brands work with me. Each page shows the deliverables, the process and the case studies behind it.</p></div>
+  <div class="svcs">${SERVICES.map(x=>`<a href="#${x.id}"><span class="slate">${esc(x.kicker.replace("Service · ",""))}</span><b>${esc(x.name)}</b><small>${esc(x.d)}</small><i aria-hidden="true">→</i></a>`).join("")}</div>
 </div></section>
 
 <section class="sec" id="problems" style="padding-top:0"><div class="wrap">
@@ -1781,11 +1800,90 @@ ${k.board&&k.board.length?`<section class="sec" style="background:var(--stage-2)
   <div class="sec-head"><h2>The finish</h2><p>What happened in the edit and the mix.</p></div>
   <div class="finish">${k.finish.map(([b,p])=>`<div><b>${esc(b)}</b><p>${esc(p)}</p></div>`).join("")}</div>
   <div class="finals" data-project="${k.id}"></div>
+  ${svcFor(k.id)?`<p class="svc-rel"><span class="slate">Service</span> <a href="#${svcFor(k.id).id}">${esc(svcFor(k.id).name)} <span aria-hidden="true">→</span></a></p>`:""}
 </div></section>
 
 <div class="wrap"><a class="next" href="#${nx.id}"><div><span class="slate">Next case · ${esc(nx.client)}</span><h2>${esc(nx.title)}</h2></div><span class="arrow" aria-hidden="true">→</span></a></div>`;
 }
 
+
+
+/* ================= SERVICES (SEO landing pages) ================= */
+const SERVICES=[
+ {id:"ai-ugc-ads",name:"AI UGC ads",kicker:"Service · AI UGC video ads",
+  h1:'AI UGC ads that look <span class="hl">filmed</span> on a real phone.',
+  t:"AI UGC Video Ads for Brands | Hafiz Afaq (AI Guy)",
+  d:"AI UGC ads for TikTok, Reels and Meta: selfie testimonials, founder interviews and family-reaction ads with one consistent face and your real product.",
+  intro:"UGC-style ads work because they look like a real customer holding a phone. I make that format with AI: an original creator who stays the same person in every clip, your real product in their hands, natural selfie camera work and a hook in the first second.",
+  forWho:["D2C and TikTok Shop brands that need more creatives than shoots allow","Brands testing new hooks and angles every week","Founders who want an interview-style ad without sitting on camera"],
+  get:[["Creator casting","An original AI creator with an ID card: face, wardrobe, marks and voice, locked across every clip."],["Product lock","Your product built from real packshots, so the label, shape and colour stay right."],["Script and hooks","Hook, story, proof and CTA written for the platform, with alternate hooks to test."],["Edit and sound","Word-by-word captions, cuts on breaths, room tone and a loudness-normalised mix."],["Formats","9:16 first, with 4:5 and 1:1 cut-downs when needed."]],
+  cases:["sans","orakser","ggpod","sansdirty"],
+  faq:[["Do AI UGC ads look fake?","They can, which is why the work is in the details: one locked face, hands that behave, a real product label, selfie-style camera movement and sound that matches the room. Each case study shows how."],["Can you use my real product?","Yes. I build the product from your own photos and packshots, and composite the label from your real artwork when the AI can’t render it exactly."],["Are the creators real people?","No. They are original AI characters, not lookalikes of real people, and I recommend labelling the ad as AI-generated wherever the platform asks for it."],["Can you fix UGC footage you already have?","Yes. The Sans filter revision is a VFX fix on real 4K creator footage."]]},
+ {id:"ai-video-ads",name:"AI video ads & brand films",kicker:"Service · AI video ad production",
+  h1:'AI video ads and brand films, <span class="hl">directed</span> like a shoot.',
+  t:"AI Video Ads & Brand Films for Brands | Hafiz Afaq",
+  d:"AI video ad production for brands in the US, UK and worldwide: character story ads, product films, B2B brand films and spec spots, cast, lit and edited like a real shoot.",
+  intro:"A good ad is a story with one idea in it. I write that idea, cast the characters, build the sets and direct every shot with lens, light and movement written like a shot list. Then I finish it with a real edit, sound design and a platform-ready mix.",
+  forWho:["Brands that need a story ad without a production budget","B2B companies whose product is hard to film","Agencies that want a director on their AI production"],
+  get:[["Concept and script","One idea, a hook, and a shot list with beat timings."],["Cast and sets","Turnaround sheets for every character, and empty set plates with motivated light."],["Directed shots","Start frames and motion prompts for every shot, with continuity rules."],["Edit and sound","Pacing, captions, sound design, music and a −14 LUFS master."],["Cut-downs","Social and platform versions from the same assets."]],
+  cases:["ultra","erased","bunn","walkin","swifter","nhis","swapp","cherat"],
+  faq:[["How long is a typical AI video ad?","Anything from a 6-second logo sting to a three-minute story ad. The case studies here run from 0:10 to 3:13."],["Which AI tools do you use?","Google Flow and Veo, Nano Banana, Kling, ElevenLabs, Suno, CapCut and custom Python finishing. The tool is chosen shot by shot."],["Can characters stay the same across a whole film?","Yes. Every character gets a turnaround sheet and identity marks that are attached to every shot, then checked frame by frame in QC."],["Do you work with clients outside Pakistan?","Yes. Clients include brands in the US and the UAE, and everything runs remotely."]]},
+ {id:"ai-educational-videos",name:"AI kids & educational videos",kicker:"Service · AI educational videos",
+  h1:'AI kids and <span class="hl">educational</span> videos parents trust.',
+  t:"AI Educational & Kids Videos for YouTube | Hafiz Afaq",
+  d:"AI kids rhymes and educational lesson videos for learning brands: locked characters, correct letters and numbers, original songs and an enrollment call at the end.",
+  intro:"Learning videos have two audiences: the child who watches and the parent who decides. I make series that work for both: recurring characters that never drift, letters and numbers set in the edit so they are always correct, original music, and an end card that points to your school.",
+  forWho:["Online schools and tutoring brands building a YouTube channel","Kids channels that need the same characters in every episode","Curriculum teams that want lessons visualised"],
+  get:[["Series bible","Characters, classroom or playroom, colours and rules, reused in every episode."],["Songs and lessons","Original songs or lesson scripts mapped to the curriculum."],["Correct on screen","Letters, numbers and diagrams designed in the edit, never left to the AI."],["Voices","Fixed character voices across the series."],["Brand","An intro, a watermark and an enrollment end card."]],
+  cases:["dlh","dlhabc"],
+  faq:[["Why not let the AI draw the letters and numbers?","AI video still misspells and miscounts. Every letter, numeral and diagram is set in the edit, so a lesson is never wrong."],["Can the same characters appear in every episode?","Yes. They are locked on turnaround sheets and reused, which is what makes a channel feel like a series."],["What ages do you make videos for?","So far, toddlers up to age 5 for rhymes, and ages 5 to 13 for classroom lessons."]]},
+ {id:"ai-vfx-post-production",name:"AI VFX & post-production",kicker:"Service · AI VFX and finishing",
+  h1:'AI VFX that fixes footage <span class="hl">without</span> a reshoot.',
+  t:"AI VFX, Background Replacement & Video Fixes | Hafiz Afaq",
+  d:"AI and Python VFX for brand footage: background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.",
+  intro:"Sometimes the footage is almost right. I fix it in post: move a creator from a plain wall into a new set, change how a product looks in real 4K footage, or build a seamless loop for a website hero, with custom compositing in Python and OpenCV alongside AI tools.",
+  forWho:["Brands with creator footage and a client note to fix","Teams that want a premium set without a reshoot","Websites that need a light, seamless hero video"],
+  get:[["Background replacement","Matted footage placed into a new set, with the light matched."],["Product fixes","Frame-accurate changes to a product in real footage, even with hands moving over it."],["Hero loops","Seamless, muted, compressed loops for the web."],["Finishing","Colour match, grain, upscaling and delivery masters."]],
+  cases:["stately","sansdirty","cherat"],
+  faq:[["Can you replace the background on long footage?","Yes. The Stately case moved four minutes of creator footage into a new study set."],["Will the fix hold up at 4K?","The Sans revision was done in 4K at 60 frames per second, with the creator’s hands passing over the product."],["How heavy is a website hero video?","The Cherat loop is 1.9 MB as MP4 and 1.4 MB as WebM for 12 seconds."]]}
+];
+const svcFor=id=>SERVICES.find(s=>s.cases.includes(id));
+function caseCard(k){return `<a class="film" href="#${k.id}"><div class="media"><img src="${M(k.previewImg&&!k.preview?k.previewImg:k.preview?k.previewPoster:k.poster)}" alt="${esc(k.client.split(" · ")[0]+": "+k.title)}" loading="lazy"></div><span class="n">${k.num}</span><div class="shade"></div><div class="info"><span class="slate"><b>${esc(k.client.split(" · ")[0])}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div></a>`}
+function svcPage(sv){
+  const cs=sv.cases.map(id=>CASES.find(c=>c.id===id)).filter(Boolean);
+  const others=SERVICES.filter(x=>x.id!==sv.id);
+  return `
+<div class="wrap cp-top"><a class="back" href="#services">← All services</a></div>
+<header class="wrap ip-hero">
+  <div class="reveal">
+    <span class="cp-num">${esc(sv.kicker)}</span>
+    <h1>${sv.h1}</h1>
+    <p class="logline">${esc(sv.intro)}</p>
+    <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#svc-work">See the work</a></div>
+  </div>
+  <div class="svc-for reveal" style="animation-delay:.12s"><span class="slate"><b>Best for</b></span><ul>${sv.forWho.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+</header>
+<section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>What you get</h2><p>Every project is cast, lit, edited and mixed like a real shoot, with the same person from brief to final file.</p></div>
+  <div class="finish">${sv.get.map(([b,p])=>`<div><b>${esc(b)}</b><p>${esc(p)}</p></div>`).join("")}</div>
+</div></section>
+<section class="sec" id="svc-work" style="background:var(--stage-2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>Case studies</h2><p>Real projects in this format. Each one shows the brief, the assets, the prompts and the edit.</p></div>
+  <div class="films svc-films">${cs.map(caseCard).join("")}</div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><h2>How it works</h2><p>Four stages, with your approval at each one.</p></div>
+  <div class="finish">${[["1 · Brief","Your product, audience, platform and the one thing the viewer must feel."],["2 · Cast and lock","Characters, product and sets locked on sheets before any video is made."],["3 · Direct","Every shot directed with references, lens, light and continuity rules."],["4 · Edit and QC","Edit, captions, sound and a frame-by-frame check before delivery."]].map(([b,p])=>`<div><b>${b}</b><p>${p}</p></div>`).join("")}</div>
+</div></section>
+<section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>Questions about ${esc(sv.name)}</h2></div>
+  <div class="faq">${sv.faq.map(([q,a])=>`<details><summary><h3>${esc(q)}</h3><span aria-hidden="true">+</span></summary><p>${esc(a)}</p></details>`).join("")}</div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Other services</h2></div>
+  <div class="svcs">${others.map(x=>`<a href="#${x.id}"><span class="slate">${esc(x.kicker.replace("Service · ",""))}</span><b>${esc(x.name)}</b><i aria-hidden="true">→</i></a>`).join("")}</div>
+</div></section>`;
+}
 
 /* ================= IP & REGULATORY PAGE ================= */
 function ipPage(){
@@ -1876,14 +1974,17 @@ let current=null;
 const CLEAN=!!document.querySelector('meta[name="clean-urls"]');
 const SITE="https://hafiz-afaq-portfolio.vercel.app/";
 const ROOT=CLEAN?new URL(document.querySelector("base")?.getAttribute("href")||"./",location.href).pathname:"";
-const isRoute=id=>id==="ip"||CASES.some(c=>c.id===id);
-const pathFor=id=>id==="ip"?"ip-trademark-regulatory/":CASES.some(c=>c.id===id)?`work/${id}/`:"";
-function routeFromPath(){const rel=location.pathname.slice(ROOT.length);const m=rel.match(/^work\/([\w-]+)\/?$/);if(m&&CASES.some(c=>c.id===m[1]))return m[1];if(/^ip-trademark-regulatory\/?$/.test(rel))return"ip";return null}
+const isSvc=id=>SERVICES.some(s=>s.id===id);
+const isRoute=id=>id==="ip"||isSvc(id)||CASES.some(c=>c.id===id);
+const pathFor=id=>id==="ip"?"ip-trademark-regulatory/":isSvc(id)?`services/${id}/`:CASES.some(c=>c.id===id)?`work/${id}/`:"";
+function routeFromPath(){const rel=location.pathname.slice(ROOT.length);const m=rel.match(/^work\/([\w-]+)\/?$/);if(m&&CASES.some(c=>c.id===m[1]))return m[1];if(/^ip-trademark-regulatory\/?$/.test(rel))return"ip";const sm=rel.match(/^services\/([\w-]+)\/?$/);if(sm&&isSvc(sm[1]))return sm[1];return null}
 const SEO_T={ultra:"AI Character Story Ad for ULTRA – Case Study | Hafiz Afaq",erased:"AI Brand Film for Optimum Vision – Case Study | Hafiz Afaq",ggpod:"AI Founder Interview Video – Case Study | Hafiz Afaq",orakser:"AI UGC Testimonial Ad for ORAKSER | Hafiz Afaq",stately:"AI Set Replacement Video for Stately | Hafiz Afaq",walkin:"AI Fashion B-Roll Ad for Stately – Case Study | Hafiz Afaq",dlh:"AI Kids Educational Video Series – Case Study | Hafiz Afaq",nhis:"AI Brand Film & Logo Animation Pitch | Hafiz Afaq",sansdirty:"AI VFX Fix on Real UGC Footage – Case Study | Hafiz Afaq",sans:"AI UGC TikTok Shop Ad – Case Study | Hafiz Afaq",bunn:"AI Coffee Product Film for BUNN – Case Study | Hafiz Afaq",swifter:"AI Streetwear Spec Ad (SWIFTER) | Hafiz Afaq",dlhabc:"AI Kids Alphabet Song Video (3D) – Case Study | Hafiz Afaq",cherat:"AI Website Hero Video Loop – Case Study | Hafiz Afaq",swapp:"AI Car Rental Reel for Swapp UAE | Hafiz Afaq",ehsaan:"One Actor, Nine AI Roles – Short Film | Hafiz Afaq",dental:"AI Dental Clinic Video Concept | Hafiz Afaq"};
+const SEO_D={ultra:"A 3-minute AI character story ad for ULTRA where every lead is an animal that stays identical in every scene, and the product label is always readable.",ggpod:"A 1:47 AI founder interview ad for an ultrasonic retainer cleaner: one face held in close-up for two minutes, the product locked, cut like real founder ads.",stately:"Four minutes of creator footage moved from a plain wall into a lamp-lit walnut study with AI and Python compositing, without a reshoot. Full VFX workflow.",bunn:"A 30-second AI product film for the BUNN Speed Brew Elite coffee maker, built from a real review: rush, brew, one calm sip. Cast, sets and edit inside.",sans:"A 44-second AI UGC TikTok Shop ad for the Sans Air Purifier Mini: a family-reaction story with the proof, a dusty filter, in the very first frame."};
 const SEO_HOME={t:"AI Video Production & AI Filmmaker for Brands | Hafiz Afaq",d:"AI filmmaker making AI video ads, UGC ads, brand films and lesson series for brands in the US, UK and worldwide. 17 case studies, full workflow."};
 function seoMeta(key){
   const k=CASES.find(c=>c.id===key);
-  if(k)return{t:SEO_T[k.id]||`${k.client.split(" · ")[0]} – Case Study | Hafiz Afaq`,d:k.logline};
+  if(k)return{t:SEO_T[k.id]||`${k.client.split(" · ")[0]} – Case Study | Hafiz Afaq`,d:SEO_D[k.id]||k.logline};
+  {const sv=SERVICES.find(x=>x.id===key);if(sv)return{t:sv.t,d:sv.d}}
   if(key==="ip")return{t:"Trademark, DRAP & IP Research Services in Pakistan | Hafiz Afaq",d:"Trademark registration and brand protection, DRAP dossiers, establishment licences, import/export research and OSINT, through ORAKSER in Karachi."};
   return SEO_HOME;
 }
@@ -1901,10 +2002,10 @@ if(CLEAN){
   addEventListener("popstate",()=>{const r=routeFromPath();go("#"+(r||""))});
 }
 function render(target,scrollTo){
-  const k=CASES.find(c=>c.id===target);const isIp=target==="ip";
-  const key=k?k.id:isIp?"ip":"home";
+  const k=CASES.find(c=>c.id===target);const isIp=target==="ip";const sv=SERVICES.find(x=>x.id===target);
+  const key=k?k.id:isIp?"ip":sv?sv.id:"home";
   if(key!==current){
-    app.innerHTML=k?casePage(k):isIp?ipPage():home();
+    app.innerHTML=k?casePage(k):isIp?ipPage():sv?svcPage(sv):home();
     current=key;
     const sm=seoMeta(key);document.title=sm.t;
     {const d=document.querySelector('meta[name="description"]');if(d)d.setAttribute("content",sm.d);const c=document.querySelector('link[rel="canonical"]');if(c&&CLEAN)c.setAttribute("href",SITE+pathFor(key==="home"?"":key))}
@@ -1913,16 +2014,16 @@ function render(target,scrollTo){
     app.querySelectorAll("[data-s]").forEach(b=>b.addEventListener("click",()=>{const s=b.closest(".board-group").querySelector(".strip");s.scrollBy({left:Number(b.dataset.s)*s.clientWidth*.8,behavior:reduce?"auto":"smooth"})}));
     if(!k&&!reduce)parallax();
   }
-  if(k||isIp){scrollTo0()}else if(scrollTo){const el=document.getElementById(scrollTo);el?el.scrollIntoView():scrollTo0()}
+  if(k||isIp||sv){scrollTo0()}else if(scrollTo){const el=document.getElementById(scrollTo);el?el.scrollIntoView():scrollTo0()}
 }
 function scrollTo0(){window.scrollTo({top:0,behavior:"auto"})}
 const wipe=document.getElementById("wipe"),wipeTxt=document.getElementById("wipeTxt");
 function go(hash){
   const id=hash.replace(/^#/,"");
-  const isCase=CASES.some(c=>c.id===id)||id==="ip";
+  const isCase=isRoute(id);
   const changing=(isCase?id:"home")!==current;
   if(!changing||reduce){render(isCase?id:null,isCase?null:id);return}
-  wipeTxt.textContent=id==="ip"?"IP & Regulatory":isCase?CASES.find(c=>c.id===id).client:"Hafiz Afaq";
+  wipeTxt.textContent=id==="ip"?"IP & Regulatory":isSvc(id)?SERVICES.find(x=>x.id===id).name:isCase?CASES.find(c=>c.id===id).client:"Hafiz Afaq";
   wipe.className="in";
   setTimeout(()=>{render(isCase?id:null,isCase?null:id);wipe.className="out";setTimeout(()=>wipe.className="",520)},430);
 }
