@@ -10,6 +10,23 @@
 <link rel="canonical" href="https://hafiz-afaq-portfolio.vercel.app/work/cherat/">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="google-site-verification" content="dYSfL5DAiWh_w_vxFUu85NTO27DkVkC12ysf6sN7Mos">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTMJ5F7VR3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-YTMJ5F7VR3');
+</script>
+<script>
+/* T-03: key-event tracking - delegated document click listener (survives SPA re-renders; observes only, never preventDefault) */
+(function(){function ev(n,p){if(window.gtag){try{gtag('event',n,p||{})}catch(e){}}}
+document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('a'):null;if(!t)return;
+if(t.id==='bMail'){ev('generate_lead',{method:'brief_builder'});return;}
+var h=t.getAttribute('href')||'';
+if(h.indexOf('mailto:')===0){ev('email_click');return;}
+if(h.indexOf('linkedin.com/in/hafizafaqnasir')!==-1){ev('linkedin_click',{link_url:'https://www.linkedin.com/in/hafizafaqnasir/'});}});})();
+</script>
 <meta name="author" content="Hafiz Afaq Nasir">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png">
