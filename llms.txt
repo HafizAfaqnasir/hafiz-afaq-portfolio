@@ -2,6 +2,8 @@
 
 > AI filmmaker and creative director based in Karachi, Pakistan, making AI video ads, UGC ads, brand films and educational series for brands in the US, UK and worldwide. Each case study shows the final film, character sheets, sets, prompts and edit.
 
+Site: https://hafiz-afaq-portfolio.vercel.app/
+
 ## Services
 - [AI UGC ads](https://hafiz-afaq-portfolio.vercel.app/services/ai-ugc-ads/): AI UGC ads for TikTok, Reels and Meta: selfie testimonials, founder interviews and family-reaction ads with one consistent face and your real product.
 - [AI video ads & brand films](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads/): AI video ad production for brands in the US, UK and worldwide: character story ads, product films, B2B brand films and spec spots, cast, lit and edited like a real shoot.
@@ -28,6 +30,7 @@
 - [The Dental Clinic: The world’s waiting room.](https://hafiz-afaq-portfolio.vercel.app/work/dental/): Concept · online consultation film. A film concept for a Karachi dental clinic’s online consultations, written for Pakistanis abroad who keep putting off the dentist until the next trip home.
 
 ## Other pages
+- [All work](https://hafiz-afaq-portfolio.vercel.app/work/): all 17 case studies in one place.
 - [IP & Regulatory](https://hafiz-afaq-portfolio.vercel.app/ip-trademark-regulatory/): trademark registration, DRAP dossiers and IP research through ORAKSER, Karachi.
 - [LinkedIn](https://www.linkedin.com/in/hafizafaqnasir/)
 
