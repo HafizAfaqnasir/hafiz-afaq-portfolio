@@ -39,6 +39,7 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [LinkedIn](https://www.linkedin.com/in/hafizafaqnasir/)
 - [Behance](https://www.behance.net/afaqnasir3)
 - [Upwork](https://www.upwork.com/freelancers/~01b986b8b995885ee7)
+- [Vimeo](https://vimeo.com/hafizafaq)
 
 ## Contact
 - Email: afaqn4286@gmail.com
