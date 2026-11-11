@@ -1399,8 +1399,9 @@ CASES.forEach((c,i)=>{Object.assign(c,STORY[c.id]);c.stepTools=STEP_TOOLS[c.id]|
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const esc=s=>{const d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML};
 const app=document.getElementById("app");
-let io=null;
+let io=null,wvPending=false;
 function wireVideos(root){
+  if(document.readyState!=="complete"){if(!wvPending){wvPending=true;addEventListener("load",()=>{wvPending=false;wireVideos(app)},{once:true})}return}
   const vs=root.querySelectorAll("video[data-auto]");
   if(reduce){vs.forEach(v=>v.controls=true);return}
   if(!io)io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.preload="auto";v.play().catch(()=>{})}else v.pause()}),{rootMargin:"100px"});
