@@ -1857,6 +1857,7 @@ if(CLEAN){
   addEventListener("popstate",()=>{const r=routeFromPath();go("#"+(r||""))});
 }
 function render(target,scrollTo){
+  const firstLoad=(current===null);
   const k=CASES.find(c=>c.id===target);const isIp=target==="ip";const sv=SERVICES.find(x=>x.id===target);
   const key=k?k.id:isIp?"ip":sv?sv.id:"home";
   if(key!==current){
@@ -1866,6 +1867,7 @@ function render(target,scrollTo){
     {const d=document.querySelector('meta[name="description"]');if(d)d.setAttribute("content",sm.d);const c=document.querySelector('link[rel="canonical"]');if(c&&CLEAN)c.setAttribute("href",SITE+pathFor(key==="home"?"":key))}
     linkify(app);
     wireVideos(app);wireLightbox(app);renderFinals();
+    if(!firstLoad&&window.gtag){try{gtag("config","G-YTMJ5F7VR3",{page_path:ROOT+pathFor(key==="home"?"":key),page_title:sm.t})}catch(e){}}
     app.querySelectorAll("[data-s]").forEach(b=>b.addEventListener("click",()=>{const s=b.closest(".board-group").querySelector(".strip");s.scrollBy({left:Number(b.dataset.s)*s.clientWidth*.8,behavior:reduce?"auto":"smooth"})}));
     if(!k&&!reduce)parallax();
   }
