@@ -39,6 +39,7 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 
 - [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
 - [Press & media kit](https://hafiz-afaq-portfolio.vercel.app/press/): Bio, facts, headshot, links and contact for journalists and podcasters.
+- [Find me everywhere](https://hafiz-afaq-portfolio.vercel.app/links/): Every profile in one place: LinkedIn, Behance, Upwork, Vimeo, Contra, Facebook, YouTube and Quora.
 ## Profiles
 - [LinkedIn](https://www.linkedin.com/in/hafizafaqnasir/)
 - [Behance](https://www.behance.net/afaqnasir3)
