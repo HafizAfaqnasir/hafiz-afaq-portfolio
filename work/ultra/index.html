@@ -634,6 +634,7 @@ Avoid: changing or misspelled label, tin changing shape, warped paws.</pre></div
   <div class="finish"><div><b>Label composite</b><p>The tin label tracked from the real packshot in the hero shots.</p></div><div><b>Caption line</b><p>“Same ritual. Zero nicotine. No crash.” lands on the product shot.</p></div><div><b>Sound</b><p>A room tone for each location and a swell into the reveal.</p></div><div><b>Master</b><p>−14 LUFS for TikTok, Reels and Shorts.</p></div></div>
   <div class="finals" data-project="ultra"></div>
   <p class="svc-rel"><span class="slate">Service</span> <a href="services/ai-video-ads/">AI video ads &amp; brand films <span aria-hidden="true">→</span></a></p>
+  <p class="svc-rel"><a href="services/character-lock-kit/">Get the free Character Lock Kit <span aria-hidden="true">→</span></a></p>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
@@ -1486,7 +1487,7 @@ function home(){
 </div></section>
 
 <section class="sec" id="lab"><div class="wrap">
-  <div class="sec-head"><h2>Character lab</h2><p>Real casting sheets from client work, locked by Character Lock. Consistency is decided here, before the first clip. Tap a card to see what is locked.</p></div>
+  <div class="sec-head"><h2>Character lab</h2><p>Real casting sheets from client work, locked by Character Lock. Consistency is decided here, before the first clip. Tap a card to see what is locked. <a href="#character-lock-kit">Download the free Character Lock Kit <span aria-hidden="true">→</span></a></p></div>
   <div class="lab">${LAB.map(([w,f,n,s,l])=>`<figure class="${w}" data-full="${M(f+".webp")}" data-cap="${esc(n+" · "+s)}"><img src="${M(f+".webp")}" alt="${esc(n)} sheet" loading="lazy"><figcaption><strong>${esc(n)}</strong><span class="slate">${esc(s)}</span><span class="locks">${esc(l)}</span></figcaption></figure>`).join("")}</div>
 </div></section>
 
@@ -1544,6 +1545,8 @@ deploy: vercel · tests: 10 passing</div></div>
       <p>I didn’t start in marketing. I started on the legal and regulatory side of business: intellectual property research, import and export documentation, and compliance work. So I read a brief the way an owner does. Before I plan a single shot, I ask what the product has to prove, and what it is allowed to claim.</p>
       <p>Clients send me a reference and a script. I send back a finished, platform-ready file: casting, sets, prompts, edit, captions and sound, handled by one person who answers for the result.</p>
       <p>Every project runs through a direction system I built from more than forty books on film, lighting, sound, design and branding.</p>
+      <p>For press features, interviews and my headshot, see the <a href="/press/">Press &amp; media kit</a>.</p>
+      <p>All my profiles, on one page: <a href="/links/">Find me everywhere</a>.</p>
     </div>
     <div class="chips" style="margin-top:22px"><span class="chip">Karachi, Pakistan</span><span class="chip">TBH Media Studio</span><span class="chip">IBA · Digital Marketing</span><span class="chip">Hafiz-e-Quran</span></div>
   </div>
@@ -1661,6 +1664,7 @@ ${k.board&&k.board.length?`<section class="sec" style="background:var(--stage-2)
   <div class="finish">${k.finish.map(([b,p])=>`<div><b>${esc(b)}</b><p>${esc(p)}</p></div>`).join("")}</div>
   <div class="finals" data-project="${k.id}"></div>
   ${svcFor(k.id)?`<p class="svc-rel"><span class="slate">Service</span> <a href="#${svcFor(k.id).id}">${esc(svcFor(k.id).name)} <span aria-hidden="true">→</span></a></p>`:""}
+  ${k.id==="orakser"?`<p class="svc-rel"><a href="#ip">IP &amp; Regulatory — trademark registration <span aria-hidden="true">→</span></a></p>`:""}${k.id==="ultra"?`<p class="svc-rel"><a href="#character-lock-kit">Get the free Character Lock Kit <span aria-hidden="true">→</span></a></p>`:""}
 </div></section>
 
 <div class="wrap"><a class="next" href="#${nx.id}"><div><span class="slate">Next case · ${esc(nx.client)}</span><h2>${esc(nx.title)}</h2></div><span class="arrow" aria-hidden="true">→</span></a></div>`;
@@ -1743,7 +1747,7 @@ const SERVICES=[
   cases:["walkin","bunn","swapp"],
   faq:[["Will my product look the same in every ad?","Yes. Your product photos are the starting point, and the product, label and set are locked on sheets — Character Lock — so the same product looks the same in every variant. Every frame is checked before delivery."],["What do you need from my store to start?","Your product photos and the product page. The hero image from your product page is usually the first frame, and the brief is the product, the audience, the platform and the one thing the viewer must feel."],["Can AI video replace real creators?","Not everywhere. AI covers product films, UGC-style testimonials and hook variants. When a product needs a genuine demonstration — a stain lifting, a fit across body types, how food tastes — a real creator is still the right call, and I will say so."],["How quickly can you deliver an ad?","Three recent ads went from brief to delivery in one day. Timelines depend on the brief — the portfolio shows the finished work."]]}
 ];
-const SVC_PARENT={"ehsaan":"ai-brand-films","dental":"ai-video-ads"};const svcFor=id=>SERVICES.find(s=>s.id===SVC_PARENT[id])||SERVICES.find(s=>s.cases.includes(id));
+const SVC_PARENT={"ehsaan":"ai-brand-films","dental":"ai-video-ads","bunn":"ai-video-ads-ecommerce","swapp":"ai-video-ads-ecommerce"};const svcFor=id=>SERVICES.find(s=>s.id===SVC_PARENT[id])||SERVICES.find(s=>s.cases.includes(id));
 function caseCard(k){return `<a class="film" href="#${k.id}"><div class="media"><img src="${M(k.previewImg&&!k.preview?k.previewImg:k.preview?k.previewPoster:k.poster)}" alt="${esc(k.client.split(" · ")[0]+": "+k.title)}" loading="lazy"></div><span class="n">${k.num}</span><div class="shade"></div><div class="info"><span class="slate"><b>${esc(k.client.split(" · ")[0])}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div></a>`}
 function svcPage(sv){
   const cs=sv.cases.map(id=>CASES.find(c=>c.id===id)).filter(Boolean);
@@ -1755,7 +1759,7 @@ function svcPage(sv){
     <span class="cp-num">${esc(sv.kicker)}</span>
     <h1>${sv.h1}</h1>
     <p class="logline">${esc(sv.intro)}</p>
-    <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#svc-work">See the work</a>${sv.id==="character-lock"?'<a class="btn btn-ghost" href="#character-lock-kit">Download the free kit <span aria-hidden="true">↓</span></a>':""}</div>
+    <div class="ctas"><a class="btn btn-red" href="#contact">Start a project <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#svc-work">See the work</a>${sv.id==="character-lock"?'<a class="btn btn-ghost" href="#character-lock-kit">Download the free kit <span aria-hidden="true">↓</span></a>':sv.id==="ai-video-ads"?'<a class="btn btn-ghost" href="#character-lock-kit">Keep one character identical — free Character Lock Kit <span aria-hidden="true">↓</span></a>':""}</div>
   </div>
   <div class="svc-for reveal" style="animation-delay:.12s"><span class="slate"><b>Best for</b></span><ul>${sv.forWho.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
 </header>
