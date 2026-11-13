@@ -11,6 +11,7 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [AI kids & educational videos](https://hafiz-afaq-portfolio.vercel.app/services/ai-educational-videos/): AI kids rhymes and educational lesson videos for learning brands: locked characters, correct letters and numbers, original songs and an enrollment call.
 - [AI VFX & post-production](https://hafiz-afaq-portfolio.vercel.app/services/ai-vfx-post-production/): AI and Python VFX for brand footage: background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.
 - [Character Lock](https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): Character Lock keeps one face, outfit and turnaround the same in every shot, with locked locations and light — the method behind ULTRA’s 3-minute story ad.
+- [Character Lock Kit](https://hafiz-afaq-portfolio.vercel.app/services/character-lock-kit/): The free Character Lock Kit: the character sheet template, the prompt-lock checklist and the ULTRA worked example. Download the PDF — no email needed.
 - [Same-day AI video ads](https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): Same-day AI video ads for brands in the US, UK and worldwide: three recent ads went from brief to delivery in one day, one person from brief to final file.
 - [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
 
