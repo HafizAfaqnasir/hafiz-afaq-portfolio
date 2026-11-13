@@ -12,6 +12,7 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [AI VFX & post-production](https://hafiz-afaq-portfolio.vercel.app/services/ai-vfx-post-production/): AI and Python VFX for brand footage: background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.
 - [Character Lock](https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): Character Lock keeps one face, outfit and turnaround the same in every shot, with locked locations and light — the method behind ULTRA’s 3-minute story ad.
 - [Same-day AI video ads](https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): Same-day AI video ads for brands in the US, UK and worldwide: three recent ads went from brief to delivery in one day, one person from brief to final file.
+- [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
 
 ## Case studies
 - [ULTRA: A bear dad, a dog best friend, and one tin.](https://hafiz-afaq-portfolio.vercel.app/work/ultra/): Character story ad. A three-minute story ad where every lead is an animal, and each one has to be the same animal in every scene.
@@ -34,10 +35,9 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 
 ## Other pages
 - [All work](https://hafiz-afaq-portfolio.vercel.app/work/): all 17 case studies in one place.
-- [All services](https://hafiz-afaq-portfolio.vercel.app/services/): all 7 AI video services in one place.
+- [All services](https://hafiz-afaq-portfolio.vercel.app/services/): all 8 AI video services in one place.
 - [IP & Regulatory](https://hafiz-afaq-portfolio.vercel.app/ip-trademark-regulatory/): trademark registration, DRAP dossiers and IP research through ORAKSER, Karachi.
 
-- [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
 - [Press & media kit](https://hafiz-afaq-portfolio.vercel.app/press/): Bio, facts, headshot, links and contact for journalists and podcasters.
 - [Find me everywhere](https://hafiz-afaq-portfolio.vercel.app/links/): Every profile in one place: LinkedIn, Behance, Upwork, Vimeo, Contra, Facebook, YouTube and Quora.
 ## Profiles

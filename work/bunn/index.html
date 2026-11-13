@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -16,8 +16,7 @@
 <link rel="apple-touch-icon" href="media/icon-180.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Hafiz Afaq (AI Guy)">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale" content="en-GB">
 <meta property="og:title" content="AI Coffee Product Film for BUNN – Case Study | Hafiz Afaq">
 <meta property="og:description" content="A 30-second AI product film for the BUNN Speed Brew Elite coffee maker, built from a real review: rush, brew, one calm sip. Cast, sets and edit inside.">
 <meta property="og:url" content="https://hafiz-afaq-portfolio.vercel.app/work/bunn/">
@@ -665,7 +664,7 @@ click, room tone. No music, no dialogue.</pre></div>
   <div class="th-box"><div class="th-frame" id="thFrame"><video id="thVid" controls playsinline preload="auto"></video></div>
   <div class="th-bar"><span class="slate" id="thT"></span><a class="btn btn-red btn-sm" id="thGo" href="#work">Open →</a></div></div>
 </div>
-<footer><div class="wrap"><span class="slate"><b>Hafiz Afaq</b> · The AI Guy</span><span class="slate">Client films are AI-generated and disclosed as such.</span></div></footer>
+<footer><div class="wrap"><span class="slate"><b>Hafiz Afaq</b> · The AI Guy</span><span class="slate">Client films are AI-generated and disclosed as such.</span><span class="slate"><a href="/press/">Press &amp; media kit</a> &middot; <a href="/links/">Find me everywhere</a></span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer"><button type="button" id="lbClose" aria-label="Close">✕</button><img id="lbImg" alt=""><div class="cap" id="lbCap"></div></dialog>
 
@@ -1447,7 +1446,7 @@ function home(){
 <div class="wall" aria-label="Character and product sheets"><div class="wall-track">${[...WALL,...WALL].map(([f,cp],i)=>`<figure${i>=WALL.length?' aria-hidden="true"':""}><img src="${M(f+".webp")}" alt="${i<WALL.length?esc(cp):""}" loading="lazy" height="118"><figcaption>${esc(cp)}</figcaption></figure>`).join("")}</div></div>
 
 <section class="sec" id="work"><div class="wrap">
-  <div class="sec-head"><h2>Selected work</h2><p>Eleven client brands, a pitch, a spec ad and my own channel: seventeen projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit.</p></div>
+  <div class="sec-head"><h2>Selected work</h2><p>Eleven client brands, a pitch, a spec ad and my own channel: seventeen projects. Open any project to watch the film and see exactly how it was built: the casting sheets, the empty sets, the keyframes and the edit. <a href="/work/">All work →</a></p></div>
   <div class="films">${c.map((k,i)=>`
     <a class="film${[0,3,4,10,11,14,15].includes(i)?" wide":""}" href="#${k.id}">
       <div class="media">${k.preview?`<video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video>`:`<img src="${M(k.previewImg||k.poster)}" alt="${esc(k.client.split(" · ")[0]+": "+k.title)}" loading="lazy">`}</div>
@@ -1458,7 +1457,7 @@ function home(){
 </div></section>
 
 <section class="sec" id="services" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><h2>Services</h2><p>Seven ways brands work with me. Each page shows the deliverables, the process and the case studies behind it.</p></div>
+  <div class="sec-head"><h2>Services</h2><p>Eight ways brands work with me. Each page shows the deliverables, the process and the case studies behind it. <a href="/services/">All services →</a></p></div>
   <div class="svcs">${SERVICES.map(x=>`<a href="#${x.id}"><span class="slate">${esc(x.kicker.replace("Service · ",""))}</span><b>${esc(x.name)}</b><small>${esc(x.d)}</small><i aria-hidden="true">→</i></a>`).join("")}</div>
 </div></section>
 
@@ -1724,7 +1723,16 @@ const SERVICES=[
   forWho:["Brands that need it this week, without a crew","Brands that need a story ad without a production budget","Agencies that want a director on their AI production"],
   get:[["Concept and script","One idea, a hook, and a shot list with beat timings."],["Directed shots","Start frames and motion prompts for every shot, with continuity rules."],["Edit and sound","Pacing, captions, sound design, music and a −14 LUFS master."]],
   cases:["ultra","erased"],
-  faq:[["How long is a typical AI video ad?","Anything from a 6-second logo sting to a three-minute story ad. The case studies here run from 0:10 to 3:13."],["Which AI tools do you use?","Google Flow and Veo, Nano Banana, Kling, ElevenLabs, Suno, CapCut and custom Python finishing. The tool is chosen shot by shot."],["Do you work with clients outside Pakistan?","Yes. Clients include brands in the US and the UAE, and everything runs remotely."],["How quickly can you deliver an ad?","Three recent ads went from brief to delivery in one day. Timelines depend on the brief — the portfolio shows the finished work."]]}
+  faq:[["How long is a typical AI video ad?","Anything from a 6-second logo sting to a three-minute story ad. The case studies here run from 0:10 to 3:13."],["Which AI tools do you use?","Google Flow and Veo, Nano Banana, Kling, ElevenLabs, Suno, CapCut and custom Python finishing. The tool is chosen shot by shot."],["Do you work with clients outside Pakistan?","Yes. Clients include brands in the US and the UAE, and everything runs remotely."],["How quickly can you deliver an ad?","Three recent ads went from brief to delivery in one day. Timelines depend on the brief — the portfolio shows the finished work."]]},
+ {id:"ai-video-ads-ecommerce",name:"AI video ads for ecommerce brands",kicker:"Service · AI video ads for ecommerce",
+  h1:'AI video ads for <span class="hl">ecommerce</span> brands.',
+  t:"AI Video Ads for Ecommerce Brands | Hafiz Afaq",
+  d:"AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.",
+  intro:"Your product photos are the truth. I build product films, UGC-style testimonials and hook variants around them — the product never changes shape, colour or label, and every variant is checked frame by frame before delivery.",
+  forWho:["Shopify and DTC stores that need a fresh video for every product","Fashion, beauty and home brands whose product has to look the same in every frame","Stores that need new hooks every week, not one ad a quarter"],
+  get:[["Product films from your real photos","Your product photos are the starting point. The video is built around them, so the product never changes shape, colour or label."],["Hook variants per product","Problem, result and objection angles for each hero product — cut 9:16 for Reels and TikTok and 1:1 for the feed."],["UGC-style testimonials","Selfie-style presenters talking about your product, with one consistent face and your real product in frame."],["Character Lock for products","The product, the label and the set are locked on sheets, so the same product looks the same in every variant."]],
+  cases:["walkin","bunn","swapp"],
+  faq:[["Will my product look the same in every ad?","Yes. Your product photos are the starting point, and the product, label and set are locked on sheets — Character Lock — so the same product looks the same in every variant. Every frame is checked before delivery."],["What do you need from my store to start?","Your product photos and the product page. The hero image from your product page is usually the first frame, and the brief is the product, the audience, the platform and the one thing the viewer must feel."],["Can AI video replace real creators?","Not everywhere. AI covers product films, UGC-style testimonials and hook variants. When a product needs a genuine demonstration — a stain lifting, a fit across body types, how food tastes — a real creator is still the right call, and I will say so."],["How quickly can you deliver an ad?","Three recent ads went from brief to delivery in one day. Timelines depend on the brief — the portfolio shows the finished work."]]}
 ];
 const SVC_PARENT={"ehsaan":"ai-brand-films","dental":"ai-video-ads"};const svcFor=id=>SERVICES.find(s=>s.id===SVC_PARENT[id])||SERVICES.find(s=>s.cases.includes(id));
 function caseCard(k){return `<a class="film" href="#${k.id}"><div class="media"><img src="${M(k.previewImg&&!k.preview?k.previewImg:k.preview?k.previewPoster:k.poster)}" alt="${esc(k.client.split(" · ")[0]+": "+k.title)}" loading="lazy"></div><span class="n">${k.num}</span><div class="shade"></div><div class="info"><span class="slate"><b>${esc(k.client.split(" · ")[0])}</b> · ${esc(k.kind)}</span><h3>${esc(k.title)}</h3><span class="go">View case study <i>→</i></span></div></a>`}
@@ -1809,7 +1817,8 @@ function ipPage(){
 <section class="sec" style="border-top:1px solid var(--line)"><div class="wrap ipvid">
   <div><span class="slate"><b>Brand videos for ORAKSER</b></span><h2 style="font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.025em;margin:12px 0 16px">Where the two worlds meet.</h2>
     <p style="color:var(--soft);max-width:44ch">I made these AI-assisted Urdu reels for ORAKSER’s social channels. Each one tells a business owner, in under twenty seconds, why a brand with no registered trademark can be lost to someone else.</p>
-    <p style="color:var(--soft);max-width:44ch;margin-top:12px">Same method as my client films: a story first, a clear hook, bold captions, and one action at the end: protect your brand.</p></div>
+    <p style="color:var(--soft);max-width:44ch;margin-top:12px">Same method as my client films: a story first, a clear hook, bold captions, and one action at the end: protect your brand.</p>
+    <p style="color:var(--soft);max-width:44ch;margin-top:12px">See the film: <a href="#orakser">ORAKSER — One ® on a signboard →</a></p></div>
   <figure class="ipv"><div class="player sq"><video controls playsinline preload="none" poster="${M("ip/orakser-reel-1.jpg")}" src="${M("ip/orakser-reel-1.mp4")}"></video></div><figcaption class="slate"><b>Reel 01</b> · “Apna brand” · 0:18 · Urdu</figcaption></figure>
   <figure class="ipv"><div class="player v"><video controls playsinline preload="none" poster="${M("ip/orakser-reel-2.jpg")}" src="${M("ip/orakser-reel-2.mp4")}"></video></div><figcaption class="slate"><b>Reel 02</b> · “Apna brand bachao” · 0:18 · Urdu</figcaption></figure>
 </div></section>
@@ -1843,6 +1852,7 @@ function ipPage(){
 <section class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-head"><h2>Services through ORAKSER</h2><p>ORAKSER (Orakzai Services) is an IP and regulatory practice in DHA, Karachi. These are the matters I work on with the team.</p></div>
   <div class="chips svc">${services.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>
+  <p style="color:var(--soft);margin-top:16px">I also make the AI video ads themselves — <a href="#ai-video-ads">see the AI video services →</a></p>
 </div></section>
 
 <div class="wrap"><a class="next" href="#work"><div><span class="slate">Back to the creative work</span><h2>See the films</h2></div><span class="arrow" aria-hidden="true">→</span></a></div>`;
