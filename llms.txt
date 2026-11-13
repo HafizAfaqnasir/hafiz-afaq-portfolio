@@ -10,10 +10,14 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [AI brand films](https://hafiz-afaq-portfolio.vercel.app/services/ai-brand-films/): AI brand films for B2B brands: a 56-second film for a Karachi digital-signage company and a 3-minute story ad, cast, lit and edited like a real shoot.
 - [AI kids & educational videos](https://hafiz-afaq-portfolio.vercel.app/services/ai-educational-videos/): AI kids rhymes and educational lesson videos for learning brands: locked characters, correct letters and numbers, original songs and an enrollment call.
 - [AI VFX & post-production](https://hafiz-afaq-portfolio.vercel.app/services/ai-vfx-post-production/): AI and Python VFX for brand footage: background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.
-- [Character Lock](https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): Character Lock keeps one face, outfit and turnaround the same in every shot, with locked locations and light — the method behind ULTRA’s 3-minute story ad.
+- [Character Lock](https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): Character Lock is Hafiz Afaq's step-by-step method for keeping one character identical across every shot of an AI ad, with the ULTRA film as proof.
 - [Character Lock Kit](https://hafiz-afaq-portfolio.vercel.app/services/character-lock-kit/): The free Character Lock Kit: the character sheet template, the prompt-lock checklist and the ULTRA worked example. Download the PDF — no email needed.
 - [Same-day AI video ads](https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): Same-day AI video ads for brands in the US, UK and worldwide: three recent ads went from brief to delivery in one day, one person from brief to final file.
 - [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
+
+## Guides
+- [AI video ad vs AI UGC](https://hafiz-afaq-portfolio.vercel.app/guides/ai-video-ad-vs-ai-ugc/): AI video ad vs AI UGC: what each one is, which parts AI handles, what the platforms require, and which one fits your brand.
+- [What an AI video ad really costs](https://hafiz-afaq-portfolio.vercel.app/guides/what-an-ai-video-ad-costs/): Tool clips cost $0.12 to $11, but a finished AI video ad costs more. The retake maths, the done-for-you bands, and what a quote should include.
 
 ## Case studies
 - [ULTRA: A bear dad, a dog best friend, and one tin.](https://hafiz-afaq-portfolio.vercel.app/work/ultra/): Character story ad. A three-minute story ad where every lead is an animal, and each one has to be the same animal in every scene.

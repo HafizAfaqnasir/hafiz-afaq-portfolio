@@ -17,6 +17,11 @@
       "statusCode": 301
     },
     {
+      "source": "/guides/:slug/index.html",
+      "destination": "/guides/:slug/",
+      "statusCode": 301
+    },
+    {
       "source": "/ip-trademark-regulatory/index.html",
       "destination": "/ip-trademark-regulatory/",
       "statusCode": 301
