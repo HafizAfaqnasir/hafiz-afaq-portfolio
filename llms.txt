@@ -48,6 +48,8 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [Contra](https://contra.com/afaq_nasir_1rx4oyk1)
 - [Facebook](https://www.facebook.com/profile.php?id=61596075887661)
 - [YouTube](https://www.youtube.com/@hafizafaqai)
+- [Dev.to](https://dev.to/hafizafaqnasir/character-lock-how-i-keep-the-same-character-identical-across-a-3-minute-ai-ad-3k9n)
+- [Hashnode](https://hafizafaq.hashnode.dev/character-lock-how-i-keep-the-same-character-identical-across-a-3-minute-ai-ad)
 
 ## Contact
 - Email: afaqn4286@gmail.com
