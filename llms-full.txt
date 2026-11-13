@@ -1,0 +1,114 @@
+## Who he is
+
+Hafiz Afaq, also known as Hafiz Afaq (AI Guy), is an AI filmmaker and creative director based in Karachi, Pakistan. He makes AI video ads, AI UGC ads, brand films and educational series for brands in the US, UK and worldwide. He works alone, from brief to final file, and directs each ad like a real shoot: brief, cast and lock, direct, edit and QC, with the buyer approving the work at each stage.
+
+Contact: afaqn4286@gmail.com. Portfolio: https://hafiz-afaq-portfolio.vercel.app/
+
+Profiles: LinkedIn (https://www.linkedin.com/in/hafizafaqnasir/), Behance (https://www.behance.net/afaqnasir3), Upwork (https://www.upwork.com/freelancers/~01b986b8b995885ee7), Vimeo (https://vimeo.com/hafizafaq), Contra (https://contra.com/afaq_nasir_1rx4oyk1), Facebook (https://www.facebook.com/profile.php?id=61596075887661), YouTube (https://www.youtube.com/@hafizafaqai), Dev.to and Hashnode (Character Lock article, canonical link to the method page on this site).
+
+## The 8 services
+
+1. AI UGC ads (https://hafiz-afaq-portfolio.vercel.app/services/ai-ugc-ads/): AI UGC ads for TikTok, Reels and Meta. Selfie testimonials, founder interviews and family-reaction ads with one consistent face and the real product.
+2. AI video ads and brand films (https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads/): AI video ad production for brands in the US, UK and worldwide. Character story ads, product films and B2B brand films, cast and edited like a real shoot.
+3. AI brand films (https://hafiz-afaq-portfolio.vercel.app/services/ai-brand-films/): AI brand films for B2B brands. A 56-second film for a Karachi digital-signage company and a 3-minute story ad, cast, lit and edited like a real shoot.
+4. AI kids and educational videos (https://hafiz-afaq-portfolio.vercel.app/services/ai-educational-videos/): AI kids rhymes and educational lesson videos for learning brands. Locked characters, correct letters and numbers, original songs and an enrollment call.
+5. AI VFX and post-production (https://hafiz-afaq-portfolio.vercel.app/services/ai-vfx-post-production/): AI and Python VFX for brand footage. Background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.
+6. Character Lock (https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): the method for keeping one character identical across every shot of an AI ad. The ULTRA film is the proof. See the method section below.
+7. Same-day AI video ads (https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): three recent ads went from brief to delivery in one day, one person from brief to final file. Which three ads is not stated on the site, and ULTRA is not named as one of them.
+8. AI video ads for ecommerce (https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands. Product films, UGC-style testimonials and hook variants built from real product photos.
+
+The free Character Lock Kit (https://hafiz-afaq-portfolio.vercel.app/services/character-lock-kit/) is a free tool, not a ninth service: the character sheet template, the prompt-lock checklist and the ULTRA worked example. The PDF downloads free, no email needed.
+
+## The Character Lock method
+
+Character Lock is the name of Hafiz Afaq's method for keeping one character identical across every shot of an AI ad. It is not claimed as proprietary: the name is also used elsewhere in the market (Lovart lists "Character Lock" as a feature name; source: keyword-intelligence audit, 13 Nov 2026). The method is a system, not a phrase, and it makes no 100 percent identity promise. The promise is the system and the public proof.
+
+The four stages, in order, with buyer approval at each stage:
+
+1. Brief. The product, the audience, the platform and the one thing the viewer must feel.
+2. Cast and lock. Characters, product and sets are locked on sheets before any video is made. Turnaround sheets, fixed identity marks, location plates with one motivated light each. Once the lock is approved, it does not change for the rest of the job.
+3. Direct. Every shot is directed with references, lens, light and continuity rules, and judged against the lock, not against the last shot.
+4. Edit and QC. Edit, captions, sound and a frame-by-frame check against the lock before delivery. Anything that breaks a character is re-made or cut.
+
+Product accuracy is part of the method: the product label is composited from the real artwork, so the packshot is correct in every frame, because no model keeps a label exact on its own. Formats are 9:16 first at 1080 by 1920, with 4:5 and 1:1 cut-downs; 16:9 for brand films and educational series. Films are mixed to broadcast loudness (ULTRA at minus 14 LUFS).
+
+## Guide 1: AI video ad vs AI UGC
+
+Full guide: https://hafiz-afaq-portfolio.vercel.app/guides/ai-video-ad-vs-ai-ugc/
+
+An AI video ad is a finished advertisement made with AI tools and finished by a person. It covers brand films, product ads, launch spots and cut-downs for each platform. AI UGC is one format inside that world: a synthetic presenter talking to camera in the style of a real customer video. The presenter is AI, the script is written for the ad, and the product shots are built from real photos and artwork. The difference from a real UGC video is the presenter: a real customer in one, a synthetic presenter in the other.
+
+Which parts AI handles, and which need a real person: AI drafts the script and variations, builds the scene and the presenter, and does the edit, captions and cut-downs. A person writes the angle and checks it is true, checks the label, logo and colour frame by frame, does the final QC and the platform versions, and decides what the ad claims. AI cannot judge what is true. A real person's voice is used only with written consent. Voice cloning is not promised.
+
+Buy the AI video ad when the job is a brand film, a launch, or a product ad where one character or one look has to hold across every shot. Buy AI UGC when many short talking-head clips are needed fast, to test hooks and angles. Testing guidance from the prompt panel (Perplexity, Gemini and ChatGPT all agreed): 3 to 5 variants per ad set as a baseline, then test more of what wins. No product shipping is needed for the AI route: the ad is built from product photos and the product page.
+
+## Guide 2: What an AI video ad really costs
+
+Full guide: https://hafiz-afaq-portfolio.vercel.app/guides/what-an-ai-video-ad-costs/
+
+A tool will sell a 30-second clip cheaply. A finished ad is not a clip. The tool prices below are published prices, checked 13 Nov 2026, for one render, not one usable ad. Monthly tool subscriptions in this set run $15 to $220 a month.
+
+Tool clip prices, per 30-second clip unless stated: JoggAI about $0.12 to $0.24; Synthesia about $0.31 to $0.43; Creatify about $2.73; Runway Turbo about $3.60 and Gen-4.5 about $8.64; Arcads about $11 per video (no public pricing page; its pricing page returns a 404); LongStories.ai about $12.19 to $12.87 per finished minute at 1080p.
+
+The retake maths: a tool charges for every render, including the ones thrown away. Arcads rounds every clip up to a full minute, so four hook variations to find one winner cost about $44, not $11. Creatify bills revisions at 3 credits per 15 seconds on Starter. Runway charges credits for warped or unusable generations, with no automatic refund. A failed generation costs the same as a good one.
+
+What a subscription does not buy: strategy and script, direction, human QC (one test found a 0.2-second lip-sync delay cut click-through by 68 percent), product accuracy, rights clarity, revisions after the first render, platform cut-downs, and AI labelling.
+
+What done-for-you costs (other providers' published rates, not his prices): AI UGC ads $50 to $300 per ad; freelancer band $500 to $3,000 per video; Versely packages from $500, cinematic from $3,500; Gisteo service page from $1,000, 60-second brand film from $3,000; Knowlify from $5,000 a month. A finished ad from Hafiz Afaq is quoted per brief. No price of his is stated anywhere on the site, and no market band is presented as his price.
+
+How to compare two quotes: ask how many revisions are included and what counts as one; who owns the finished video and where it can run, for how long; who pays for a failed render; whether platform cut-downs and captions are included; and whether the price is per video or per month.
+
+## Disclosure rules
+
+AI content is labelled on every platform, and disclosure is part of the delivery, not an extra. An unlabelled ad can be rejected or restricted.
+
+- Meta (Facebook and Instagram): Meta applies its AI info label to the ad. Meta does not ban AI-generated creative; an AI-made ad is reviewed against the same Advertising Standards as a human-shot ad.
+- TikTok: the AI-generated content label is switched on before the ad runs. For paid ads, the label is set in TikTok Ads Manager. A clear disclaimer, caption, watermark or sticker of the maker's own also counts.
+- YouTube: the creator sets the disclosure with the "AI use" question in YouTube Studio, and viewers see a "Made with AI" disclosure in the video's "How this content was made" section. YouTube says the label does not limit a video's audience or its eligibility to earn money, and it may apply a label itself if the creator does not. Clearly unrealistic content, such as animation, and minor edits such as colour correction or captions do not need a disclosure.
+- EU AI Act, Article 50: in force since 2 August 2026, it follows the content, not the company, and covers ads shown to people in the EU even if the maker is outside the EU. Anyone using AI professionally to make a deepfake, or an image, audio or video that resembles a real person, place or event and would falsely appear authentic, must disclose that it was artificially generated or manipulated, clearly, at first exposure. Breaches can draw fines of up to 15 million euros or 3 percent of worldwide turnover.
+- FTC testimonial rule (US): a review or testimonial must come from a real person who has real experience of the product. An AI presenter must never be shown as a real customer giving a real review. AI presenters on this site are fictional characters, never presented as real customers.
+- New York synthetic performer law: in effect from 9 June 2026. It requires disclosure for synthetic performers in ads that reach New York audiences. Penalties are $1,000 for a first violation and $5,000 after that.
+
+Consent rule: a real person's face or voice is never faked. A real person appears only with consent, and the result is labelled AI-generated. In a Harris Poll reported by ailately.com, 73 percent of people said suspected AI lowered their trust in the ad. The way to close that trust gap is honesty in the ad itself, not hiding the AI.
+
+## Proof films
+
+### ULTRA (flagship)
+
+Case page: https://hafiz-afaq-portfolio.vercel.app/work/ultra/
+
+ULTRA is a 3-minute story ad (3:13) for ULTRA, a zero-nicotine pouch. One bear dad (a grizzly bear, always on edge) and one golden Labrador stay the same animals across more than 25 clips, in a kitchen, a garage and a truck, and the product tin stays readable in every product shot. The end line is "Same ritual. Zero nicotine. No crash."
+
+Tools used, named on the case page: Nano Banana Pro, Google Flow with Veo 3.1, CapCut and Claude. The film is vertical 9:16, photoreal and cinematic. The label is composited from the real packshot. Watch the full film on YouTube (https://youtu.be/Jzj5-1Chb-A), the 60-second cut (https://www.youtube.com/shorts/EHcDqJB4g_M), or on Vimeo (https://vimeo.com/1245945207). No conversion numbers, view counts or sales figures are stated for this film, because none have been supplied.
+
+### Ehsaan (second flagship)
+
+Case page: https://hafiz-afaq-portfolio.vercel.app/work/ehsaan/
+
+Ehsaan Ki Zanjeer (Chain of Kindness) is a 2:40 short film in 21 shots. One actor plays six roles: a factory worker, an old guard, a mechanic, a biker, a rich businessman and his sister. The story: a factory worker is locked in a freezer, a guard saves him and asks for one thing in return ("help the next person in trouble"), and that favour travels down a highway, into a dhaba, and back to the worker's own home. The film is Hafiz Afaq's own brief, for his own channel (OneFace), a one-actor channel where every role is him, without ever standing in front of a camera.
+
+The method: one face was locked, and each role was blended into that face at a set strength, so the six people read as family, not clones. The old guard carries about 35 percent of the face and keeps his own white beard and deep wrinkles; the businessman is 100 percent the face; the sister carries about 40 percent. The original mouth stays untouched in the face fusion, so lip-sync never breaks. The film uses Hafiz Afaq's own face, with his own consent, and is labelled as AI-generated.
+
+Project page on Behance: https://www.behance.net/gallery/258407273/Ehsaan-AI-Short-Film-One-Actor-Six-Roles. No view counts, subscriber numbers or performance figures are stated, because none have been supplied.
+
+### Other case films
+
+- Glint and Gleam, GG Pod: a 1:47 founder interview ad for an ultrasonic retainer cleaner, one face held in close-up. Case: https://hafiz-afaq-portfolio.vercel.app/work/ggpod/
+- Stately: four minutes of creator footage moved from a plain wall into a lamp-lit walnut study, background replacement without a reshoot. Case: https://hafiz-afaq-portfolio.vercel.app/work/stately/
+- ORAKSER: a 37-second selfie-style UGC testimonial ad for a Karachi trademark firm. A restaurant owner explains why he registered his name before anything else. Watch the preview Short on YouTube (https://www.youtube.com/shorts/ICHGv56KfUw) and on Vimeo (https://vimeo.com/1246320100). Case: https://hafiz-afaq-portfolio.vercel.app/work/orakser/
+- Sans Air Purifier Mini: a 44-second family-reaction TikTok Shop UGC ad where the proof, a filter full of dust, lands in the first frame. Watch the preview Short on YouTube (https://youtube.com/shorts/es_FH7YvoQI). Case: https://hafiz-afaq-portfolio.vercel.app/work/sans/
+- BUNN Speed Brew Elite: a 30-second breakfast story built from a coffee-maker review. Watch the preview Short on YouTube (https://youtube.com/shorts/oFA73i7d8HM). Case: https://hafiz-afaq-portfolio.vercel.app/work/bunn/
+- Stately, Walk in: a 10-second suit ad built around one real product from Stately's store. Case: https://hafiz-afaq-portfolio.vercel.app/work/walkin/
+- SWIFTER: a self-initiated streetwear spec ad, one shirt, one model, eight shots, two 10-second cuts. Case: https://hafiz-afaq-portfolio.vercel.app/work/swifter/
+- Dynamic Learning Hub: a learning brand's YouTube series in two visual worlds, a 3D counting rhyme for toddlers (1:52) and a realistic fractions lesson for Grade 3 (1:31), both ending on the school's enrollment call. Case: https://hafiz-afaq-portfolio.vercel.app/work/dlh/
+- Dynamic Learning Hub, ABC: a 2:15 3D alphabet rhyme for toddlers, A to M, to an original song. Case: https://hafiz-afaq-portfolio.vercel.app/work/dlhabc/
+- Sans Air Purifier Mini, VFX fix: a 7-second fix on real filmed UGC, making the filter look dirty, in 4K at 60 frames. Case: https://hafiz-afaq-portfolio.vercel.app/work/sansdirty/
+- Optimum Vision, ERASED: a 56-second B2B brand film for a Karachi digital-signage company. Case: https://hafiz-afaq-portfolio.vercel.app/work/erased/
+- Cherat Packaging: a 12-second seamless website hero loop, four processes, three seconds each. Case: https://hafiz-afaq-portfolio.vercel.app/work/cherat/
+- New Horizon Integration Systems: a 45-second pitch film plus a 6.5-second logo sting. Case: https://hafiz-afaq-portfolio.vercel.app/work/nhis/
+- Swapp: a paid test reel for a UAE car-rental app. Case: https://hafiz-afaq-portfolio.vercel.app/work/swapp/
+- The Dental Clinic: a film concept for a Karachi dental clinic's online consultations, written for Pakistanis abroad. No film exists for this case. Case: https://hafiz-afaq-portfolio.vercel.app/work/dental/
+
+## What this file does not claim
+
+No prices are stated as his. No testimonials, client names, results, conversion numbers, view counts or subscriber numbers appear anywhere in it, because none have been supplied. Character Lock is not claimed as proprietary. Voice cloning is not promised. Same-day delivery is not claimed for ULTRA or Ehsaan. Anything the owner has not confirmed is marked UNVERIFIED above rather than stated as fact.
