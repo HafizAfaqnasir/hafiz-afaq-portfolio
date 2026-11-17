@@ -15,6 +15,10 @@ Site: https://hafiz-afaq-portfolio.vercel.app/
 - [Same-day AI video ads](https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): Same-day AI video ads for brands in the US, UK and worldwide: three recent ads went from brief to delivery in one day, one person from brief to final file.
 - [AI video ads for ecommerce](https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands: product films, UGC-style testimonials and hook variants built from your real product photos.
 
+## Pricing
+
+Prices in USD. A single AI video ad starts at $1,200. A three-ad testing pack is $2,950, and monthly creative is $4,800 a month for 8 ads. Every ad includes 2 revision rounds and paid-social usage for 12 months. A 50% deposit starts the work. Rush delivery is +25%, quoted first. Delivery is quoted with the brief. The buyer owns the finished video once it is paid for in full and can run it anywhere, forever. Voice cloning of a real person is not offered. Media buying is not offered.
+
 ## Guides
 - [AI video ad vs AI UGC](https://hafiz-afaq-portfolio.vercel.app/guides/ai-video-ad-vs-ai-ugc/): AI video ad vs AI UGC: what each one is, which parts AI handles, what the platforms require, and which one fits your brand.
 - [What an AI video ad really costs](https://hafiz-afaq-portfolio.vercel.app/guides/what-an-ai-video-ad-costs/): Tool clips cost $0.12 to $11, but a finished AI video ad costs more. The retake maths, the done-for-you bands, and what a quote should include.
