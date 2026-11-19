@@ -14,7 +14,7 @@ Profiles: LinkedIn (https://www.linkedin.com/in/hafizafaqnasir/), Behance (https
 4. AI kids and educational videos (https://hafiz-afaq-portfolio.vercel.app/services/ai-educational-videos/): AI kids rhymes and educational lesson videos for learning brands. Locked characters, correct letters and numbers, original songs and an enrollment call.
 5. AI VFX and post-production (https://hafiz-afaq-portfolio.vercel.app/services/ai-vfx-post-production/): AI and Python VFX for brand footage. Background replacement, product fixes on real UGC, seamless website hero loops and finishing, all without a reshoot.
 6. Character Lock (https://hafiz-afaq-portfolio.vercel.app/services/character-lock/): the method for keeping one character identical across every shot of an AI ad. The ULTRA film is the proof. See the method section below.
-7. Same-day AI video ads (https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): three recent ads went from brief to delivery in one day, one person from brief to final file. Which three ads is not stated on the site, and ULTRA is not named as one of them.
+7. Same-day AI video ads (https://hafiz-afaq-portfolio.vercel.app/services/same-day-ai-video-ad/): one person from brief to final file, with no crew to book and no shoot to schedule.
 8. AI video ads for ecommerce (https://hafiz-afaq-portfolio.vercel.app/services/ai-video-ads-ecommerce/): AI video ads for ecommerce and Shopify brands. Product films, UGC-style testimonials and hook variants built from real product photos.
 
 The free Character Lock Kit (https://hafiz-afaq-portfolio.vercel.app/services/character-lock-kit/) is a free tool, not a ninth service: the character sheet template, the prompt-lock checklist and the ULTRA worked example. The PDF downloads free, no email needed.
@@ -57,6 +57,18 @@ What a subscription does not buy: strategy and script, direction, human QC (one 
 What done-for-you costs (other providers' published rates, not his prices): AI UGC ads $50 to $300 per ad; freelancer band $500 to $3,000 per video; Versely packages from $500, cinematic from $3,500; Gisteo service page from $1,000, 60-second brand film from $3,000; Knowlify from $5,000 a month. His prices, published November 2026: a single AI video ad from $1,200; a three-ad testing pack $2,950; monthly creative $4,800 a month for 8 ads. Every ad includes 2 revision rounds and paid-social usage for 12 months. A 50% deposit starts the work. The buyer owns the finished video once it is paid for in full and can run it anywhere, forever. Delivery is quoted with the brief.
 
 How to compare two quotes: ask how many revisions are included and what counts as one; who owns the finished video and where it can run, for how long; who pays for a failed render; whether platform cut-downs and captions are included; and whether the price is per video or per month.
+
+## Guide 3: Do AI video ads hurt your brand?
+
+Full guide: https://hafiz-afaq-portfolio.vercel.app/guides/do-ai-video-ads-hurt-your-brand/
+
+The honest answer is no, not if the ad is disclosed and directed. The risk is a bad ad, not an AI ad. What hurts a brand is a viewer who feels fooled, a fake testimonial, or a synthetic presenter posing as a real customer.
+
+The three rules on every client film: disclosure, consent, and no fake person. A real person's face or voice is used only with written consent. An AI presenter is a fictional character, never presented as a real customer. The product shots stay real.
+
+The proof: ULTRA keeps one bear dad and one dog identical for more than 25 clips across three minutes, and the product label is composited from the real packshot. Ehsaan is one actor playing six roles in a single film. When only a real person will do, the answer is a real shoot: testimonials and founder stories.
+
+Do AI ads convert? There is no public number to quote, and none is claimed here. If a seller quotes a conversion rate for AI ads, ask for the study behind it.
 
 ## Disclosure rules
 
