@@ -23,7 +23,7 @@ Prices in USD. A single AI video ad starts at $1,200. A three-ad testing pack is
 - [AI video ad vs AI UGC](https://hafiz-afaq-portfolio.vercel.app/guides/ai-video-ad-vs-ai-ugc/): AI video ad vs AI UGC: what each one is, which parts AI handles, what the platforms require, and which one fits your brand.
 - [What an AI video ad really costs](https://hafiz-afaq-portfolio.vercel.app/guides/what-an-ai-video-ad-costs/): Tool clips cost $0.12 to $11, but a finished AI video ad costs more. The retake maths, the done-for-you bands, and what a quote should include.
 - [Do AI video ads hurt your brand?](https://hafiz-afaq-portfolio.vercel.app/guides/do-ai-video-ads-hurt-your-brand/): The honest answer: no, not if the ad is disclosed and directed. The three rules on every client film, and when only a real person will do.
-- [How to keep the same character identical in every shot](https://hafiz-afaq-portfolio.vercel.app/guides/keep-same-character-identical-ai-video/): The fix is not a better prompt. It is a system: the same words and the same reference image as the first frame, on every clip. The method behind ULTRA, one bear dad across more than 25 clips.
+- [How to keep the same character identical in every shot](https://hafiz-afaq-portfolio.vercel.app/guides/keep-same-character-identical-ai-video/): The fix is not a better prompt. It is a system: the same words and the same first frame, on every clip. The method behind ULTRA: one bear dad, 25+ clips.
 
 ## Case studies
 - [ULTRA: A bear dad, a dog best friend, and one tin.](https://hafiz-afaq-portfolio.vercel.app/work/ultra/): Character story ad. A three-minute story ad where every lead is an animal, and each one has to be the same animal in every scene.
