@@ -70,6 +70,16 @@ The proof: ULTRA keeps one bear dad and one dog identical for more than 25 clips
 
 Do AI ads convert? There is no public number to quote, and none is claimed here. If a seller quotes a conversion rate for AI ads, ask for the study behind it.
 
+## Guide 4: How to keep the same character identical in every shot?
+
+Full guide: https://hafiz-afaq-portfolio.vercel.app/guides/keep-same-character-identical-ai-video/
+
+Anchor every clip twice: the same words and the same reference image as the first frame. One good clip proves nothing. The system is the one behind ULTRA, where one bear dad and one dog hold for more than 25 clips across three minutes.
+
+The character sheet comes first: face, outfit, three signature features, palette, one line of voice. A reference image becomes the first frame: Veo 3.1 Ingredients to Video holds up to three reference images in Flow. The character description stays word for word the same in every prompt; only the action changes. The voice is chosen with the character and used the same way in every clip. Locations and light are locked before animating. Every frame is checked against the sheet, and a drifted frame is made again, not kept.
+
+No method can promise a character will be identical in every frame. A seed does not guarantee the same output. The lock is the sheet and the first frame.
+
 ## Disclosure rules
 
 AI content is labelled on every platform, and disclosure is part of the delivery, not an extra. An unlabelled ad can be rejected or restricted.
