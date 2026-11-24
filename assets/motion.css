@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Motion layer — "The Lock", directed.
+   Everything here is additive: the page works without it, and nothing renders
+   until motion.js adds html.mx (motion on). Reduced-motion users never get it.
+   ========================================================================== */
+
+/* ---------- Slate intro (first visit per session) ---------- */
+#mx-slate{position:fixed;inset:0;z-index:200;background:#0A0A0A;display:grid;place-items:center;color:#F7F5F2;cursor:pointer;
+  font-family:"JetBrains Mono",ui-monospace,monospace}
+#mx-slate .board{width:min(460px,86vw);transform-origin:50% 50%}
+#mx-slate .clap{height:44px;position:relative;transform-origin:0 100%;
+  background:repeating-linear-gradient(-55deg,#F7F5F2 0 22px,#0A0A0A 22px 44px);border:3px solid #F7F5F2;border-bottom:0}
+#mx-slate .base{height:16px;background:repeating-linear-gradient(-55deg,#0A0A0A 0 22px,#F7F5F2 22px 44px);border:3px solid #F7F5F2;border-top:0}
+#mx-slate .body{border:3px solid #F7F5F2;border-top:0;padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;background:#0A0A0A}
+#mx-slate .cell{display:grid;gap:2px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#A39D97}
+#mx-slate .cell b{font-size:1.02rem;letter-spacing:.04em;color:#F7F5F2;font-weight:500}
+#mx-slate .cell.full{grid-column:1/-1}
+#mx-slate .cell.full b{font-family:"Poppins",system-ui,sans-serif;font-weight:800;font-size:clamp(1.5rem,5vw,2.1rem);letter-spacing:-.02em;text-transform:none}
+#mx-slate .cell.full b em{font-style:normal;background:#F7F5F2;color:#E3140C;padding:0 .18em;text-shadow:.05em .05em 0 #7A0A06}
+#mx-slate .tc{color:#E3140C}
+#mx-slate .skip{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:.62rem;letter-spacing:.2em;color:#5f5a55;text-transform:uppercase}
+#mx-slate .sweep{position:absolute;inset:0;background:#E3140C;transform:scaleY(0);transform-origin:50% 100%}
+
+/* ---------- Grain (film stock) ---------- */
+html.mx body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:mxGrain .9s steps(6) infinite}
+@keyframes mxGrain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-2%,4%)}80%{transform:translate(5%,1%)}100%{transform:translate(0,0)}}
+
+/* ---------- Scroll progress + timecode HUD ---------- */
+#mx-bar{position:fixed;left:0;top:0;height:2px;width:100%;z-index:95;background:#E3140C;transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+#mx-hud{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));z-index:94;pointer-events:none;
+  display:flex;align-items:center;gap:10px;font:500 .64rem/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;
+  color:#D9D4CE;background:rgba(10,10,10,.72);backdrop-filter:blur(8px);border:1px solid #282624;padding:8px 10px;opacity:0;transform:translateY(8px)}
+#mx-hud .dot{width:7px;height:7px;border-radius:50%;background:#E3140C;animation:mxBlink 1.2s steps(1) infinite}
+#mx-hud .tc{color:#F7F5F2;font-variant-numeric:tabular-nums}
+#mx-hud .sc{color:#A39D97;max-width:34vw;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+@keyframes mxBlink{50%{opacity:.2}}
+@media (max-width:900px){#mx-hud{display:none}}
+
+/* ---------- Viewfinder cursor (fine pointers only) ---------- */
+html.mx-cur, html.mx-cur a, html.mx-cur button, html.mx-cur summary, html.mx-cur [data-play]{cursor:none}
+html.mx-cur input, html.mx-cur textarea, html.mx-cur select{cursor:auto}
+#mx-cur{position:fixed;left:0;top:0;z-index:150;pointer-events:none;width:0;height:0}
+#mx-cur .vf{position:absolute;left:0;top:0;width:34px;height:34px;transform:translate(-50%,-50%)}
+#mx-cur .vf i{position:absolute;width:10px;height:10px;border:1.5px solid #F7F5F2}
+#mx-cur .vf i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+#mx-cur .vf i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+#mx-cur .vf i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+#mx-cur .vf i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+#mx-cur .dot{position:absolute;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#E3140C}
+#mx-cur .lbl{position:absolute;left:0;top:0;transform:translate(14px,14px);white-space:nowrap;font:600 .6rem/1 "JetBrains Mono",ui-monospace,monospace;
+  letter-spacing:.14em;text-transform:uppercase;background:#E3140C;color:#F7F5F2;padding:5px 7px;opacity:0;scale:.6;transition:opacity .2s,scale .25s}
+#mx-cur.has-lbl .lbl{opacity:1;scale:1}
+#mx-cur.locked .vf i{border-color:#E3140C}
+#mx-cur.down .vf{scale:.85}
+#mx-cur.hide{opacity:0}
+
+/* ---------- Text reveal helpers ---------- */
+.mx-line{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em;margin-right:-.02em} /* -.02em keeps the original line breaks */
+.mx-word{display:inline-block;will-change:transform}
+
+/* ---------- Brand marquee (velocity reactive) ---------- */
+.mx-marq{border-block:1px solid #282624;overflow:hidden;padding-block:clamp(14px,2vw,22px);background:#0A0A0A;position:relative}
+.mx-marq .trk{display:flex;width:max-content;gap:0;will-change:transform}
+.mx-marq .grp{display:flex;align-items:center;flex:none}
+.mx-marq span{font:800 clamp(1.6rem,4.4vw,3.4rem)/1 "Poppins",system-ui,sans-serif;letter-spacing:-.03em;color:transparent;
+  -webkit-text-stroke:1px #5f5a55;padding-inline:clamp(14px,2vw,26px);white-space:nowrap;transition:color .3s,-webkit-text-stroke-color .3s}
+.mx-marq span:hover{color:#F7F5F2;-webkit-text-stroke-color:#F7F5F2}
+.mx-marq span.on{color:#F7F5F2;-webkit-text-stroke-color:transparent}
+.mx-marq b{width:12px;height:12px;flex:none;background:#E3140C;rotate:45deg}
+.mx-marq .lbl{position:absolute;left:max(16px,env(safe-area-inset-left,0px));top:6px;font:500 .58rem/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.14em;color:#5f5a55;text-transform:uppercase;z-index:2;background:#0A0A0A;padding:2px 4px}
+
+/* ---------- Workflow: a red "film strip" line that draws as you scroll ---------- */
+.flow{position:relative}
+.mx-flowline{position:absolute;left:0;right:0;top:0;height:2px;background:#E3140C;transform:scaleX(0);transform-origin:0 50%;z-index:1;pointer-events:none}
+
+/* ---------- Case cards: shutter reveal ---------- */
+html.mx .film .media{clip-path:inset(0 0 0 0)}
+
+@media (prefers-reduced-motion:reduce){#mx-slate,#mx-cur,#mx-hud,#mx-bar{display:none!important}html.mx body::after{display:none}}
