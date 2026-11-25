@@ -310,6 +310,7 @@ footer .wrap{padding-block:26px;display:flex;justify-content:space-between;flex-
 /* ===== case page ===== */
 .cp-top{padding-block:clamp(26px,4vw,48px) 0}
 .back{display:inline-flex;gap:8px;align-items:center;text-decoration:none;color:var(--mute);font-size:.88rem}.back:hover{color:var(--paper)}
+.crumbs{font-size:.82rem;color:var(--mute);margin-bottom:12px}.crumbs a{color:var(--mute);text-decoration:none}.crumbs a:hover{color:var(--paper);text-decoration:underline}.crumbs [aria-current="page"]{color:var(--paper)}
 .cp-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);align-items:start;padding-block:clamp(26px,4vw,48px) clamp(48px,7vw,88px)}
 .cp-hero.land{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
 .cp-num{font:500 .82rem var(--f-slate);color:var(--red);display:block;margin-bottom:12px}
@@ -1607,6 +1608,7 @@ CASES.forEach((c,i)=>{Object.assign(c,STORY[c.id]);c.stepTools=STEP_TOOLS[c.id]|
 /* ================= HELPERS ================= */
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const esc=s=>{const d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML};
+function crumbsHTML(items,cur){return '<nav class="crumbs" aria-label="Breadcrumb">'+items.map(([h,l])=>'<a href="'+h+'">'+esc(l)+'</a><span aria-hidden="true"> / </span>').join("")+'<span aria-current="page">'+esc(cur)+'</span></nav>'}
 const faqA=a=>esc(a).replace(/&lt;a href=(?:"|&quot;)(#[a-z0-9-]+|\/(?:[a-z0-9-]+\/)+)(?:"|&quot;)&gt;(.*?)&lt;\/a&gt;/g,'<a href="$1">$2</a>');
 const app=document.getElementById("app");
 let io=null,wvPending=false;
@@ -1811,7 +1813,7 @@ function casePage(k){
   const hero=k.final?player(k.final,k.poster,k.orient,k.label1||"Final film"):
     (k.preview?`<div class="player v"><video data-auto muted loop playsinline preload="none" poster="${M(k.previewPoster)}" src="${M(k.preview)}"></video><span class="lbl chip red">Clip from the ad</span></div><p class="slate" style="margin-top:10px">The full ad is with the client. Board, sheets and clips below.</p>`:`<div class="player v cover"><img src="${M(k.poster)}" alt="${esc(k.title)}"></div>${k.emptyNote?`<p class="slate" style="margin-top:10px">${esc(k.emptyNote)}</p>`:""}`);
   return `
-<div class="wrap cp-top"><a class="back" href="/work/">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="/${pathFor(c.id)}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
+<div class="wrap cp-top">${crumbsHTML([["/","Home"],["/work/","Work"]],k.client.split(" · ")[0])}<a class="back" href="/work/">← All work</a><nav class="tabs" aria-label="Projects">${CASES.map(c=>`<a href="/${pathFor(c.id)}"${c.id===k.id?' aria-current="page"':""}>${c.num} · ${esc(c.client.split(" · ")[0])}</a>`).join("")}</nav></div>
 <header class="wrap cp-hero${k.orient==="h"?" land":""}">
   <div class="reveal">${k.orient==="h"?hero:`<div>${hero}</div>`}${k.final2?`<div style="margin-top:14px">${player(k.final2,k.poster2,k.orient2||"h",k.label2||"Video 2")}</div>`:""}</div>
   <div class="reveal" style="animation-delay:.12s">
@@ -2148,7 +2150,7 @@ const GUIDES=[
   <p class="gbody">The same system runs a client ad: a sheet, identity marks, and a frame-by-frame check on every clip, with one person taking the ad from brief to final file. <a href="/work/ultra/">ULTRA</a> is the proof it holds across a full film: one bear dad, one golden Labrador, more than 25 clips, three minutes. The worksheet version of the same system is <a href="/services/character-lock-kit/">the free Character Lock Kit</a>, and the service version is <a href="/services/character-lock/">the Character Lock method</a>.</p>
 </div></section>`,
   faq:[["Can a seed keep a character identical?","No. A seed does not guarantee the same output, so it is not the lock. The lock is the sheet and the first frame: the same words and the same reference image on every clip. If a shot drifts, make it again with the same sheet and the same first frame."],["Does this work with any AI video tool?","The system is tool-agnostic: a sheet, a first frame and a check. I pick the tool per shot, not per habit, and the sheet and first frame travel with the shot. The reference-image step in this guide uses Veo 3.1 in Flow, which takes up to three reference images."],["Does the character have to be a person?","No. The same system locks animals, products and rooms. ULTRA locks a bear, a dog and a tin. The tin label is composited from the real packshot, so it stays readable in every product shot."],["How many reference images do I need?","One strong first frame per shot is the minimum. Veo 3.1 Ingredients to Video takes up to three reference images, for a character, a product or a scene. The character sheet carries everything the images do not show."],["Where do I start?","Download the free Character Lock Kit. It is the worksheet version of this system: the character sheet, the identity marks checklist and the QC pass. Or read the Character Lock method, which is the same system run as a service."]]},
- {id:"how-long-does-an-ai-video-ad-take",name:"How long does an AI video ad take?",h1:"How long does it take, and how does hiring work?",t:"How Long Does an AI Video Ad Take? Process & Timelines | Hafiz Afaq",d:"Most standard short ads take 1 to 3 days from an approved brief. The four stages, what you approve at each one, and what to send first.",
+ {id:"how-long-does-an-ai-video-ad-take",name:"How long does an AI video ad take?",h1:"How long does it take, and how does hiring work?",t:"How Long Does an AI Video Ad Take? | Hafiz Afaq",d:"Most standard short ads take 1 to 3 days from an approved brief. The four stages, what you approve at each one, and what to send first.",
   lede:"Most standard short ads take 1 to 3 days from an approved brief. Four stages, with your approval at each one, and one person taking the ad from brief to final file.",
   body:`<section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
   <div class="sec-head"><h2>The answer first</h2><p>Most standard short ads take 1 to 3 days from an approved brief.</p></div>
@@ -2182,7 +2184,7 @@ function svcPage(sv){
   const cs=sv.cases.map(id=>CASES.find(c=>c.id===id)).filter(Boolean);
   const others=SERVICES.filter(x=>x.id!==sv.id);
   return `
-<div class="wrap cp-top"><a class="back" href="#services">← All services</a></div>
+<div class="wrap cp-top">${crumbsHTML([["/","Home"],["/services/","Services"]],sv.name)}<a class="back" href="#services">← All services</a></div>
 <header class="wrap ip-hero">
   <div class="reveal">
     <span class="cp-num">${esc(sv.kicker)}</span>
@@ -2217,7 +2219,7 @@ ${sv.extraBeforeFaq||""}<section class="sec" style="border-top:1px solid var(--l
 
 function guidePage(g){
   return `
-<div class="wrap cp-top"><a class="back" href="/services/ai-video-ads/">← AI video ads</a></div>
+<div class="wrap cp-top">${crumbsHTML([["/","Home"]],g.name)}<a class="back" href="/services/ai-video-ads/">← AI video ads</a></div>
 <header class="wrap ip-hero">
   <div class="reveal">
     <span class="cp-num">Guide</span>
@@ -2244,7 +2246,7 @@ ${g.body}
 
 function kitPage(){
   return `
-<div class="wrap cp-top"><a class="back" href="#services">← All services</a></div>
+<div class="wrap cp-top">${crumbsHTML([["/","Home"],["/services/","Services"]],"Character Lock Kit")}<a class="back" href="#services">← All services</a></div>
 <header class="wrap ip-hero">
   <div class="reveal">
     <span class="cp-num">Character Lock · Free kit</span>
@@ -2299,7 +2301,7 @@ function ipPage(){
   const services=["Trademark registration","Copyright","Patent","Design registration","Company & NTN registration","Domain registration","DRAP registration","FDA registration","Pakistan Single Window","Halal certification","ISO certification","PCSIR"];
   const faqs=[["Which DRAP form is the establishment licence?","Form-1 for a manufacturer and Form-2 for an importer. The licence comes before any product filing: no product is filed until the establishment licence is in place. It is valid for five years. An importer also needs a provincial Drug Sale Licence."],["How are medical devices filed with DRAP?","Class A devices are enlisted: Form-6 for a local device and Form-6A for an imported one. Class B to Class D devices are registered: Form-7 for a local device and Form-7A for an imported one."],["What is different about homoeopathic and herbal products?","Under SRO 412(I)/2014, homoeopathic, herbal, Unani and traditional products are enlisted, not registered. Firms file Form-1 or Form-2, and products file Form-3 for general and traditional products, Form-4 for therapeutic products, and Form-5 for imported products."],["Where do medical device import filings go now?","Through the Pakistan Single Window, since DRAP's letter of 16 October 2026. The old OIES route is only a fallback for filings where the DRAP data is incomplete."],["How long does a trademark take to certificate?","In the partner-pack matter on this page, twelve to fifteen months from filing to certificate. The cost through to the certificate is set in advance, in two stages tied to the official fees."],["Who handles the IP and regulatory work?","The matters are handled through ORAKSER (Orakzai Services), an IP and regulatory practice in DHA, Karachi. The same person also makes the AI video ads, so the claims in an ad are checked against what the brand can prove before the script is written."]];
   return `
-<div class="wrap cp-top"><a class="back" href="#about">← About</a></div>
+<div class="wrap cp-top">${crumbsHTML([["/","Home"]],"IP & Regulatory")}<a class="back" href="#about">← About</a></div>
 <header class="wrap ip-hero">
   <div class="reveal">
     <span class="cp-num">IP &amp; Regulatory · with ORAKSER (Orakzai Services), Karachi</span>
